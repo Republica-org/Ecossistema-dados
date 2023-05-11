@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados-dev.br_ibge_estadic.indicadores_gerais`

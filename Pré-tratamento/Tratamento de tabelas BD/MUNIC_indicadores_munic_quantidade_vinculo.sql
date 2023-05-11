@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados-dev.br_ibge_munic.indicadores_quantidade_vinculo`

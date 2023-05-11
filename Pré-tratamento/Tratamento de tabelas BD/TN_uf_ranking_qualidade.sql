@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados-dev.br_me_siconfi.uf_ranking_qualidade`

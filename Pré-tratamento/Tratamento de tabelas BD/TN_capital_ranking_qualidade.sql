@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados-dev.br_me_siconfi.capital_ranking_qualidade`

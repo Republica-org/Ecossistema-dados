@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados-dev.br_me_siconfi.municipio_ranking_qualidade`
