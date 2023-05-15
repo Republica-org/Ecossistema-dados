@@ -1,6 +1,6 @@
 
 
-### Quantidade de vínculos públicos civis ativos
+## Quantidade de vínculos públicos civis ativos
 
 
 <b> Descrição: </b>
@@ -8,42 +8,54 @@
 Total de vínculos públicos presentes na RAIS.
 
 <b>Unidade: </b>
+<br>
 Vínculos
 
 <b>Fonte dos dados: </b>
+<br>
 RAIS  
 
 <b>Cobertura temporal: </b>
+<br>
 2003 - 2021
 
 <b>Última atualização do dado: </b>
+<br>
 2023
 
 <b>Recorte territorial: </b>
+<br>
 Brasil, UF
 
 <b>Poderes: </b>
+<br>
 Executivo, Legislativo e Judiciário
 
 <b> Nível de governo: </b>
+<br>
 Municipal, Estadual e Federal
 
 <b> Tipo de administração: </b>
+<br>
 Direta e Indireta
 
 <b>Dados são setoriais (ex. saúde, educação):</b>
+<br>
 Não
 
 <b>Dados sociodemográficos presentes: </b>
+<br>
 Sexo, Escolaridade, Faixa etária
 
 <b>Tratamento primário dos dados: </b>
+<br>
 Base dos Dados
 
 <b>Tratamento secundário dos dados:</b>
+<br>
 República.org 
 
-#### Mais detalhes e passo a passo do tratamento: 
+### Mais detalhes e passo a passo do tratamento: 
 
 
 <details>
