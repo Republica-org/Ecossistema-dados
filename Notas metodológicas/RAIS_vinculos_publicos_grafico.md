@@ -55,6 +55,13 @@ Base dos Dados
 <br>
 República.org 
 
+<b>ID da tabela no GBQ:</b>
+<br>
+`repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_grafico`
+ 
+
+
+
 ### Mais detalhes e passo a passo do tratamento: 
 
 
