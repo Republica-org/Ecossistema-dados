@@ -1,9 +1,10 @@
 
 
-#### Quantidade de vínculos públicos civis ativos
+### Quantidade de vínculos públicos civis ativos
 
 
 <b> Descrição: </b>
+<br>
 Total de vínculos públicos presentes na RAIS.
 
 <b>Unidade: </b>
@@ -39,14 +40,14 @@ Sexo, Escolaridade, Faixa etária
 <b>Tratamento primário dos dados: </b>
 Base dos Dados
 
-<b>Tratamento secundário dos dados</b>
+<b>Tratamento secundário dos dados:</b>
 República.org 
 
-##### Mais detalhes e passo a passo do tratamento: 
+#### Mais detalhes e passo a passo do tratamento: 
 
 
 <details>
-  <summary><b> 1º passo:</b> Recorte de tabela no GBQ. </summary>
+  <summary><b> 1º passo:</b> Recorte de tabela no GBQ: </summary>
 
  
 
