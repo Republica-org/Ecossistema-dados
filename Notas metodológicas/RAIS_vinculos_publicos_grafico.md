@@ -5,7 +5,7 @@
 
 <b> Descrição: </b>
 <br>
-Total de vínculos públicos presentes na RAIS.
+Total de vínculos públicos presentes na RAIS. 
 
 <b>Unidade: </b>
 <br>
@@ -63,14 +63,15 @@ República.org
 
 
 ### Mais detalhes e passo a passo do tratamento: 
-
-
+<br>
+Para elaboração desta tabela foi utilizada a RAIS não identificada exitente na plataforma da [Base dos Dados](https://basedosdados.org/dataset/3e7c4d58-96ba-448e-b053-d385a829ef00?table=c3a5121e-f00d-41ff-b46f-bd26be8d4af3). Para consultar dados originados da RAIS identificada, o [Atlas do Estado Brasileiro](https://www.ipea.gov.br/atlasestado/), vinculado ao IPEA, disponibiliza tabulações refinadas a partir de um tratamento longitudinal dos vínculos. 
+<br>
 <details>
   <summary><b> 1º passo:</b> Recorte de tabela no GBQ: </summary>
+<br>
+ Consulta ao GBQ da Base dos Dados:
 
- 
-
-
+<br>
 ``` sql
 
  SELECT 
