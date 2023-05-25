@@ -59,6 +59,13 @@ República.org
 <br>
 `repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_grafico`
  
+<<<<<<< HEAD
+<b>Dicionário das variáveis:</b>
+<br>
+
+
+=======
+>>>>>>> 383a08107c07c1740b331c66c864c0af8bd27bce
 
 ### Mais detalhes e passo a passo do tratamento: 
 
