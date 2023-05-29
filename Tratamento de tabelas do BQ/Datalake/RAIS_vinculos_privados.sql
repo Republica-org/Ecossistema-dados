@@ -1,3 +1,4 @@
+
 WITH tabela_1 AS (
 
   SELECT nome, nome_regiao, b.* FROM
@@ -115,7 +116,7 @@ FROM tabela_1
 
   WHERE ((natureza_juridica NOT LIKE "1%" OR natureza_juridica = '1228')
   AND natureza_juridica NOT IN ('2011', '2038'))
-  AND cbo_2002 LIKE "0%" 
+  -- AND cbo_2002 LIKE "0%" 
   AND vinculo_ativo_3112 = 1
 
 
@@ -135,5 +136,5 @@ GROUP BY
   grau_instrucao_1985_2005,
   grau_instrucao,
   nome_regiao,
-  nome_municipio,
-  cbo_2002
+  nome_municipio
+ 

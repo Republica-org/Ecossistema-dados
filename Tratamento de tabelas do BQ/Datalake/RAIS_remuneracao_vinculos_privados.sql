@@ -3,7 +3,9 @@
 
 SELECT 
   ano,
+  "privado" as flag_publico_privado,
   "poderes" as variavel,
+
 
   CASE 
 
@@ -18,11 +20,11 @@ SELECT
   AVG(valor_remuneracao_media) AS media_remuneracao
 
 FROM `basedosdados.br_me_rais.microdados_vinculos`
-WHERE (natureza_juridica LIKE "1%" 
-OR natureza_juridica IN ('2011', '2038'))
-AND natureza_juridica != '1228'
-AND cbo_2002 NOT LIKE "0%" 
-AND vinculo_ativo_3112 = 1
+
+WHERE ((natureza_juridica NOT LIKE "1%" OR natureza_juridica = '1228')
+  AND natureza_juridica NOT IN ('2011', '2038'))
+  -- AND cbo_2002 LIKE "0%" 
+  AND vinculo_ativo_3112 = 1
 
 GROUP BY 
 
@@ -34,8 +36,9 @@ GROUP BY
 
   SELECT 
   ano,
+  "privado" as flag_publico_privado,
   "genero" as variavel,
-
+    
    CASE 
     WHEN sexo = '1' THEN 'Masculino'
     WHEN sexo = '2' THEN 'Feminino'
@@ -47,11 +50,11 @@ GROUP BY
   AVG(valor_remuneracao_media) AS media_remuneracao
 
 FROM `basedosdados.br_me_rais.microdados_vinculos`
-WHERE (natureza_juridica LIKE "1%" 
-OR natureza_juridica IN ('2011', '2038'))
-AND natureza_juridica != '1228'
-AND cbo_2002 NOT LIKE "0%" 
-AND vinculo_ativo_3112 = 1
+
+WHERE ((natureza_juridica NOT LIKE "1%" OR natureza_juridica = '1228')
+  AND natureza_juridica NOT IN ('2011', '2038'))
+  -- AND cbo_2002 LIKE "0%" 
+  AND vinculo_ativo_3112 = 1
 
 GROUP BY 
 
@@ -64,6 +67,7 @@ GROUP BY
   
   SELECT 
   ano,
+  "privado" as flag_publico_privado,
   "grau_instrucao" as variavel,
 
 
@@ -90,11 +94,11 @@ GROUP BY
   AVG(valor_remuneracao_media) AS media_remuneracao
 
 FROM `basedosdados.br_me_rais.microdados_vinculos`
-WHERE (natureza_juridica LIKE "1%" 
-OR natureza_juridica IN ('2011', '2038'))
-AND natureza_juridica != '1228'
-AND cbo_2002 NOT LIKE "0%" 
-AND vinculo_ativo_3112 = 1
+
+WHERE ((natureza_juridica NOT LIKE "1%" OR natureza_juridica = '1228')
+  AND natureza_juridica NOT IN ('2011', '2038'))
+  -- AND cbo_2002 LIKE "0%" 
+  AND vinculo_ativo_3112 = 1
 
 GROUP BY 
 
@@ -107,6 +111,7 @@ GROUP BY
   
   SELECT 
   ano,
+  "privado" as flag_publico_privado,
   "nivel_governo" as variavel,
 
   CASE 
@@ -120,11 +125,11 @@ GROUP BY
   AVG(valor_remuneracao_media) AS media_remuneracao
 
 FROM `basedosdados.br_me_rais.microdados_vinculos`
-WHERE (natureza_juridica LIKE "1%" 
-OR natureza_juridica IN ('2011', '2038'))
-AND natureza_juridica != '1228'
-AND cbo_2002 NOT LIKE "0%" 
-AND vinculo_ativo_3112 = 1
+
+WHERE ((natureza_juridica NOT LIKE "1%" OR natureza_juridica = '1228')
+  AND natureza_juridica NOT IN ('2011', '2038'))
+  -- AND cbo_2002 LIKE "0%" 
+  AND vinculo_ativo_3112 = 1
 
 GROUP BY 
 
@@ -137,6 +142,7 @@ GROUP BY
   
   SELECT 
   ano,
+  "privado" as flag_publico_privado,
   "tipo_vinculo" as variavel,
 
   CASE 
@@ -167,11 +173,11 @@ GROUP BY
   AVG(valor_remuneracao_media) AS media_remuneracao
 
 FROM `basedosdados.br_me_rais.microdados_vinculos`
-WHERE (natureza_juridica LIKE "1%" 
-OR natureza_juridica IN ('2011', '2038'))
-AND natureza_juridica != '1228'
-AND cbo_2002 NOT LIKE "0%" 
-AND vinculo_ativo_3112 = 1
+
+WHERE ((natureza_juridica NOT LIKE "1%" OR natureza_juridica = '1228')
+  AND natureza_juridica NOT IN ('2011', '2038'))
+  -- AND cbo_2002 LIKE "0%" 
+  AND vinculo_ativo_3112 = 1
 
 GROUP BY 
 
