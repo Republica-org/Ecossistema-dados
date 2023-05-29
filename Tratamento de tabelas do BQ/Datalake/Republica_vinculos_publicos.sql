@@ -1,16 +1,8 @@
-WITH tabela_1 AS (
-  SELECT nome,nome_regiao, b.* FROM
-    `basedosdados.br_bd_diretorios_brasil.municipio`  AS a
-      RIGHT JOIN `basedosdados.br_me_rais.microdados_vinculos` AS b 
-      ON a.id_municipio = b.id_municipio )
 
  SELECT 
 
   ano, 
   sigla_uf,
-  nome AS nome_municipio,  
-  id_municipio,
-  nome_regiao,
 
   CASE 
     WHEN natureza_juridica IN ('1015','1023', '1031') THEN 'Executivo'
@@ -20,7 +12,6 @@ WITH tabela_1 AS (
   END AS poderes,
 
   
-
   CASE 
     WHEN natureza_juridica IN ('1015','1040', '1074', '1104','1139', '1163', '1252', '1287', '1317', '1341') THEN 'Federal'
     WHEN natureza_juridica IN ('1023','1058', '1082', '1112', '1147', '1171', '1236','1260',  '1295', '1325') THEN 'Estadual'
@@ -140,13 +131,11 @@ CASE
     WHEN tipo_vinculo = '96' THEN 'Contratado/tempo determinado'
     WHEN tipo_vinculo = '97' THEN 'Contratado/tempo determinado'
     ELSE 'Ignorado' 
-  END AS tipo_vinculo
+  END AS tipo_vinculo,
 
   COUNT(*) AS quantidade_vinculos
 
-
-
-FROM tabela_1
+FROM `basedosdados.br_me_rais.microdados_vinculos`
 WHERE (natureza_juridica LIKE "1%" 
 OR natureza_juridica IN ('2011', '2038'))
 AND natureza_juridica != '1228'
@@ -157,7 +146,6 @@ GROUP BY
 
   ano, 
   sigla_uf,
-  id_municipio, 
   poderes,
   esfera,
   tipologia, 
@@ -168,8 +156,6 @@ GROUP BY
   grau_instrucao_apos_2005,
   grau_instrucao_1985_2005,
   grau_instrucao,
-  nome_regiao,
-  nome_municipio,
   tempo_emprego, 
   carga_horaria,
   tipo_vinculo
