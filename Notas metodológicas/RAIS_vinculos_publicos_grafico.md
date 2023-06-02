@@ -58,20 +58,13 @@ República.org
 <b>ID da tabela no GBQ:</b>
 <br>
 `repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_grafico`
- 
-<<<<<<< HEAD
-<b>Dicionário das variáveis:</b>
-<br>
 
-
-=======
->>>>>>> 383a08107c07c1740b331c66c864c0af8bd27bce
 
 ### Mais detalhes e passo a passo do tratamento: 
 
 <br>
 
-Para elaboração desta tabela foi utilizada a RAIS não identificada exitente na plataforma da [Base dos Dados](https://basedosdados.org/dataset/3e7c4d58-96ba-448e-b053-d385a829ef00?table=c3a5121e-f00d-41ff-b46f-bd26be8d4af3). Para consultar dados originados da RAIS identificada, o [Atlas do Estado Brasileiro](https://www.ipea.gov.br/atlasestado/), vinculado ao IPEA, disponibiliza tabulações refinadas a partir de um tratamento longitudinal dos vínculos. 
+Para elaboração desta tabela foi utilizada a RAIS não identificada existente na plataforma da [Base dos Dados](https://basedosdados.org/dataset/3e7c4d58-96ba-448e-b053-d385a829ef00?table=c3a5121e-f00d-41ff-b46f-bd26be8d4af3). Para consultar dados originados da RAIS identificada, o [Atlas do Estado Brasileiro](https://www.ipea.gov.br/atlasestado/), vinculado ao IPEA, disponibiliza tabulações refinadas a partir de um tratamento longitudinal dos vínculos. 
 
 <br>
 
