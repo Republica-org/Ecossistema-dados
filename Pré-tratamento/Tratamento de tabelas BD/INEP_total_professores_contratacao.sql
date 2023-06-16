@@ -35,7 +35,7 @@ SELECT
         WHEN escolaridade = '5' THEN 'Ensino Médio' 
         WHEN escolaridade = '6' THEN  
                                   CASE 
-                                    WHEN pos_nenhum = 0 then 'Ensiono Superior Completo'
+                                    WHEN pos_nenhum = 0 then 'Ensiono Superior Completo' -- está invertido
                                     WHEN pos_nenhum = 1 then
                                           case
                                             when mestrado = 1 then 'Pós-Graduação - Mestrado'
