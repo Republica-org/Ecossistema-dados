@@ -1,0 +1,97 @@
+
+{
+    "view": {
+      "type": "br_map_categorical",
+      "mapType": "municipalities_by_state",
+  
+      "stateIdVariableId": "sigla_uf",
+      "municipalityIdVariableId": "id_municipio",
+  
+      "range": [
+
+        {
+            "label": "Perfil do gestor de educação por",
+            "value": "cor_raca"
+          },
+        {
+          "label": "Perfil do gestor de educação por",
+          "value": "genero"
+        }
+        
+      ]
+    },
+    
+    "variables": {
+      "sigla_uf": {
+        "type": "categorical",
+        "variableId": "sigla_uf",
+        "categories": []
+      },
+      "id_municipio": {
+        "type": "categorical",
+        "variableId": "id_municipio",
+        "categories": []
+      },
+      "nome": {
+        "type": "categorical",
+        "variableId": "nome",
+        "categories": []
+      },
+      "genero": {
+        "type": "categorical",
+        "variableId": "genero",
+        "categories": [
+          {
+            "label": "Feminino",
+            "value": "Feminino",
+            "color": "var(--red)"
+          },
+          {
+            "label": "Masculino",
+            "value": "Masculino",
+            "color": "var(--green)"
+          }
+        ]
+      },
+      "cor_raca": {
+        "type": "categorical",
+        "variableId": "cor_raca",
+        "categories": [
+          {
+            "label": "Branca",
+            "value": "Branca",
+            "color": "var(--red)"
+          },
+          {
+            "label": "Preta",
+            "value": "Preta",
+            "color": "var(--green)"
+          },
+          {
+            "label": "Parda",
+            "value": "Parda",
+            "color": "var(--blue)"
+          },
+          {
+            "label": "Indígena",
+            "value": "Indígena",
+            "color": "var(--orange)"
+          },
+          {
+            "label": "Amarela",
+            "value": "Amarela",
+            "color": "var(--purple)"
+          },
+          {
+            "label": "Não informou",
+            "value": "Não informou",
+            "color": "var(--grey)"
+          }
+        ]
+      },
+      "ano": {
+        "variableId": "ano",
+        "type": "continuous"
+      }
+    }
+  }

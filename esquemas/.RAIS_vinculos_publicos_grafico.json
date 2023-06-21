@@ -1,0 +1,185 @@
+
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      "sexo",
+      "poderes",
+      "grau_instrucao",
+      "esfera",
+      "faixa_etaria",
+      "carga_horaria",
+      "tipo_vinculo"
+    ],
+    "filterBy": [
+      "sexo",
+      "poderes",
+      "grau_instrucao",
+      "esfera",
+      "faixa_etaria",
+      "carga_horaria",
+      "tipo_vinculo"
+    ],
+    
+    "chartType": "lines",
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano"
+    },
+    "sexo": {
+      "type": "categorical",
+      "label": "Sexo",
+      "categories": [
+        "Feminino",
+        "Masculino"
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    "esfera": {
+      "type": "categorical",
+      "label": "Esfera federativa",
+      "categories": [
+        {
+          "id": "Municipal",
+          "color": "dark-blue",
+          "label": "Municipal"
+        },
+        {
+          "id": "Estadual",
+          "color": "orange",
+          "label": "Estadual"
+        },
+        {
+          "id": "Federal",
+          "color": "green",
+          "label": "Federal"
+        },
+        {
+          "id": "Outros",
+          "color": "light-grey",
+          "label": "Outros"
+        }
+      ],
+      "phrasePrefix": "que atuam na esfera"
+    },
+    "poderes": {
+      "type": "categorical",
+      "label": "Poderes",
+      "categories": [
+        "Executivo",
+        "Judiciário",
+        "Legislativo",
+        "Outros"
+      ],
+      "phrasePrefix": "que atuam no poder"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "categories": [
+        "IGNORADO",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "categories": [
+        "Entre 18 e 29 anos",
+        "Entre 30 e 49 anos",
+        "Entre 50 e 65 anos",
+        "Acima de 65 anos",
+        "Ignorado"
+      ],
+      "phrasePrefix": "com idade"
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipo de vínculo",
+      "categories": [
+        "Aprendiz contratado",
+        "Avulso",
+        "CLT",
+        "CLT/Rural",
+        "Contratado/prazo determinado",
+        "Contratado/tempo determinado",
+        "Diretor",
+        "Estatutário",
+        "Estatutário não efetivo",
+        "Temporário"
+      ],
+      "phrasePrefix": "com vínculo do tipo"
+    },
+    "carga_horaria": {
+      "type": "categorical",
+      "label": "Carga horária",
+      "categories": [
+        "20 horas",
+        "30 horas",
+        "40 horas ou mais",
+        "Ignorado"
+      ],
+      "phrasePrefix": "com carga horária de"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "label": "Grau de instrução",
+      "categories": [
+        "Até Fundamental ",
+        "Até Ensino Médio",
+        "Até Ensino Superior Completo",
+        "Até Pós Graduação"
+      ],
+      "phrasePrefix": "que cursaram"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  },
+  "dataSources": {
+    "RAIS_vinculos_publicos_grafico": "repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_grafico"
+  }
+}

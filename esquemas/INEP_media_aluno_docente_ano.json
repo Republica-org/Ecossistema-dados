@@ -1,0 +1,30 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio",
+    "range": [
+      {
+        "label": "Média de alunos por docente",
+        "value": "media_alunos_docente"
+      }
+    ],
+    "groupBy": "sigla_uf"
+  },
+  "filterBy": [
+    "ano"
+  ],
+  "valueExpressions": {
+    "media_alunos_docente": "SUM(alunos_soma) / SUM(professores_soma)"
+  },
+ 
+  "variables": {
+    "ano": "categorical",
+    "sigla_uf": "categorical",
+    "nome_municipio": "categorical",
+    "id_municipio": "categorical",
+    "professores_soma": "continuous",
+    "alunos_soma": "continuous"
+  }
+}

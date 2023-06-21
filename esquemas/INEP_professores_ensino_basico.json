@@ -1,0 +1,29 @@
+
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "quantidade_pessoas_sum"
+      }
+    ],
+    "domain": "ano",
+    
+    
+    "chartType": "lines",
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano"
+    },
+    "quantidade_pessoas": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "aggregation",
+    "chartType": "lines",
+    "domain": "ano",
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "valor_sum"
+      }
+    ],
+    "filterBy": [
+      "tipo_das",
+      "sexo",
+      "cor_raca"
+    ],
+    
+    "groupBy": [
+      
+      "tipo_das",
+      "sexo",
+      "cor_raca"
+      
+    ]
+  },
+
+
+  "variables": {
+    "tipo_das": {
+      "label": "Nível",
+      "type": "categorical",
+      "categories": ["DAS-1", "DAS-2", "DAS-3", "DAS-4","DAS-5","DAS-6"],
+      "phrasePrefix": "que atuam no poder"
+    },
+    
+    "sexo": {
+      "label": "Sexo",
+      "type": "categorical",
+      "categories": ["Feminino", "Masculino"],
+      "phrasePrefix": "do sexo"
+    },
+    "cor_raca": {
+        "label": "Cor/Raça",
+        "type": "categorical",
+        "categories": ["Negro", "Branco","Outros", "Não informado"],
+        "phrasePrefix": "do sexo"
+      },
+    "ano": {
+      "label": "Ano",
+      "type": "categorical"
+    },
+    "valor": {
+      "label": "Total de vínculos",
+      "type": "continuous"
+    }
+  }
+}
