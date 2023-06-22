@@ -24,6 +24,40 @@
     "quantidade_pessoas": {
       "type": "continuous",
       "label": "Quantidade de vínculos"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "categories": [
+        "IGNORADO",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
     }
   }
 }

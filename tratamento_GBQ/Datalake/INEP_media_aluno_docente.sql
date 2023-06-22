@@ -33,7 +33,7 @@ numero_prof AS (
     END AS publico_privado,    
     rede,
     quantidade_matriculas,
-    count(id_docente) as professores,
+    count(distinct(id_docente)) as professores, -- inseri o distinct
     CASE 
       WHEN sexo_docente = '1' THEN 'Masculino'
       WHEN sexo_docente = '2' THEN 'Feminino'

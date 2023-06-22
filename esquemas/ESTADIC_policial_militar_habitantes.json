@@ -1,0 +1,41 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Policiais por 1000 hab.",
+        "value": "policiais_por_1000_hab"
+      },
+      {
+        "label": "Policiais total",
+        "value": "policiais_total"
+      }
+    ],
+    "groupBy": "sigla_uf",
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "sigla_uf": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "sigla_uf"
+    },
+    "pop_projetada": {
+      "type": "continuous"
+    },
+    "policia_militar_efetivo_total": {
+      "type": "continuous"
+    }
+  },
+  "dataSources": {
+    "ESTADIC_policial_militar_habitantes": "repositoriodedadosgpsp.perfil_remuneracao.ESTADIC_policial_militar_habitantes"
+  },
+  "valueExpressions": {
+    "policiais_total": "sum(policia_militar_efetivo_total)",
+    "policiais_por_1000_hab": {
+      "label": "Policiais por 1000 hab.",
+      "value": "sum(policia_militar_efetivo_total) / (sum(pop_projetada) / 1000)"
+    }
+  }
+}
