@@ -1,0 +1,80 @@
+
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Total de policiais militares",
+        "value": "quantidade_pessoas_sum"
+      }
+    ],
+    "domain": "genero",
+   
+    "chartType": "bars",
+    "dataSourceType": "aggregation",
+
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      }
+    ],
+
+    "filterByStateId": "sigla_uf"
+
+  },
+  "variables": {
+    
+    "genero": {
+      "type": "categorical",
+      "label": "Sexo",
+      "categories": [
+        "feminino",
+        "masculino"
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    "quantidade_pessoas": {
+      "type": "continuous",
+      "label": "Quantidade de pessoas"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "categories": [
+        "IGNORADO",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    }
+  }
+  
+}
+
+

@@ -39,7 +39,11 @@ save(dadosPNADc_22,
      dadosPNADc_20,
      dadosPNADc_19,
      dadosPNADc_18,
-     dadosPNADc_17, file = "G:\\Drives compartilhados\\República.org\\4. Equipes\\Dados e Comunicação\\DADOS\\415 - Repositório de Dados\\Repositório Local\\IBGEarquivos_pnad.RData")
+     dadosPNADc_17,
+     dadosPNADc_16 ,
+     dadosPNADc_15,~
+     dadosPNADc_14 ,
+    dadosPNADc_13 , file = "G:\\Drives compartilhados\\República.org\\4. Equipes\\Dados e Comunicação\\DADOS\\415 - Repositório de Dados\\Repositório Local\\IBGEarquivos_pnad.RData")
 
 
 dadosPNADc_22$variables <- transform(dadosPNADc_22$variables, flag_lideranca=ifelse(V4010 >= '1111' & V4010 <= '1439',1,0))
@@ -55,9 +59,6 @@ dadosPNADc_13$variables <- transform(dadosPNADc_13$variables, flag_lideranca=ife
 
 
 
-pop_genero =svytotal(x=~ V2007, design=dadosPNADc_22, na.rm=TRUE)
-genero= data.frame(pop_genero)
-view(genero)
 
 
 df_servidor_22 = svytotal(x=~interaction(V2007,V2010, V4028,V4014,flag_lideranca), design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" | V4012== "Militar do exército, da marinha, da aeronáutica, da polícia militar ou do corpo de bombeiros militar" ), na.rm=TRUE)
