@@ -1,0 +1,127 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "mapType": "states",
+
+    "stateIdVariableId": "sigla_uf",
+
+    "range": ["genero","cor_raca","faixa_etaria","escolaridade_gestor"]
+  },
+
+  
+  "variables": {
+    "sigla_uf": {
+      "type": "categorical",
+      "variableId": "sigla_uf",
+      "categories": []
+    },
+    "genero": {
+      "type": "categorical",
+      "variableId": "genero",
+      "categories": [
+        {
+          "label": "Feminino",
+          "value": "Feminino",
+          "color": "var(--red)"
+        },
+        {
+          "label": "Masculino",
+          "value": "Masculino",
+          "color": "var(--green)"
+        }
+      ]
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "variableId": "cor_raca",
+      "categories": [
+        {
+          "label": "Branca",
+          "value": "Branca",
+          "color": "var(--red)"
+        },
+        {
+          "label": "Preta",
+          "value": "Preta",
+          "color": "var(--green)"
+        },
+        {
+          "label": "Parda",
+          "value": "Parda",
+          "color": "var(--blue)"
+        },
+        {
+          "label": "Indígena",
+          "value": "Indígena",
+          "color": "var(--orange)"
+        },
+        {
+          "label": "Amarela",
+          "value": "Amarela",
+          "color": "var(--purple)"
+        },
+        {
+          "label": "Não informou",
+          "value": "Não informou",
+          "color": "var(--grey)"
+        }
+      ]
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "variableId": "faixa_etaria",
+      "categories": [
+        {
+          "label": "Entre 30 e 49 anos",
+          "value": "Entre 30 e 49 anos",
+          "color": "var(--red)"
+        },
+        {
+          "label": "Entre 50 e 64 anos",
+          "value": "Entre 50 e 64 anos",
+          "color": "var(--green)"
+        },
+        {
+          "label": "Acima de 65 anos",
+          "value": "Acima de 65 anos",
+          "color": "var(--purple)"
+        }
+      ]
+    },
+    "escolaridade_gestor": {
+      "type": "categorical",
+      "variableId": "escolaridade_gestor",
+      "categories": [
+        {
+          "label": "Ensino superior incompleto",
+          "value": "Ensino superior incompleto",
+          "color": "var(--red)"
+        },
+        {
+          "label": "Ensino superior completo",
+          "value": "Ensino superior completo",
+          "color": "var(--green)"
+        },
+        {
+          "label": "Especialização",
+          "value": "Especialização",
+          "color": "var(--purple)"
+        },
+        {
+          "label": "Mestrado",
+          "value": "Mestrado",
+          "color": "var(--orange)"
+        },
+        {
+          "label": "Doutorado",
+          "value": "Doutorado",
+          "color": "var(--blue)"
+        }
+      ]
+    },
+    "ano": {
+      "variableId": "ano",
+      "type": "continuous"
+    }
+  }
+}

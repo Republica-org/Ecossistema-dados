@@ -1,0 +1,52 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Quantidade de vinculos",
+        "value": "quantidade_vinculos"
+      },
+      {
+        "label": "Proporção de vínculos por tipo",
+        "value": "proporcao_tipo"
+      }
+    ],
+    "groupBy": "sigla_uf",
+
+    "filterBy": [
+     
+      "tipo_vinculo"
+    ],
+
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "sigla_uf": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "sigla_uf"
+    },
+    "total_estado": {
+      "type": "continuous"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous"
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "tipo_vinculo"
+    }
+  },
+  
+
+
+  "valueExpressions": {
+    "quantidade_vinculos": "sum(quantidade_vinculos)",
+    "proporcao_tipo": {
+      "label": "Proporção por tipo de vínculo",
+      "value": "sum(quantidade_vinculos) / sum(total_estado) "
+    }
+  }
+}

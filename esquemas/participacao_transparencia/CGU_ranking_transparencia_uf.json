@@ -1,0 +1,27 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Nota",
+        "value": "nota_sum"
+      }
+    ],
+    "groupBy": "sigla_uf",
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "sigla_uf": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "sigla_uf"
+    },
+   
+    "nota": {
+      "type": "continuous"
+    }
+  }
+  
+  
+}

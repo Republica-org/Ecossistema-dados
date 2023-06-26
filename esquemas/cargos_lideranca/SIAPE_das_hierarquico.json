@@ -1,0 +1,38 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "aggregation",
+    "chartType": "lines",
+    "domain": "ano",
+    "range": [
+      {
+        "label": "Proporção de vínculos",
+        "value": "proporcao_vinculos_sum"
+      }
+    ],
+   
+    "groupBy": [
+      
+      "tipo_das"
+      
+    ]
+  },
+
+
+  "variables": {
+    "tipo_das": {
+      "label": "Nível",
+      "type": "categorical",
+      "categories": ["DAS-1", "DAS-2", "DAS-3", "DAS-4","DAS-5","DAS-6"],
+      "phrasePrefix": "que atuam no poder"
+    },
+    "ano": {
+      "label": "Ano",
+      "type": "categorical"
+    },
+    "proporcao_vinculos": {
+      "label": "Proporção de vínculos",
+      "type": "continuous"
+    }
+  }
+}

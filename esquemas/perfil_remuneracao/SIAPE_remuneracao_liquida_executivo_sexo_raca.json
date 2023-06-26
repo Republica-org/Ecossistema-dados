@@ -1,0 +1,44 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "aggregation",
+    "chartType": "lines",
+    "domain": "ano",
+    "range": [
+      {
+        "label": "Remuneração líquida",
+        "value": "remuneracao_liquida_sum"
+      }
+    ],
+    
+    "groupBy": [
+      
+      "genero_raca"
+      
+    ]
+  },
+
+
+  "variables": {
+    "genero_raca": {
+      "label": "gênero e raça",
+      "type": "categorical",
+      "categories": [
+"Homens Negros",
+"Homens Brancos"	,
+"Mulheres Negras",
+"Mulheres Brancas"
+
+],
+  "phrasePrefix": "que atuam no poder"
+    },
+    "ano": {
+      "label": "Ano",
+      "type": "categorical"
+    },
+    "remuneracao_liquida": {
+      "label": "Remuneração líquida",
+      "type": "continuous"
+    }
+  }
+}

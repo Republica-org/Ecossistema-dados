@@ -1,0 +1,69 @@
+
+
+
+{
+    "view": { 
+      "type": "data_series",
+  
+      "range": [
+        {
+          "label": "Total de ingressantes",
+          "value": "quantidade_ingressos_sum"
+        }
+      ],
+      "domain": "ano",
+      "groupBy": [
+        {
+          "label": "---",
+          "value": ""
+        },
+        "tipo_ingresso",
+        "regime_juridico",
+        "genero"
+      ],
+      "filterBy": [
+        "tipo_ingresso",
+        "regime_juridico",
+        "genero"
+      ],
+      
+      "chartType": "lines",
+      "dataSourceType": "aggregation"
+    },
+    "variables": {
+      "ano": {
+        "type": "categorical",
+        "label": "Ano"
+      },
+      "tipo_ingresso": {
+        "type": "categorical",
+        "label": "Tipo de ingresso",
+        "categories": [
+          "Processo Seletivo", "Concurso", "Transposição"
+        ],
+        "phrasePrefix": "por"
+      },
+      "regime_juridico": {
+        "type": "categorical",
+        "label": "Regime Jurídico",
+        "categories": [
+          "Contrato Temporário", "Estatutário", "Médico Residente",
+       "Programa Mais Médicos", "Residência Multi Profissional"
+        ],
+        "phrasePrefix": "que é"
+      },
+      "genero": {
+        "type": "categorical",
+        "label": "Gênero",
+        "categories": [
+          "Feminino",
+          "Masculino"
+        ],
+        "phrasePrefix": "do sexo"
+      },
+      "quantidade_ingressos": {
+        "type": "continuous",
+        "label": "Quantidade de ingressos"
+      }
+    }
+  }

@@ -1,0 +1,56 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "aggregation",
+    "chartType": "bars",
+    "domain": "ano",
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "quantidade_sum"
+      }
+    ],
+    
+    
+    "groupBy": [
+     
+      "genero",
+      "cor_raca",
+      "faixa_etaria"
+    ]
+  },
+
+
+  "variables": {
+    "genero": {
+      "label": "Gênero",
+      "type": "categorical",
+      "phrasePrefix": "do gênero"
+    },
+    "cor_raca": {
+      "label": "Cor/raça",
+      "type": "categorical",
+      "phrasePrefix": "que são"
+    },
+    "faixa_etaria": {
+      "label": "Faixa etária",
+      "type": "categorical",
+      "categories": [
+        "Até Fundamental ",
+        "Até Ensino Médio",
+        "Até Ensino Superior Completo",
+        "Até Pós Graduação"
+      ],
+      "phrasePrefix": "que cursaram"
+    },
+    
+    "ano": {
+      "label": "Ano",
+      "type": "categorical"
+    },
+    "quantidade": {
+      "label": "Quantidade de vínculos",
+      "type": "continuous"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Quantidade de vinculos",
+        "value": "quantidade_vinculos"
+      },
+      {
+        "label": "Proporção de vínculos por tipo",
+        "value": "proporcao_tipo"
+      }
+    ],
+    "groupBy": "id_municipio",
+
+    "filterBy": [
+     
+      "tipo_vinculo"
+    ],
+
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "sigla_uf": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "sigla_uf"
+    },
+    "id_municipio": {
+      "type": "categorical",
+      "variableId": "id_municipio",
+      "categories": []
+    },
+    "total_municipio": {
+      "type": "continuous"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous"
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "tipo_vinculo"
+    }
+  },
+  
+
+
+  "valueExpressions": {
+    "quantidade_vinculos": "sum(quantidade_vinculos)",
+    "proporcao_tipo": {
+      "label": "Proporção por tipo de vínculo",
+      "value": "sum(quantidade_vinculos) / sum(total_municipio) "
+    }
+  }
+}

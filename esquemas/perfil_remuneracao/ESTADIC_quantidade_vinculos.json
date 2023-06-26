@@ -1,0 +1,81 @@
+
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Total de vínculos estaduais",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      
+      "tipo_vinculo"
+    ],
+    "filterBy": [
+      "tipo_vinculo"
+    ],
+    
+    "chartType": "lines",
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano"
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipo de vínculo",
+      "categories": [
+        "Celetistas",
+        "Estatutários",
+        "Estagiários",
+        "Somente comissionados",
+        "Sem vínculo permanente"
+      ],
+      "phrasePrefix": "do vínculo"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "categories": [
+        "IGNORADO",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}

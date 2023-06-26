@@ -10,6 +10,22 @@
       }
     ],
     "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      "genero",
+      "cor_raca",
+      "faixa_etaria",
+      "grau_instrucao"
+    ],
+    "filterBy": [
+      "genero",
+      "cor_raca",
+      "faixa_etaria",
+      "grau_instrucao"
+    ],
     
     
     "chartType": "lines",
@@ -20,6 +36,51 @@
     "ano": {
       "type": "categorical",
       "label": "Ano"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "categories": [
+        "Feminino",
+        "Masculino"
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "label": "Cor/Raça",
+      "categories": [
+        "Parda",
+        "Preta",
+        "Branca",
+        "Amarela",
+        "Indígena",
+        "Não declarado"
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "label": "Grau de instrução",
+      "categories": [
+        "Até Ensino Superior Completo",
+        "Até Pós Graduação ou Mestrado",
+        "Até Ensino Fundamental",
+        "Até Ensino Médio",
+        "Até Doutorado"
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "categories": [
+        "Entre 18-29",
+        "Entre 30-49",
+        "Entre 50-64",
+        "Acima de 65"
+      ],
+      "phrasePrefix": "do sexo"
     },
     "quantidade_pessoas": {
       "type": "continuous",

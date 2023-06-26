@@ -12,14 +12,14 @@
     ],
     "filterBy": [
       "tipo_das",
-      "sexo",
+      "genero",
       "cor_raca"
     ],
     
     "groupBy": [
       
       "tipo_das",
-      "sexo",
+      "genero",
       "cor_raca"
       
     ]
@@ -34,8 +34,8 @@
       "phrasePrefix": "que atuam no poder"
     },
     
-    "sexo": {
-      "label": "Sexo",
+    "genero": {
+      "label": "Gênero",
       "type": "categorical",
       "categories": ["Feminino", "Masculino"],
       "phrasePrefix": "do sexo"

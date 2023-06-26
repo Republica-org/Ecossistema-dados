@@ -1,0 +1,64 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "staticValues",
+    "chartType": "bars",
+    "dimensionVariableId": "variavel",
+    "dimensionValueVariableId": "categoria",
+
+    "domain": "flag_publico_privado",
+    "range": ["media_remuneracao_ajustada", "media_remuneracao"],
+    "groupBy": [
+      {
+        "value": "genero",
+        "label": "Gênero"
+      },
+      {
+        "value": "poderes",
+        "label": "Poderes"
+      },
+      {
+        "value": "tipo_vinculo",
+        "label": "Tipo de vínculo"
+      },
+      {
+        "value": "nivel_governo",
+        "label": "Nível de governo"
+      },
+      {
+        "value": "grau_instrucao",
+        "label": "Grau de instrução"
+      }
+    ]
+  },
+  "filterBy": [
+    "flag_publico_privado"
+  ],
+
+  
+  "variables": {
+    "flag_publico_privado": {
+      "type": "categorical"
+    },
+    
+    "ano": {
+      "type": "categorical"
+    },
+    "variavel": {
+      "type": "categorical"
+    },
+    "categoria": {
+      "type": "categorical"
+    },
+    "media_remuneracao": {
+      "type": "continuous",
+      "label": "Remuneração média",
+      "expression": "media_remuneracao"
+    },
+    "media_remuneracao_ajustada": {
+      "type": "continuous",
+      "label": "Remuneração média ajustada",
+      "expression": "media_remuneracao_ajustada"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "aggregation",
+    "chartType": "bars",
+    "domain": "ano",
+    "range": [
+      {
+        "label": "Proporção de vínculos",
+        "value": "per_valor_sum"
+      }
+    ],
+    "filterBy": [
+      "ministerios"
+    ],
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      
+      "ministerios"
+      
+    ]
+  },
+
+
+  "variables": {
+    "ministerios": {
+      "label": "Ministérios",
+      "type": "categorical",
+      "categories": [
+"Ministério Da Educação",
+"Ministério Da Justiça"	,
+"Ministério De Minas E Energia",
+"Ministério Do Meio Ambiente",
+"Ministério Dos Transportes, Portos E Aviação Civil",
+"Ministério Da Indústria, Comércio Exterior E Serviços",
+"Ministério Do Turismo",	
+"Ministério Do Esporte",
+"Ministério Da Cultura",	
+"Ministério Das Relações Exteriores",
+"Ministério Da Integração Nacional",	
+"Ministério Da Ciência, Tecnologia, Inovação E Comunicações",	
+"Ministério Do Trabalho E Emprego",	
+"Ministério Da Agricultura, Pecuária E Abastecimento"	,
+"Ministério Da Fazenda",
+"Ministério Do Planejamento Desenvolvimento E Gestão",
+"Ministério Do Desenvolvimento Social",	
+"Ministério Da Defesa",
+"Ministério Da Saúde"
+
+
+],
+  "phrasePrefix": "que atuam no poder"
+    },
+    "ano": {
+      "label": "Ano",
+      "type": "categorical"
+    },
+    "per_valor": {
+      "label": "Proporção de vínculos",
+      "type": "continuous"
+    }
+  }
+}

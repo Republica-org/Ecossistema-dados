@@ -1,0 +1,59 @@
+{
+  "view": {
+    "type": "data_series",
+    "dataSourceType": "staticValues",
+    "chartType": "lines",
+    "dimensionVariableId": "variavel",
+    "dimensionValueVariableId": "categoria",
+
+    "domain": "ano",
+    "range": ["media_remuneracao_ajustada", "media_remuneracao"],
+    "groupBy": [
+      {
+        "value": "genero",
+        "label": "Gênero"
+      },
+      {
+        "value": "poderes",
+        "label": "Poderes"
+      },
+      {
+        "value": "tipo_vinculo",
+        "label": "Tipo de vínculo"
+      },
+      {
+        "value": "nivel_governo",
+        "label": "Nível de governo"
+      },
+      {
+        "value": "grau_instrucao",
+        "label": "Grau de instrução"
+      }
+    ]
+  },
+
+  "dataSources": {
+    "RAIS_remuneracao_vinculos_publicos": "repositoriodedadosgpsp.perfil_remuneracao.RAIS_remuneracao_vinculos_publicos"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical"
+    },
+    "variavel": {
+      "type": "categorical"
+    },
+    "categoria": {
+      "type": "categorical"
+    },
+    "media_remuneracao": {
+      "type": "continuous",
+      "label": "Remuneração média",
+      "expression": "media_remuneracao"
+    },
+    "media_remuneracao_ajustada": {
+      "type": "continuous",
+      "label": "Remuneração média ajustada",
+      "expression": "media_remuneracao_ajustada"
+    }
+  }
+}

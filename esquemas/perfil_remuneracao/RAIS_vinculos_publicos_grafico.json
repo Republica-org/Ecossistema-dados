@@ -178,8 +178,5 @@
       "type": "continuous",
       "label": "Quantidade de vínculos"
     }
-  },
-  "dataSources": {
-    "RAIS_vinculos_publicos_grafico": "repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_grafico"
   }
 }

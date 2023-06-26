@@ -1,0 +1,27 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Nota",
+        "value": "nota_sum"
+      }
+    ],
+    "groupBy": "sigla_uf",
+    "mapType": "municipalities_by_state",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "id_municipio": {
+      "type": "categorical",
+      "categories": [],
+      "variableId": "id_municipio"
+    },
+   
+    "nota": {
+      "type": "continuous"
+    }
+  }
+  
+  
+}
