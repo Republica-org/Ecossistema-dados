@@ -1,38 +1,44 @@
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "aggregation",
-    "chartType": "lines",
-    "domain": "ano",
     "range": [
       {
         "label": "Proporção de vínculos",
         "value": "proporcao_vinculos_sum"
       }
     ],
-   
+    "domain": "ano",
     "groupBy": [
-      
       "tipo_das"
-      
-    ]
+    ],
+    "chartType": "stacked_areas",
+    "stackOffset": "expand",
+    "numberFormat": {
+      "style": "percent"
+    },
+    "dataSourceType": "aggregation"
   },
-
-
   "variables": {
-    "tipo_das": {
-      "label": "Nível",
+    "ano": {
       "type": "categorical",
-      "categories": ["DAS-1", "DAS-2", "DAS-3", "DAS-4","DAS-5","DAS-6"],
+      "label": "Ano"
+    },
+    "tipo_das": {
+      "type": "categorical",
+      "label": "Nível",
+      "options": [
+        "DAS-1",
+        "DAS-2",
+        "DAS-3",
+        "DAS-4",
+        "DAS-5",
+        "DAS-6"
+      ],
       "phrasePrefix": "que atuam no poder"
     },
-    "ano": {
-      "label": "Ano",
-      "type": "categorical"
-    },
     "proporcao_vinculos": {
-      "label": "Proporção de vínculos",
-      "type": "continuous"
+      "type": "continuous",
+      "label": "Proporção de vínculos"
     }
   }
 }

@@ -1,56 +1,96 @@
+
+
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "aggregation",
-    "chartType": "bars",
-    "domain": "ano",
     "range": [
       {
         "label": "Total de vínculos",
         "value": "quantidade_sum"
+
+
       }
     ],
-    
-    
+    "domain": "ano",
     "groupBy": [
-     
       "genero",
       "cor_raca",
       "faixa_etaria"
-    ]
+    ],
+    "filterBy": [
+      
+      "genero",
+      "cor_raca",
+      "faixa_etaria"
+    ],
+    "chartType": "bars",
+    
+    "dataSourceType": "aggregation"
   },
-
-
   "variables": {
-    "genero": {
-      "label": "Gênero",
+    "ano": {
       "type": "categorical",
-      "phrasePrefix": "do gênero"
+      "label": "Ano",
+      "options": [
+        "2018",
+        "2021"
+      ],
+      "phrasePrefix": "em"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Feminino",
+        "Masculino"
+      ],
+      "phrasePrefix": "do sexo"
     },
     "cor_raca": {
+      "type": "categorical",
       "label": "Cor/raça",
-      "type": "categorical",
-      "phrasePrefix": "que são"
-    },
-    "faixa_etaria": {
-      "label": "Faixa etária",
-      "type": "categorical",
-      "categories": [
-        "Até Fundamental ",
-        "Até Ensino Médio",
-        "Até Ensino Superior Completo",
-        "Até Pós Graduação"
+      "options": [
+        {
+          "id": "Branca",
+          "color": "dark-blue",
+          "label": "Branca"
+        },
+        {
+          "id": "Preta",
+          "color": "orange",
+          "label": "Preta"
+        },
+        {
+          "id": "Parda",
+          "color": "green",
+          "label": "Parda"
+        },
+        {
+          "id": "Indígena",
+          "color": "light-grey",
+          "label": "Indígena"
+        }
       ],
-      "phrasePrefix": "que cursaram"
+      "phrasePrefix": "que atuam na esfera"
     },
     
-    "ano": {
-      "label": "Ano",
-      "type": "categorical"
+    
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "options": [
+        "Entre 18 e 29 anos",
+        "Entre 30 e 49 anos",
+        "Entre 50 e 65 anos",
+        "Acima de 65 anos",
+        "Ignorado"
+      ],
+      "phrasePrefix": "com idade"
     },
+    
     "quantidade": {
-      "label": "Quantidade de vínculos",
-      "type": "continuous"
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
     }
   }
 }

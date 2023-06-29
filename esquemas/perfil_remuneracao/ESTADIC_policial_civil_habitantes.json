@@ -3,15 +3,15 @@
     "type": "br_map_continuous",
     "range": [
       {
-        "label": "Policiais por 1000 hab.",
+        "label": "Total de policiais civis a cada mil habitantes",
         "value": "policiais_por_1000_hab"
       },
       {
-        "label": "Policiais total",
+        "label": "Total de policiais civis",
         "value": "policiais_total"
       }
     ],
-    "groupBy": "sigla_uf",
+   
     "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },

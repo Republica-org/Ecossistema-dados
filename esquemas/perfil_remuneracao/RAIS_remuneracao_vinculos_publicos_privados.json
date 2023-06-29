@@ -8,6 +8,24 @@
 
     "domain": "flag_publico_privado",
     "range": ["media_remuneracao_ajustada", "media_remuneracao"],
+
+
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
+
     "groupBy": [
       {
         "value": "genero",
@@ -38,11 +56,25 @@
   
   "variables": {
     "flag_publico_privado": {
-      "type": "categorical"
+      "type": "categorical",
+      "label":"tipo de setor"
     },
     
     "ano": {
-      "type": "categorical"
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "phrasePrefix": "em"
     },
     "variavel": {
       "type": "categorical"

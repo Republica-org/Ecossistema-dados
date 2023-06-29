@@ -1,0 +1,56 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Quantidade de pessoas que trabalham no mercado formal de trabalho",
+        "value": "quantidade_sum"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "pais": ["Brasil","Chile","Estados Unidos"]
+      }
+    },
+    "domain": "setor",
+    "groupBy":"pais",
+    "filterBy":["genero","pais"],
+    "chartType": "bars",
+    
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    
+    "pais": {
+      "type": "categorical",
+      "label": "Países",
+      "options": [
+        "África do Sul", "Argentina", "Bolivia", "Brasil", "Chile",
+       "Colombia", "Dinamarca", "Estados Unidos", "França", "México",
+       "Peru", "Suécia", "Uruguai", "OCDE"
+      ],
+      "phrasePrefix": "no"
+    },
+    "setor": {
+      "type": "categorical",
+      "label": "setor",
+      "options": [
+        "Público", "Privado"
+      ],
+      "phrasePrefix": "dos"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Feminino", "Masculino"
+      ],
+      "phrasePrefix": "do gênero"
+    },
+    "quantidade": {
+      "type": "continuous",
+      "label": "Quantidade vínculos públicos no mercado formal de trabalho"
+    
+    }
+  }
+}

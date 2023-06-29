@@ -13,36 +13,58 @@
       "poderes"
     ],
     "filterBy": [
-      "ano"
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
     ],
     "chartType": "bars",
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
     "dataSourceType": "aggregation",
     "filterByStateId": "sigla_uf"
   },
   "variables": {
     "ano": {
-      "type": "categorical",
+      "type": "continuous",
       "label": "Ano",
-      "categories": [
-        "1999",
-        "2000",
-        "2001", 
-        "2019"
-      ]
+      "options": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "phrasePrefix": "em"
     },
     "sexo": {
       "type": "categorical",
       "label": "Sexo",
-      "categories": [
-        "Feminino",
-        "Masculino"
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Feminino",
+          "value": "Feminino"
+        },
+        {
+          "color": "green",
+          "label": "Masculino",
+          "value": "Masculino"
+        }
       ],
       "phrasePrefix": "do sexo"
     },
     "esfera": {
       "type": "categorical",
       "label": "Esfera federativa",
-      "categories": [
+      "options": [
         {
           "id": "Municipal",
           "color": "dark-blue",
@@ -69,7 +91,7 @@
     "poderes": {
       "type": "categorical",
       "label": "Poderes",
-      "categories": [
+      "options": [
         "Executivo",
         "Judiciário",
         "Legislativo",
@@ -80,7 +102,7 @@
     "sigla_uf": {
       "type": "categorical",
       "label": "UF",
-      "categories": [
+      "options": [
         "IGNORADO",
         "AC",
         "AL",
@@ -114,7 +136,7 @@
     "faixa_etaria": {
       "type": "categorical",
       "label": "Faixa etária",
-      "categories": [
+      "options": [
         "Entre 18 e 29 anos",
         "Entre 30 e 49 anos",
         "Entre 50 e 65 anos",
@@ -126,7 +148,7 @@
     "tipo_vinculo": {
       "type": "categorical",
       "label": "Tipo de vínculo",
-      "categories": [
+      "options": [
         "Aprendiz contratado",
         "Avulso",
         "CLT",
@@ -143,7 +165,7 @@
     "carga_horaria": {
       "type": "categorical",
       "label": "Carga horária",
-      "categories": [
+      "options": [
         "20 horas",
         "30 horas",
         "40 horas ou mais",
@@ -154,7 +176,7 @@
     "grau_instrucao": {
       "type": "categorical",
       "label": "Grau de instrução",
-      "categories": [
+      "options": [
         "Até Fundamental ",
         "Até Ensino Médio",
         "Até Ensino Superior Completo",
@@ -168,7 +190,7 @@
     },
     "flag_publico_privado": {
       "type": "categorical",
-      "label": "Setor"
+      "label": "setor"
     }
   },
   "dataSources": {

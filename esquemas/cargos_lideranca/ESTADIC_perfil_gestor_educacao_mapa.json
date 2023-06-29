@@ -1,127 +1,99 @@
 {
   "view": {
     "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Perfil do gestor de educação por cor/raça",
+        "value": "cor_raca"
+      },
+      {
+        "label": "Perfil do gestor de educação por gênero",
+        "value": "genero"
+      }
+    ],
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
     "mapType": "states",
-
-    "stateIdVariableId": "sigla_uf",
-
-    "range": ["genero","cor_raca","faixa_etaria","escolaridade_gestor"]
+    "stateIdVariableId": "sigla_uf"
   },
-
-  
   "variables": {
-    "sigla_uf": {
+    "ano": {
+      "type": "continuous",
+      "options": [2018,2021],
+      "variableId": "ano",
+      "phrasePrefix":"no ano de"
+    },
+    "nome": {
       "type": "categorical",
-      "variableId": "sigla_uf",
-      "categories": []
+      "options": [],
+      "variableId": "nome"
     },
     "genero": {
       "type": "categorical",
-      "variableId": "genero",
-      "categories": [
+      "options": [
         {
+          "color": "var(--red)",
           "label": "Feminino",
-          "value": "Feminino",
-          "color": "var(--red)"
+          "value": "Feminino"
         },
         {
+          "color": "var(--green)",
           "label": "Masculino",
-          "value": "Masculino",
-          "color": "var(--green)"
+          "value": "Masculino"
         }
-      ]
+      ],
+      "variableId": "genero"
     },
     "cor_raca": {
       "type": "categorical",
-      "variableId": "cor_raca",
-      "categories": [
+      "options": [
         {
+          "color": "var(--red)",
           "label": "Branca",
-          "value": "Branca",
-          "color": "var(--red)"
+          "value": "Branca"
         },
         {
+          "color": "var(--green)",
           "label": "Preta",
-          "value": "Preta",
-          "color": "var(--green)"
+          "value": "Preta"
         },
         {
+          "color": "var(--blue)",
           "label": "Parda",
-          "value": "Parda",
-          "color": "var(--blue)"
+          "value": "Parda"
         },
         {
+          "color": "var(--orange)",
           "label": "Indígena",
-          "value": "Indígena",
-          "color": "var(--orange)"
+          "value": "Indígena"
         },
         {
+          "color": "var(--purple)",
           "label": "Amarela",
-          "value": "Amarela",
-          "color": "var(--purple)"
+          "value": "Amarela"
         },
         {
+          "color": "var(--grey)",
           "label": "Não informou",
-          "value": "Não informou",
-          "color": "var(--grey)"
+          "value": "Não informou"
         }
-      ]
+      ],
+      "variableId": "cor_raca"
     },
-    "faixa_etaria": {
+    "sigla_uf": {
       "type": "categorical",
-      "variableId": "faixa_etaria",
-      "categories": [
-        {
-          "label": "Entre 30 e 49 anos",
-          "value": "Entre 30 e 49 anos",
-          "color": "var(--red)"
-        },
-        {
-          "label": "Entre 50 e 64 anos",
-          "value": "Entre 50 e 64 anos",
-          "color": "var(--green)"
-        },
-        {
-          "label": "Acima de 65 anos",
-          "value": "Acima de 65 anos",
-          "color": "var(--purple)"
-        }
-      ]
-    },
-    "escolaridade_gestor": {
-      "type": "categorical",
-      "variableId": "escolaridade_gestor",
-      "categories": [
-        {
-          "label": "Ensino superior incompleto",
-          "value": "Ensino superior incompleto",
-          "color": "var(--red)"
-        },
-        {
-          "label": "Ensino superior completo",
-          "value": "Ensino superior completo",
-          "color": "var(--green)"
-        },
-        {
-          "label": "Especialização",
-          "value": "Especialização",
-          "color": "var(--purple)"
-        },
-        {
-          "label": "Mestrado",
-          "value": "Mestrado",
-          "color": "var(--orange)"
-        },
-        {
-          "label": "Doutorado",
-          "value": "Doutorado",
-          "color": "var(--blue)"
-        }
-      ]
-    },
-    "ano": {
-      "variableId": "ano",
-      "type": "continuous"
+      "options": [],
+      "variableId": "sigla_uf"
     }
+    
   }
 }

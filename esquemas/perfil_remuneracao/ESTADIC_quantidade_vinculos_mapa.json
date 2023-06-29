@@ -11,13 +11,18 @@
         "value": "proporcao_tipo"
       }
     ],
-    "groupBy": "sigla_uf",
 
     "filterBy": [
-     
-      "tipo_vinculo"
+      {
+        "type": "single",
+        "variableId": "tipo_vinculo"
+      }
     ],
-
+    "defaultValues": {
+      "filterBy": {
+        "tipo_vinculo": "Estatutários"
+      }
+    },
     "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },
@@ -30,13 +35,19 @@
     "total_estado": {
       "type": "continuous"
     },
+    "ano": {
+      "type": "continuous",
+      "categories": [2021]
+    },
     "quantidade_vinculos": {
       "type": "continuous"
     },
     "tipo_vinculo": {
       "type": "categorical",
-      "categories": [],
-      "variableId": "tipo_vinculo"
+      "label":"Tipode vínculo",
+      "options": ["Estatutários","Celetistas", "Somente comissionados","Estagiários","Sem vínculo permanente"],
+      "variableId": "tipo_vinculo",
+      "phrasePrefix": " "
     }
   },
   

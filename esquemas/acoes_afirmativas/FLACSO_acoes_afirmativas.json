@@ -1,0 +1,10 @@
+{
+  "view": {
+    "type": "table"
+  },
+  "variables": {
+    "ano": "continuous",
+    "categoria": "categorical",
+    "media_remuneracao": "continuous"
+  }
+}

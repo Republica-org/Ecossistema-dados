@@ -1,58 +1,56 @@
+
+
+
 {
   "view": {
     "type": "br_map_continuous",
     "range": [
       {
         "label": "Quantidade de vinculos",
-        "value": "quantidade_vinculos"
+        "value": "quantidade_vinculos_sum"
       },
       {
         "label": "Proporção de vínculos por tipo",
         "value": "proporcao_tipo"
       }
     ],
-    "groupBy": "id_municipio",
 
+    
     "filterBy": [
-     
-      "tipo_vinculo"
+      {
+        "type": "single",
+        "variableId": "tipo_vinculo"
+      }
     ],
-
+    "defaultValues": {
+      "filterBy": {
+        "tipo_vinculo": "Estatutários"
+      }
+    },
     "mapType": "municipalities_by_state",
+    "filterByStateId": "sigla_uf",
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
-    "sigla_uf": {
-      "type": "categorical",
-      "categories": [],
-      "variableId": "sigla_uf"
-    },
-    "id_municipio": {
-      "type": "categorical",
-      "variableId": "id_municipio",
-      "categories": []
-    },
-    "total_municipio": {
-      "type": "continuous"
-    },
-    "quantidade_vinculos": {
-      "type": "continuous"
-    },
+    "ano": "categorical",
+    "taxa": "continuous",
+    "sigla_uf": "categorical",
+    "id_municipio": "categorical",
+    "tipo_ocupacao": "categorical",
+    "nome_municipio": "categorical",
+    "quantidade_vinculos": "continuous",
+    "total_municipio": "continuous",
     "tipo_vinculo": {
       "type": "categorical",
-      "categories": [],
-      "variableId": "tipo_vinculo"
+      "label":"Tipode vínculo",
+      "options": ["Estatutários","Celetistas", "Somente comissionados","Estagiários","Sem vínculo permanente"],
+      "variableId": "tipo_vinculo",
+      "phrasePrefix": " "
     }
   },
   
-
-
   "valueExpressions": {
-    "quantidade_vinculos": "sum(quantidade_vinculos)",
-    "proporcao_tipo": {
-      "label": "Proporção por tipo de vínculo",
-      "value": "sum(quantidade_vinculos) / sum(total_municipio) "
-    }
+    "proporcao_tipo": "SUM(quantidade_vinculos) / SUM(total_municipio)"
   }
 }

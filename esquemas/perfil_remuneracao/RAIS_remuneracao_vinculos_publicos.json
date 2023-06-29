@@ -1,39 +1,41 @@
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "staticValues",
-    "chartType": "lines",
-    "dimensionVariableId": "variavel",
-    "dimensionValueVariableId": "categoria",
-
+    "range": [
+      "media_remuneracao_ajustada",
+      "media_remuneracao"
+    ],
     "domain": "ano",
-    "range": ["media_remuneracao_ajustada", "media_remuneracao"],
     "groupBy": [
       {
-        "value": "genero",
-        "label": "Gênero"
+        "label": "Gênero",
+        "value": "genero"
       },
       {
-        "value": "poderes",
-        "label": "Poderes"
+        "label": "Poderes",
+        "value": "poderes"
       },
       {
-        "value": "tipo_vinculo",
-        "label": "Tipo de vínculo"
+        "label": "Tipo de vínculo",
+        "value": "tipo_vinculo"
       },
       {
-        "value": "nivel_governo",
-        "label": "Nível de governo"
+        "label": "Nível de governo",
+        "value": "nivel_governo"
       },
       {
-        "value": "grau_instrucao",
-        "label": "Grau de instrução"
+        "label": "Grau de instrução",
+        "value": "grau_instrucao"
       }
-    ]
-  },
-
-  "dataSources": {
-    "RAIS_remuneracao_vinculos_publicos": "repositoriodedadosgpsp.perfil_remuneracao.RAIS_remuneracao_vinculos_publicos"
+    ],
+    "chartType": "lines",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
+    "dataSourceType": "staticValues",
+    "dimensionVariableId": "variavel",
+    "dimensionValueVariableId": "categoria"
   },
   "variables": {
     "ano": {

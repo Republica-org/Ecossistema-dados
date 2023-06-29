@@ -1,0 +1,57 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Total de médicos por mil habitantes",
+        "value": "quantidade_vinculos_por_1000_hab"
+        
+      }
+    ],
+
+    "filterBy": [
+        {
+          "type": "single",
+          "variableId": "ano"
+        }
+      ],
+      "defaultValues": {
+        "filterBy": {
+          "ano": 2021
+        }
+      },
+    "mapType": "municipalities_by_state",
+    "filterByStateId": "sigla_uf",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "ano": {
+        "type": "continuous",
+        "label": "Ano",
+        "options": [
+        
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "phrasePrefix": "em"
+      },
+    "taxa": "continuous",
+    "sigla_uf": "categorical",
+    "id_municipio": "categorical",
+    "tipo_ocupacao": "categorical",
+    "nome_municipio": "categorical",
+    "quantidade_vinculos": "continuous",
+    "populacao_domiciliada": "continuous"
+  },
+  "dataSources": {
+    "CNES_medicos_mil_habitantes": "repositoriodedadosgpsp.perfil_remuneracao.CNES_medicos_mil_habitantes"
+  },
+  "valueExpressions": {
+    "quantidade_vinculos_por_1000_hab": "SUM(quantidade_vinculos) / SUM(populacao_domiciliada) * 1000"
+  }
+}

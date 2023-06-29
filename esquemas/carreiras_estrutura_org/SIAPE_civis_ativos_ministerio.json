@@ -1,66 +1,74 @@
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "aggregation",
-    "chartType": "bars",
-    "domain": "ano",
     "range": [
       {
         "label": "Proporção de vínculos",
         "value": "per_valor_sum"
       }
     ],
-    "filterBy": [
+    "domain": "ano",
+    "groupBy": [
       "ministerios"
     ],
-    "groupBy": [
-      {
-        "label": "---",
-        "value": ""
-      },
-      
+    "filterBy": [
       "ministerios"
-      
-    ]
+
+    ],
+    "numberFormat": {
+      "style": "percent"
+    },
+    "chartType": "bars",
+    "defaultValues": {
+      "filterBy": {
+        "ministerios": ["Ministério Da Educação","Ministério Da Saúde","Ministério Do Desenvolvimento Social"]
+      }
+    },
+    "dataSourceType": "aggregation"
   },
-
-
   "variables": {
-    "ministerios": {
-      "label": "Ministérios",
-      "type": "categorical",
-      "categories": [
-"Ministério Da Educação",
-"Ministério Da Justiça"	,
-"Ministério De Minas E Energia",
-"Ministério Do Meio Ambiente",
-"Ministério Dos Transportes, Portos E Aviação Civil",
-"Ministério Da Indústria, Comércio Exterior E Serviços",
-"Ministério Do Turismo",	
-"Ministério Do Esporte",
-"Ministério Da Cultura",	
-"Ministério Das Relações Exteriores",
-"Ministério Da Integração Nacional",	
-"Ministério Da Ciência, Tecnologia, Inovação E Comunicações",	
-"Ministério Do Trabalho E Emprego",	
-"Ministério Da Agricultura, Pecuária E Abastecimento"	,
-"Ministério Da Fazenda",
-"Ministério Do Planejamento Desenvolvimento E Gestão",
-"Ministério Do Desenvolvimento Social",	
-"Ministério Da Defesa",
-"Ministério Da Saúde"
-
-
-],
-  "phrasePrefix": "que atuam no poder"
-    },
     "ano": {
-      "label": "Ano",
-      "type": "categorical"
+      "type": "continuous",
+      "label": "ano",
+      "options": [  
+        1999,
+        2018
+      ],
+      "phrasePrefix": "em"
     },
+    "ministerios": {
+      "type": "categorical",
+      "label": "ministério",
+      "options": [
+        
+        "Ministério Da Educação",
+        "Ministério Da Justiça"	,
+        "Ministério De Minas E Energia",
+        "Ministério Do Meio Ambiente",
+        "Ministério Dos Transportes, Portos E Aviação Civil",
+        "Ministério Da Indústria, Comércio Exterior E Serviços",
+        "Ministério Do Turismo",	
+        "Ministério Do Esporte",
+        "Ministério Da Cultura",	
+        "Ministério Das Relações Exteriores",
+        "Ministério Da Integração Nacional",	
+        "Ministério Da Ciência, Tecnologia, Inovação E Comunicações",	
+        "Ministério Do Trabalho E Emprego",	
+        "Ministério Da Agricultura, Pecuária E Abastecimento"	,
+        "Ministério Da Fazenda",
+        "Ministério Do Planejamento Desenvolvimento E Gestão",
+        "Ministério Do Desenvolvimento Social",	
+        "Ministério Da Defesa",
+        "Ministério Da Saúde"
+
+      ],
+      "phrasePrefix": "no"
+    },
+    
     "per_valor": {
-      "label": "Proporção de vínculos",
-      "type": "continuous"
+      "type": "continuous",
+      "label": "Proporção de vínculos"
     }
   }
+  
 }
