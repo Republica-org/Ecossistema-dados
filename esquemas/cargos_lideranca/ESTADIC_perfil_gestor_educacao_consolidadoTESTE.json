@@ -44,26 +44,11 @@
       "type": "categorical",
       "label": "Cor/raça",
       "options": [
-        {
-          "id": "Branca",
-          "color": "dark-blue",
-          "label": "Branca"
-        },
-        {
-          "id": "Preta",
-          "color": "orange",
-          "label": "Preta"
-        },
-        {
-          "id": "Parda",
-          "color": "green",
-          "label": "Parda"
-        },
-        {
-          "id": "Indígena",
-          "color": "light-grey",
-          "label": "Indígena"
-        }
+        "Branca",
+          "Preta",
+          "Parda",
+          "Indígena"
+         
       ],
       "phrasePrefix": "que atuam na esfera"
     },
