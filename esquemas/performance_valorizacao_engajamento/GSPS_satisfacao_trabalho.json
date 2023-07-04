@@ -1,0 +1,31 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Média de satisfação no trabalho",
+        "value": "media_sum"
+      }
+    ],
+    "domain": "Country",
+    
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    
+    "Country": {
+      "type": "categorical",
+      "label": "País",
+      "options": ["Brazil", "Croatia", "United States", "Kosovo", "Australia",
+      "Slovakia", "Uruguay", "Albania", "Estonia", "Lithuania",
+      "Ukraine", "Chile", "Nigeria", "Colombia", "Romania"
+      ],
+      "phrasePrefix": "que atuam na esfera"
+    },
+    "media": {
+      "type": "continuous",
+      "label": "Média"
+    }
+  }
+}

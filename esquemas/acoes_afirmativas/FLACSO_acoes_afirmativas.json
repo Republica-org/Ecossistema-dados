@@ -2,9 +2,22 @@
   "view": {
     "type": "table"
   },
-  "variables": {
-    "ano": "continuous",
-    "categoria": "categorical",
-    "media_remuneracao": "continuous"
+"variables": {
+"ano":"continuous",
+"abrangencia":"categorical",
+"nome_regiao":"categorical",
+"sigla_uf":"categorical",
+"nome_municipio":"categorical",
+"legislacao":"categorical",
+"regulamentacao":"categorical",
+"tipo_cota":"categorical",
+"flag_comissionado":"continuous",
+"percentual":"categorical",
+"nomenclatura_legislacao":"categorical",
+"forma_identificacao":"categorical",
+"flag_comiss_verificacao":"continuous",
+"vigencia":"categorical",
+"lat":"categorical",
+"lng":"categorical"
   }
 }

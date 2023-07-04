@@ -45,22 +45,22 @@
       "label": "Cor/raça",
       "options": [
         {
-          "id": "Branca",
+          "value": "Branca",
           "color": "dark-blue",
           "label": "Branca"
         },
         {
-          "id": "Preta",
+          "value": "Preta",
           "color": "orange",
           "label": "Preta"
         },
         {
-          "id": "Parda",
+          "value": "Parda",
           "color": "green",
           "label": "Parda"
         },
         {
-          "id": "Indígena",
+          "value": "Indígena",
           "color": "light-grey",
           "label": "Indígena"
         }

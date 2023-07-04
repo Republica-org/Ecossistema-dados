@@ -1,0 +1,19 @@
+{
+  "view": {
+    "type": "table"
+  },
+"variables": {
+  "quesito_sentenca": {
+    "type": "categorical",
+    "label": "Frase/Média"
+  },
+  "media_geral": {
+    "type": "continuous",
+    "label": "Frase/Média"
+  },
+  "Assunto": {
+    "type": "categorical",
+    "label": "Assunto"
+  }
+  }
+}

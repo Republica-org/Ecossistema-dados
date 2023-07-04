@@ -1,0 +1,42 @@
+  {
+    "view": {
+      "type": "data_series",
+      "range": [
+      
+        "mediana_ajustada"
+      ],
+      "domain": "Categoria",
+      "groupBy": [
+        {
+          "label": "Esfera",
+          "value": "Esfera"
+        },
+        {
+          "label": "Esfera e poder",
+          "value": "Esfera e poder"
+        }
+      ],
+      "chartType": "bars",
+      "numberFormat": {
+        "style": "currency",
+        "currency": "BRL"
+      },
+      "dataSourceType": "staticValues",
+      "dimensionVariableId": "Categoria",
+      "dimensionValueVariableId": "Grupo"
+    },
+    "variables": {
+      
+      "Categoria": {
+        "type": "categorical"
+      },
+      "Grupo": {
+        "type": "categorical"
+      },
+      "media_ajustada": {
+        "type": "continuous",
+        "label": "Remuneração mediana",
+        "expression": "edia_ajustada"
+      }
+    }
+  }

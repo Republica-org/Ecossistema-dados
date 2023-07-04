@@ -1,65 +1,57 @@
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "staticValues",
-    "chartType": "bars",
-    "dimensionVariableId": "variavel",
-    "dimensionValueVariableId": "categoria",
-
+    "range": [
+      "media_remuneracao_ajustada",
+      "media_remuneracao"
+    ],
     "domain": "flag_publico_privado",
-    "range": ["media_remuneracao_ajustada", "media_remuneracao"],
-
-
+    "groupBy": [
+      {
+        "label": "Gênero",
+        "value": "genero"
+      },
+      {
+        "label": "Poderes",
+        "value": "poderes"
+      },
+      {
+        "label": "Tipo de vínculo",
+        "value": "tipo_vinculo"
+      },
+      {
+        "label": "Nível de governo",
+        "value": "nivel_governo"
+      },
+      {
+        "label": "Grau de instrução",
+        "value": "grau_instrucao"
+      }
+    ],
     "filterBy": [
       {
         "type": "single",
         "variableId": "ano"
       }
     ],
+    "chartType": "bars",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
     "defaultValues": {
       "filterBy": {
         "ano": 2021
       }
     },
-    "numberFormat": {
-      "style": "currency",
-      "currency": "BRL"
-    },
-
-    "groupBy": [
-      {
-        "value": "genero",
-        "label": "Gênero"
-      },
-      {
-        "value": "poderes",
-        "label": "Poderes"
-      },
-      {
-        "value": "tipo_vinculo",
-        "label": "Tipo de vínculo"
-      },
-      {
-        "value": "nivel_governo",
-        "label": "Nível de governo"
-      },
-      {
-        "value": "grau_instrucao",
-        "label": "Grau de instrução"
-      }
-    ]
+    "dataSourceType": "staticValues",
+    "dimensionVariableId": "variavel",
+    "dimensionValueVariableId": "categoria"
   },
   "filterBy": [
     "flag_publico_privado"
   ],
-
-  
   "variables": {
-    "flag_publico_privado": {
-      "type": "categorical",
-      "label":"tipo de setor"
-    },
-    
     "ano": {
       "type": "continuous",
       "label": "Ano",
@@ -86,6 +78,10 @@
       "type": "continuous",
       "label": "Remuneração média",
       "expression": "media_remuneracao"
+    },
+    "flag_publico_privado": {
+      "type": "categorical",
+      "label": "tipo de setor"
     },
     "media_remuneracao_ajustada": {
       "type": "continuous",

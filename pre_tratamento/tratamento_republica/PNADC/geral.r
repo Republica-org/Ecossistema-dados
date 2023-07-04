@@ -58,80 +58,52 @@ dadosPNADc_14$variables <- transform(dadosPNADc_14$variables, flag_lideranca=ife
 dadosPNADc_13$variables <- transform(dadosPNADc_13$variables, flag_lideranca=ifelse(V4010 >= '1111' & V4010 <= '1439',1,0))
 
 
+########### Super salários! 
+### Pegando os quartis para pirâmide 
 
 
-
-df_servidor_22 = svytotal(x=~interaction(V2007,V2010, V4028,V4014,flag_lideranca), design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" | V4012== "Militar do exército, da marinha, da aeronáutica, da polícia militar ou do corpo de bombeiros militar" ), na.rm=TRUE)
-
-
-df= data.frame(df_servidor_22)
-view(df_servidor_22)
-
-df = rownames_to_column(df, "row_names") # nolint
-view(df)
-sum(df$total)
-
-
-df[1,1]
-
-
-### Pegando os quartis para pirâmide ##Oficial
-
-teste_quantil4 <- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.99842, ci=FALSE, na.rm=TRUE)
-
-teste_quantil4
-
-## Vendo os supersalários. 
-quantidade <- svytotal(x=~V4014, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))), na.rm=TRUE)
-quantidade_super <- svytotal(x=~V4014, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>41650))), na.rm=TRUE)
-
-
-quantidade_super = data.frame(quantidade_super)
-quantidade = data.frame(quantidade)
-
-sum(quantidade_super$total)/sum(quantidade$total)*100
-
+## Aqui eu pego o valor para cada corte
 
 #Até 70%: 
+corte_70<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.70, ci=FALSE, na.rm=TRUE)
+corte_70
 #Até 5.000
 
 #Até 90%:
-#até 10.000
+corte_90<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.90, ci=FALSE, na.rm=TRUE)
+corte_90
+# Até 10.000
 
 #Até 95%
-#até 15000
+corte_95<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.95, ci=FALSE, na.rm=TRUE)
+
+corte_95
+# Até 15.000
 
 # Até 99%
-#27000
+corte_99<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.99, ci=FALSE, na.rm=TRUE)
 
-#Até 99,85%
-#39200
+corte_99
+#Até 27.000
 
+#Até 99,94%
 
+corte_9994<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.9994, ci=FALSE, na.rm=TRUE)
 
-### Verificar supersalarios
-### Vendo os dados da pirâmide!! 
-#quantidade total: 
-6927827+1628540
-
-quantidade = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" ), na.rm=TRUE)
+corte_9994
+#Até 41.650,92
 
 
-quantidade_estatutarios = svytotal(x=~V4012, design=subset(dadosPNADc_22,V4028=="Sim"), na.rm=TRUE)
-quantidade_estatutarios_teto = svytotal(x=~V4012, design=subset(dadosPNADc_22,VD4016>39200 & V4028=="Sim"), na.rm=TRUE)
-
-df = data.frame(quantidade)
-view(df_estatutario)
+### Verificar quantidade que recebe supersalários
 
 
-df_total = data.frame(quantidade_com_militares)
-df_estatutario = data.frame(quantidade_estatutarios)
-df_quantidade_estatutarios_teto = data.frame(quantidade_estatutarios_teto)
+quantidade_total = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" ), na.rm=TRUE)
+quantidade_total
 
-view(df_estatutario)
-view(quantidade_estatutarios_teto)
+quantidade_super = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" & VD4016>41650 ), na.rm=TRUE)
+quantidade_super
 
-## 2022: 
-#10708/6927827
-#0,15%
+#### Fazendo df com valores dos cortes e todos os decis: 
+
+
 
