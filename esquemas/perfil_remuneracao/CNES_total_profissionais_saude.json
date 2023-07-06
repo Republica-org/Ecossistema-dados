@@ -1,63 +1,68 @@
-
-  {
-    "view": {
-      "type": "data_series",
-      "range": [
-        {
-          "label": "Total de vínculos",
-          "value": "quantidade_vinculos_sum"
-        },
-        {
-          "label": "Total de vínculos por 1000 hab",
-          "value": "quantidade_vinculos_por_1000_hab"
-        }
-      ],
-      "domain": "ano",
-      "groupBy": [
-
-        {
-          "label": "---",
-          "value": ""
-        },
-        "tipo_ocupacao"
-      ],
-      "filterBy": [
-        "tipo_ocupacao"
-      ],
-      "chartType": "lines",
-      "dataSourceType": "aggregation",
-      "filterByStateId": "sigla_uf"
-    },
-    "variables": {
-      "ano": {
-        "type": "categorical"
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
       },
-      "sigla_uf": "categorical",
-      "tipo_ocupacao": {
-        "type": "categorical",
-        "label": "Tipo de ocupação",
-        "categories": [
+      "tipo_ocupacao"
+    ],
+    "filterBy": [
+      "tipo_ocupacao"
+    ],
+    "chartType": "lines",
+    "defaultValues": {
+      "groupBy": "tipo_ocupacao",
+      "filterBy": {
+        "tipo_ocupacao": [
           "Técnicos e auxiliares de enfermagem",
           "Médicos",
           "Trabalhadores em serviços de promoção e apoio à saúde",
-          "Enfermeiros e afins",
-          "Cirurgiões-dentistas",
-          "Fisioterapeutas",
-          "Psicólogos e psicanalistas",
-          "Farmacêuticos",
-          "Técnicos de odontologia",
-          "Tecnólogos e técnicos em métodos de diagnósticos e terapêutica",
-          "Nutricionistas",
-          "Assistentes sociais e economistas domésticos",
-          "Outros"
+          "Enfermeiros e afins"
         ]
-      },
-      "quantidade_vinculos": "continuous"
+      }
     },
-    "dataSources": {
-      "CNES_total_profissionais_saude": "repositoriodedadosgpsp.perfil_remuneracao.CNES_total_profissionais_saude"
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label":"Ano"
     },
-    "valueExpressions": {
-      "quantidade_vinculos_por_1000_hab": "SUM(quantidade_vinculos) / 1000"
-    }
+    "sigla_uf": "categorical",
+    "tipo_ocupacao": {
+      "type": "categorical",
+      "label": "Tipo de ocupação",
+      "options": [
+        "Técnicos e auxiliares de enfermagem",
+        "Médicos",
+        "Trabalhadores em serviços de promoção e apoio à saúde",
+        "Enfermeiros e afins",
+        "Cirurgiões-dentistas",
+        "Fisioterapeutas",
+        "Psicólogos e psicanalistas",
+        "Farmacêuticos",
+        "Técnicos de odontologia",
+        "Tecnólogos e técnicos em métodos de diagnósticos e terapêutica",
+        "Nutricionistas",
+        "Assistentes sociais e economistas domésticos",
+        "Outros"
+      ],
+      "phrasePrefix": "de"
+    },
+    "quantidade_vinculos": "continuous"
+  },
+  "dataSources": {
+    "CNES_total_profissionais_saude": "repositoriodedadosgpsp.perfil_remuneracao.CNES_total_profissionais_saude"
   }
+ 
+}

@@ -39,39 +39,51 @@
   },
   "variables": {
     "ano": {
-      "type": "categorical",
+      "type": "continuous",
       "label": "Ano"
     },
     "sexo": {
       "type": "categorical",
-      "label": "Sexo",
-      "categories": [
-        "Feminino",
-        "Masculino"
+      "label": "Gênero",
+      "options": [
+
+
+        {
+          "value": "Feminino",
+          "color": "dark-blue",
+          "label": "Feminino"
+        },
+        {
+          "value": "Masculino",
+          "color": "green",
+          "label": "Masculino"
+        }
+        
+        
       ],
-      "phrasePrefix": "do sexo"
+      "phrasePrefix": "do gênero"
     },
     "esfera": {
       "type": "categorical",
       "label": "Esfera federativa",
-      "categories": [
+      "options": [
         {
-          "id": "Municipal",
+          "value": "Municipal",
           "color": "dark-blue",
           "label": "Municipal"
         },
         {
-          "id": "Estadual",
+          "value": "Estadual",
           "color": "orange",
           "label": "Estadual"
         },
         {
-          "id": "Federal",
+          "value": "Federal",
           "color": "green",
           "label": "Federal"
         },
         {
-          "id": "Outros",
+          "value": "Outros",
           "color": "light-grey",
           "label": "Outros"
         }
@@ -81,18 +93,36 @@
     "poderes": {
       "type": "categorical",
       "label": "Poderes",
-      "categories": [
-        "Executivo",
-        "Judiciário",
-        "Legislativo",
-        "Outros"
+      "options": [
+
+
+        {
+          "value": "Executivo",
+          "color": "dark-blue",
+          "label": "Executivo"
+        },
+        {
+          "value": "Legislativo",
+          "color": "orange",
+          "label": "Legislativo"
+        },
+        {
+          "value": "Judiciário",
+          "color": "green",
+          "label": "Judiciário"
+        },
+        {
+          "value": "Outros",
+          "color": "light-grey",
+          "label": "Outros"
+        }
       ],
       "phrasePrefix": "que atuam no poder"
     },
     "sigla_uf": {
       "type": "categorical",
       "label": "UF",
-      "categories": [
+      "options": [
         "IGNORADO",
         "AC",
         "AL",
@@ -126,36 +156,89 @@
     "faixa_etaria": {
       "type": "categorical",
       "label": "Faixa etária",
-      "categories": [
-        "Entre 18 e 29 anos",
-        "Entre 30 e 49 anos",
-        "Entre 50 e 65 anos",
-        "Acima de 65 anos",
-        "Ignorado"
+      "options": [
+
+
+        {
+          "value": "Entre 18 e 29 anos",
+          "color": "dark-blue",
+          "label": "Entre 18 e 29 anos"
+        },
+        {
+          "value": "Entre 30 e 49 anos",
+          "color": "orange",
+          "label": "Entre 30 e 49 anos"
+        },
+        {
+          "value":  "Entre 50 e 65 anos",
+          "color": "green",
+          "label":  "Entre 50 e 65 anos"
+        },
+        {
+          "value":  "Acima de 65 anos",
+          "color": "red",
+          "label":  "Acima de 65 anos"
+        },
+        {
+          "value":  "Ignorado",
+          "color": "light-grey",
+          "label":  "Ignorado"
+        }
+
+        
       ],
       "phrasePrefix": "com idade"
     },
     "tipo_vinculo": {
       "type": "categorical",
       "label": "Tipo de vínculo",
-      "categories": [
-        "Aprendiz contratado",
+      "options": [
+
+
+        {
+          "value": "Estatutário",
+          "color": "dark-blue",
+          "label": "Estatutário"
+        },
+        {
+          "value": "CLT",
+          "color": "orange",
+          "label": "CLT"
+        },
+        {
+          "value":  "Estatutário não efetivo",
+          "color": "green",
+          "label":  "Estatutário não efetivo"
+        },
+        {
+          "value":  "Diretor",
+          "color": "purple",
+          "label":  "Diretor"
+        },
+        {
+          "value":  "Temporário",
+          "color": "red",
+          "label":  "Ignorado"
+        },
+        {
+          "value":  "Aprendiz contratado",
+          "color": "pale-green",
+          "label":  "Aprendiz contratado"
+        },
+        
         "Avulso",
-        "CLT",
         "CLT/Rural",
         "Contratado/prazo determinado",
-        "Contratado/tempo determinado",
-        "Diretor",
-        "Estatutário",
-        "Estatutário não efetivo",
-        "Temporário"
+        "Contratado/tempo determinado"
+       
+        
       ],
       "phrasePrefix": "com vínculo do tipo"
     },
     "carga_horaria": {
       "type": "categorical",
       "label": "Carga horária",
-      "categories": [
+      "options": [
         "20 horas",
         "30 horas",
         "40 horas ou mais",
@@ -166,11 +249,27 @@
     "grau_instrucao": {
       "type": "categorical",
       "label": "Grau de instrução",
-      "categories": [
-        "Até Fundamental ",
-        "Até Ensino Médio",
-        "Até Ensino Superior Completo",
-        "Até Pós Graduação"
+      "options": [
+        {
+          "value": "Até Fundamental ",
+          "color": "dark-blue",
+          "label": "Até Fundamental "
+        },
+        {
+          "value": "Até Ensino Médio",
+          "color": "orange",
+          "label": "Até Ensino Médio"
+        },
+        {
+          "value":  "Até Ensino Superior Completo",
+          "color": "green",
+          "label":  "Até Ensino Superior Completo"
+        },
+        {
+          "value":  "Até Pós Graduação",
+          "color": "red",
+          "label":  "Até Pós Graduação"
+        }
       ],
       "phrasePrefix": "que cursaram"
     },

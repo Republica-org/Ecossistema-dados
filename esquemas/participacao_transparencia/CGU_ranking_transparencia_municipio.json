@@ -3,19 +3,52 @@
     "type": "br_map_continuous",
     "range": [
       {
-        "label": "Nota",
+        "label": "Nota na Escala Brasil Transparente",
         "value": "nota_sum"
       }
     ],
-    "groupBy": "sigla_uf",
-    "mapType": "municipalities_by_state",
+
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
+    
+    
+"mapType": "municipalities_by_state",
+    "filterByStateId": "sigla_uf",
+    "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
+
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+      
+        2020,
+        2021
+      ],
+      "phrasePrefix": "em"
+    },
     "id_municipio": {
       "type": "categorical",
-      "categories": [],
-      "variableId": "id_municipio"
+      "options": [],
+      "variableId": "id_municipio",
+      "label":"Município"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "label":"Unidade da Federação",
+      "variableId": "sigla_uf"
     },
    
     "nota": {

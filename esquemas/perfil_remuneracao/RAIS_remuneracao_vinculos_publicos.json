@@ -2,8 +2,7 @@
   "view": {
     "type": "data_series",
     "range": [
-      "media_remuneracao_ajustada",
-      "media_remuneracao"
+      "media_remuneracao_ajustada"
     ],
     "domain": "ano",
     "groupBy": [
@@ -39,7 +38,8 @@
   },
   "variables": {
     "ano": {
-      "type": "categorical"
+      "type": "continuous",
+      "label": "Ano"
     },
     "variavel": {
       "type": "categorical"
@@ -47,15 +47,11 @@
     "categoria": {
       "type": "categorical"
     },
-    "media_remuneracao": {
-      "type": "continuous",
-      "label": "Remuneração média",
-      "expression": "media_remuneracao"
-    },
     "media_remuneracao_ajustada": {
       "type": "continuous",
-      "label": "Remuneração média ajustada",
+      "label": "Remuneração média",
       "expression": "media_remuneracao_ajustada"
     }
   }
+  
 }

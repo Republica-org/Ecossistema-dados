@@ -1,11 +1,9 @@
-
 {
-  "view": { 
+  "view": {
     "type": "data_series",
-
     "range": [
       {
-        "label": "Total de vínculos",
+        "label": "Total de professores",
         "value": "quantidade_pessoas_sum"
       }
     ],
@@ -26,8 +24,6 @@
       "faixa_etaria",
       "grau_instrucao"
     ],
-    
-    
     "chartType": "lines",
     "dataSourceType": "aggregation",
     "filterByStateId": "sigla_uf"
@@ -40,56 +36,67 @@
     "genero": {
       "type": "categorical",
       "label": "Gênero",
-      "categories": [
-        "Feminino",
-        "Masculino"
+      "options": [
+        {
+          "value": "Feminino",
+          "color": "dark-blue",
+          "label": "Feminino"
+        },
+        {
+          "value": "Masculino",
+          "color": "green",
+          "label": "Masculino"
+        }
+        
       ],
-      "phrasePrefix": "do sexo"
+      "phrasePrefix": "do gênero"
     },
     "cor_raca": {
       "type": "categorical",
       "label": "Cor/Raça",
-      "categories": [
-        "Parda",
-        "Preta",
-        "Branca",
-        "Amarela",
-        "Indígena",
-        "Não declarado"
+      "options": [
+
+        {
+          "value": "Parda",
+          "color": "dark-blue",
+          "label": "Parda"
+        },
+        {
+          "value": "Preta",
+          "color": "green",
+          "label": "Preta"
+        },
+        {
+          "value":  "Branca",
+          "color": "red",
+          "label":  "Branca"
+        },
+        {
+          "value":  "Amarela",
+          "color": "purple",
+          "label":  "Amarela"
+        },
+        {
+          "value":  "Indígena",
+          "color": "orange",
+          "label": "Indígena"
+        },
+        {
+          "value":  "Não declarado",
+          "color": "light-grey",
+          "label":  "Não declarado"
+        }
+        
+
+
+
       ],
-      "phrasePrefix": "do sexo"
-    },
-    "grau_instrucao": {
-      "type": "categorical",
-      "label": "Grau de instrução",
-      "categories": [
-        "Até Ensino Superior Completo",
-        "Até Pós Graduação ou Mestrado",
-        "Até Ensino Fundamental",
-        "Até Ensino Médio",
-        "Até Doutorado"
-      ],
-      "phrasePrefix": "do sexo"
-    },
-    "faixa_etaria": {
-      "type": "categorical",
-      "label": "Faixa etária",
-      "categories": [
-        "Entre 18-29",
-        "Entre 30-49",
-        "Entre 50-64",
-        "Acima de 65"
-      ],
-      "phrasePrefix": "do sexo"
-    },
-    "quantidade_pessoas": {
-      "type": "continuous",
-      "label": "Quantidade de vínculos"
+      "phrasePrefix": "da cor/raça"
     },
     "sigla_uf": {
       "type": "categorical",
       "label": "UF",
-      "categories": [
+      "options": [
         "IGNORADO",
         "AC",
         "AL",
@@ -119,6 +126,70 @@
         "SP",
         "TO"
       ]
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "options": [
+        {
+          "value": "Entre 18 e 29 anos",
+          "color": "dark-blue",
+          "label": "Entre 18 e 29 anos"
+        },
+        {
+          "value": "Entre 30 e 49 anos",
+          "color": "orange",
+          "label": "Entre 30 e 49 anos"
+        },
+        {
+          "value":  "Entre 50 e 64 anos",
+          "color": "green",
+          "label":  "Entre 50 e 64 anos"
+        },
+        {
+          "value":  "Acima de 64 anos",
+          "color":   "red",
+          "label":  "Acima de 64 anos"
+        }
+      ],
+      "phrasePrefix": "com idade"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "label": "Grau de instrução",
+      "options": [
+        {
+          "value": "Até Fundamental ",
+          "color": "dark-blue",
+          "label": "Até Fundamental "
+        },
+        {
+          "value": "Até Ensino Médio",
+          "color": "orange",
+          "label": "Até Ensino Médio"
+        },
+        {
+          "value":  "Até Ensino Superior Completo",
+          "color": "green",
+          "label":  "Até Ensino Superior Completo"
+        },
+        {
+          "value":  "Até Pós Graduação ou Mestrado",
+          "color": "red",
+          "label":  "Até Pós Graduação ou Mestrado"
+        },
+        {
+          "value":  "Até Doutorado",
+          "color": "blue",
+          "label":  "Até Doutorado"
+        }
+
+      ],
+      "phrasePrefix": "que cursaram"
+    },
+    "quantidade_pessoas": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
     }
   }
 }

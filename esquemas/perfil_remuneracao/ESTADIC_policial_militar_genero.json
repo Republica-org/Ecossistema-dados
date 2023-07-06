@@ -5,7 +5,7 @@
 
     "range": [
       {
-        "label": "Total de policiais civis",
+        "label": "Total de policiais militares",
         "value": "quantidade_pessoas_sum"
       }
     ],
@@ -14,12 +14,7 @@
     "chartType": "bars",
     "dataSourceType": "aggregation",
 
-    "groupBy": [
-      {
-        "label": "---",
-        "value": ""
-      }
-    ],
+    
 
     "filterByStateId": "sigla_uf"
 
@@ -28,21 +23,29 @@
     
     "genero": {
       "type": "categorical",
-      "label": "Sexo",
-      "categories": [
-        "feminino",
-        "masculino"
+      "label": "Gênero",
+      "options": [
+        {
+          "value": "Feminino",
+          "color": "dark-blue",
+          "label": "Feminino"
+        },
+        {
+          "value": "Masculino",
+          "color": "green",
+          "label": "Masculino"
+        }
       ],
       "phrasePrefix": "do sexo"
     },
     "quantidade_pessoas": {
       "type": "continuous",
-      "label": "Quantidade de pessoas"
+      "label": "Quantidade de policiais militares"
     },
     "sigla_uf": {
       "type": "categorical",
       "label": "UF",
-      "categories": [
+      "options": [
         "IGNORADO",
         "AC",
         "AL",

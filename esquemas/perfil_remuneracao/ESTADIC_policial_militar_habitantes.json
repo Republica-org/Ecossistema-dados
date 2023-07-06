@@ -1,3 +1,4 @@
+
 {
   "view": {
     "type": "br_map_continuous",
@@ -11,14 +12,13 @@
         "value": "policiais_total"
       }
     ],
-    
     "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "sigla_uf": {
       "type": "categorical",
-      "categories": [],
+      "options": [],
       "variableId": "sigla_uf"
     },
     "pop_projetada": {

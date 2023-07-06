@@ -1,0 +1,49 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": "existencia_priorizacao_cargo_mulher",
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "variableId": "ano"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    },
+    "nome_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome_municipio"
+    },
+    "existencia_priorizacao_cargo_mulher": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "existencia_priorizacao_cargo_mulher"
+    }
+  },
+  "dataSources": {
+    "MUNIC_politica_mulheres": "repositoriodedadosgpsp.acoes_afirmativas.MUNIC_politica_mulheres"
+  }
+}

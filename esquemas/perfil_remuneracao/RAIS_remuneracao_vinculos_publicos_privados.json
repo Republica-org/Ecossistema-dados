@@ -2,8 +2,7 @@
   "view": {
     "type": "data_series",
     "range": [
-      "media_remuneracao_ajustada",
-      "media_remuneracao"
+      "media_remuneracao_ajustada"
     ],
     "domain": "flag_publico_privado",
     "groupBy": [
@@ -15,10 +14,7 @@
         "label": "Poderes",
         "value": "poderes"
       },
-      {
-        "label": "Tipo de vínculo",
-        "value": "tipo_vinculo"
-      },
+      
       {
         "label": "Nível de governo",
         "value": "nivel_governo"
@@ -74,18 +70,14 @@
     "categoria": {
       "type": "categorical"
     },
-    "media_remuneracao": {
-      "type": "continuous",
-      "label": "Remuneração média",
-      "expression": "media_remuneracao"
-    },
+    
     "flag_publico_privado": {
       "type": "categorical",
-      "label": "tipo de setor"
+      "label": "Tipo de setor"
     },
     "media_remuneracao_ajustada": {
       "type": "continuous",
-      "label": "Remuneração média ajustada",
+      "label": "Remuneração média",
       "expression": "media_remuneracao_ajustada"
     }
   }

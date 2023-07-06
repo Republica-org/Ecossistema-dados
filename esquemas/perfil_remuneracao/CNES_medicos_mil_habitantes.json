@@ -5,41 +5,40 @@
       {
         "label": "Total de médicos por mil habitantes",
         "value": "quantidade_vinculos_por_1000_hab"
-        
+      },
+      {
+        "label": "Total de médicos",
+        "value": "quantidade_vinculos_sum"
       }
     ],
-
-    "filterBy": [
-        {
-          "type": "single",
-          "variableId": "ano"
-        }
-      ],
-      "defaultValues": {
-        "filterBy": {
-          "ano": 2021
-        }
-      },
     "mapType": "municipalities_by_state",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
     "filterByStateId": "sigla_uf",
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
     "ano": {
-        "type": "continuous",
-        "label": "Ano",
-        "options": [
-        
-          2016,
-          2017,
-          2018,
-          2019,
-          2020,
-          2021
-        ],
-        "phrasePrefix": "em"
-      },
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "phrasePrefix": "em"
+    },
     "taxa": "continuous",
     "sigla_uf": "categorical",
     "id_municipio": "categorical",

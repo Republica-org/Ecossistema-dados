@@ -3,18 +3,45 @@
     "type": "br_map_continuous",
     "range": [
       {
-        "label": "Nota",
+        "label": "Nota na Escala Brasil Transparente",
         "value": "nota_sum"
       }
     ],
+
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
+
+
+
     "groupBy": "sigla_uf",
     "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
+
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+      
+        2020,
+        2021
+      ],
+      "phrasePrefix": "em"
+    },
     "sigla_uf": {
       "type": "categorical",
-      "categories": [],
+      "options": [],
+      "label":"Unidade da Federação",
       "variableId": "sigla_uf"
     },
    
