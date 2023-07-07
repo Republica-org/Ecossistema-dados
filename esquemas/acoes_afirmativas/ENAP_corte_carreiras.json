@@ -1,0 +1,74 @@
+{
+    "view": {
+      "type": "data_series",
+      "range": [
+        {
+          "label": "Total de ingressantes",
+          "value": "valor_sum"
+        },
+        {
+          "label": "Proporção de ingressantes",
+          "value": "prop_sum",
+          "numberFormat": {
+            "style": "percent",
+            "minimumFractionDigits": 2
+          }
+        }
+      ],
+      "domain": "tipo_ingresso",
+      "groupBy": [
+        "carreiras_selecionadas"
+      ],
+      "filterBy": [
+        "carreiras_selecionadas"
+      ],
+      "chartType": "bars",
+      "defaultValues": {
+        "filterBy": {
+          "carreiras_selecionadas": [
+            "Assistente Em Administracao",
+            "Professor Ens Basico Tecn Tecn",
+            "Policial Rodoviario Federal"
+          ]
+        }
+      },
+      "dataSourceType": "aggregation"
+    },
+    "variables": {
+      "prop": {
+        "type": "continuous",
+        "label": "Proporção de ingressantes"
+      },
+      "valor": {
+        "type": "continuous",
+        "label": "Total de ingressantes"
+      },
+      "tipo_ingresso": {
+        "type": "categorical",
+        "label": "Tipo de ingresso",
+        "options": [
+          "Ampla Concorrência",
+          "Cotista"
+        ],
+        "phrasePrefix": "em"
+      },
+      "carreiras_selecionadas": {
+        "type": "categorical",
+        "label": "Carreiras",
+        "options": [
+          "Administrador",
+          "Agente De Policia Federal 3A C",
+          "Assistente Em Administracao",
+          "Aux Em Administracao",
+          "Policial Rodoviario Federal",
+          "Professor Ens Basico Tecn Tecn",
+          "Tec De Tecnologia Da Informaca",
+          "Tec Infor Geograficas E Estati",
+          "Tecnico De Laboratorio Area",
+          "Tecnico Do Seguro Social",
+          "Tecnico Em Assuntos Educaciona"
+        ],
+        "phrasePrefix": "nas carreiras de"
+      }
+    }
+  }

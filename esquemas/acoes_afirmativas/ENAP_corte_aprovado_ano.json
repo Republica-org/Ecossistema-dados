@@ -1,0 +1,30 @@
+
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Proporção de cotistas aprovados",
+        "value": "per_cotistas_sum"
+      }
+    ],
+    "domain": "ano",
+    "numberFormat": {
+      "style": "percent"
+    },
+    
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "per_cotistas": {
+      "type": "continuous",
+      "label": "Proporção de cotistas aprovados"
+    }
+  }
+}

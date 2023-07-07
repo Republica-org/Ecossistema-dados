@@ -1,0 +1,36 @@
+
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Total de cargos e funções ocupadas",
+        "value": "valor_sum"
+      }
+    ],
+    "domain": "codigo_funcao_cargo",
+    
+
+    "groupBy": [
+      "forma_identificacao"
+    ],
+    
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "codigo_funcao_cargo": {
+      "type": "categorical",
+      "label": "Código da função ou do cargo"
+    },
+    "forma_identificacao": {
+      "type": "categorical",
+      "label": "Tipo de entrada"
+    },
+    "valor": {
+      "type": "continuous",
+      "label": "Total de cargos e funções ocupadas"
+    }
+  }
+}
