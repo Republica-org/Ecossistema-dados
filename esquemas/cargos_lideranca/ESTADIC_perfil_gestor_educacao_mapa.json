@@ -9,8 +9,17 @@
       {
         "label": "Perfil do gestor de educação por gênero",
         "value": "genero"
+      },
+      {
+        "label": "Perfil do gestor de educação por faixa etária",
+        "value": "faixa_etaria"
+      },
+      {
+        "label": "Perfil do gestor de educação por escolaridade",
+        "value": "escolaridade"
       }
     ],
+    "mapType": "states",
     "filterBy": [
       {
         "type": "single",
@@ -22,15 +31,18 @@
         "ano": 2021
       }
     },
-    "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
       "type": "continuous",
-      "options": [2018,2021],
+      "options": [
+        2018,
+        2021
+      ],
       "variableId": "ano",
-      "phrasePrefix":"no ano de"
+      "phrasePrefix": "no ano de",
+      "label":"Ano"
     },
     "nome": {
       "type": "categorical",
@@ -89,11 +101,62 @@
       ],
       "variableId": "cor_raca"
     },
+    "faixa_etaria": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Entre 30-49",
+          "value": "Entre 30-49"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Entre 50-64",
+          "value": "Entre 50-64"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
+        }
+      ],
+      "variableId": "faixa_etaria"
+    },
+    "escolaridade": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Ensino superior incompleto",
+          "value": "Ensino superior incompleto"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Ensino superior completo",
+          "value": "Ensino superior completo"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Especialização",
+          "value": "Especialização"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Mestrado",
+          "value": "Mestrado"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Doutorado",
+          "value": "Doutorado"
+        }
+      ],
+      "variableId": "escolaridade"
+    },
     "sigla_uf": {
       "type": "categorical",
       "options": [],
       "variableId": "sigla_uf"
     }
-    
   }
 }

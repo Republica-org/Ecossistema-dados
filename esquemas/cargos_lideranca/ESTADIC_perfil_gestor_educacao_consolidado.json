@@ -3,7 +3,7 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Total de vínculos",
+        "label": "Total de gestores",
         "value": "quantidade_sum"
       }
     ],
@@ -11,12 +11,14 @@
     "groupBy": [
       "genero",
       "cor_raca",
-      "faixa_etaria"
+      "faixa_etaria",
+      "escolaridade"
     ],
     "filterBy": [
       "genero",
       "cor_raca",
-      "faixa_etaria"
+      "faixa_etaria",
+      "escolaridade"
     ],
     "chartType": "bars",
     "dataSourceType": "aggregation"
@@ -35,8 +37,17 @@
       "type": "categorical",
       "label": "Gênero",
       "options": [
-        "Feminino",
-        "Masculino"
+        
+        {
+          "value": "Feminino",
+          "color": "dark-blue",
+          "label": "Feminino"
+        },
+        {
+          "value": "Masculino",
+          "color": "green",
+          "label": "Masculino"
+        }
       ],
       "phrasePrefix": "do sexo"
     },
@@ -45,27 +56,59 @@
       "label": "Cor/raça",
       "options": [
         {
-          "value": "Branca",
           "color": "dark-blue",
-          "label": "Branca"
+          "label": "Branca",
+          "value": "Branca"
         },
         {
-          "value": "Preta",
           "color": "orange",
-          "label": "Preta"
+          "label": "Preta",
+          "value": "Preta"
         },
         {
-          "value": "Parda",
           "color": "green",
-          "label": "Parda"
+          "label": "Parda",
+          "value": "Parda"
         },
         {
-          "value": "Indígena",
           "color": "light-grey",
-          "label": "Indígena"
+          "label": "Indígena",
+          "value": "Indígena"
         }
       ],
-      "phrasePrefix": "que atuam na esfera"
+      "phrasePrefix": "da cor/raça"
+    },
+    "escolaridade": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "red",
+          "label": "Ensino superior incompleto",
+          "value": "Ensino superior incompleto"
+        },
+        {
+          "color": "green",
+          "label": "Ensino superior completo",
+          "value": "Ensino superior completo"
+        },
+        {
+          "color": "blue",
+          "label": "Especialização",
+          "value": "Especialização"
+        },
+        {
+          "color": "orange",
+          "label": "Mestrado",
+          "value": "Mestrado"
+        },
+        {
+          "color": "purple",
+          "label": "Doutorado",
+          "value": "Doutorado"
+        }
+      ],
+      "variableId": "escolaridade",
+      "label":"Escolaridade"
     },
     "quantidade": {
       "type": "continuous",

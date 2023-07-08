@@ -1,0 +1,96 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      
+
+      {
+        "label": "Proporção de acertos",
+        "value": "proporcao_acertos_sum",
+        "numberFormat": {
+          "style": "percent",
+          "minimumFractionDigits": 2
+        }
+      },
+
+      {
+        "label": "Acertos na Dimensão I (Gestão da Informação)",
+        "value": "dimensao_I_sum",
+        "numberFormat": {
+         "style":"decimal",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+
+      },
+      {
+        "label": "Acertos na Dimensão II (Informações Contábeis)",
+        "value": "dimensao_II_sum"
+      },
+      {
+        "label": "Acertos na Dimensão III (Informações Fiscais)",
+        "value": "dimensao_III_sum"
+      },
+      {
+        "label": " Acertos na Dimensão IV (Informações Contábeis x Informações Fiscais)",
+        "value": "dimensao_IV_sum_sum"
+      }
+    ],
+
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 
+        
+        2021
+      }
+    },
+
+    "groupBy": "sigla_uf",
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2019,
+        2020,
+        2021
+      ],
+      "phrasePrefix": "em"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "label":"Unidade da Federação",
+      "variableId": "sigla_uf"
+    },
+   
+    "dimensao_I": {
+      "type": "continuous"
+    },
+    "dimensao_II": {
+      "type": "continuous"
+    },
+    "dimensao_III": {
+      "type": "continuous"
+    },
+    "dimensao_IV": {
+      "type": "continuous"
+    },
+    
+    "proporcao_acertos": {
+      "type": "continuous"
+    }
+  }
+  
+  
+}

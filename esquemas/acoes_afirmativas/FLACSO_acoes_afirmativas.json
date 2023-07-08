@@ -2,22 +2,22 @@
   "view": {
     "type": "table"
   },
-"variables": {
-"ano":"continuous",
-"abrangencia":"categorical",
-"nome_regiao":"categorical",
-"sigla_uf":"categorical",
-"nome_municipio":"categorical",
-"legislacao":"categorical",
-"regulamentacao":"categorical",
-"tipo_cota":"categorical",
-"flag_comissionado":"continuous",
-"percentual":"categorical",
-"nomenclatura_legislacao":"categorical",
-"forma_identificacao":"categorical",
-"flag_comiss_verificacao":"continuous",
-"vigencia":"categorical",
-"lat":"categorical",
-"lng":"categorical"
+  "variables": {
+    "ano": {"variableId":"ano","type":"continuous","label":"Ano"},
+    "lat": "categorical",
+    "lng": "categorical",
+    "sigla_uf": "categorical",
+    "vigencia": "categorical",
+    "tipo_cota": "categorical",
+    "legislacao": "categorical",
+    "percentual": "categorical",
+    "abrangencia": "categorical",
+    "nome_regiao": "categorical",
+    "nome_municipio": "categorical",
+    "regulamentacao": "categorical",
+    "flag_comissionado": "continuous",
+    "forma_identificacao": "categorical",
+    "flag_comiss_verificacao": "continuous",
+    "nomenclatura_legislacao": "categorical"
   }
 }

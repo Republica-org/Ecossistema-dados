@@ -7,11 +7,15 @@
         "value": "quantidade_vinculos"
       },
       {
-        "label": "Proporção de vínculos por tipo",
-        "value": "proporcao_tipo"
-      }
+        "label": "Proporção de vínculos que são",
+        "value": "proporcao_tipo",
+        "numberFormat": {
+          "style": "percent",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+      }}
     ],
-
+    "mapType": "states",
     "filterBy": [
       {
         "type": "single",
@@ -23,41 +27,45 @@
         "tipo_vinculo": "Estatutários"
       }
     },
-    "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
+    "ano": {
+      "type": "continuous",
+      "categories": [
+        2021
+      ]
+    },
     "sigla_uf": {
       "type": "categorical",
       "categories": [],
       "variableId": "sigla_uf"
     },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipode vínculo",
+      "options": [
+        "Estatutários",
+        "Celetistas",
+        "Somente comissionados",
+        "Estagiários",
+        "Sem vínculo permanente"
+      ],
+      "variableId": "tipo_vinculo",
+      "phrasePrefix": " "
+    },
     "total_estado": {
       "type": "continuous"
     },
-    "ano": {
-      "type": "continuous",
-      "categories": [2021]
-    },
     "quantidade_vinculos": {
       "type": "continuous"
-    },
-    "tipo_vinculo": {
-      "type": "categorical",
-      "label":"Tipode vínculo",
-      "options": ["Estatutários","Celetistas", "Somente comissionados","Estagiários","Sem vínculo permanente"],
-      "variableId": "tipo_vinculo",
-      "phrasePrefix": " "
     }
   },
-  
-
-
   "valueExpressions": {
-    "quantidade_vinculos": "sum(quantidade_vinculos)",
     "proporcao_tipo": {
       "label": "Proporção por tipo de vínculo",
       "value": "sum(quantidade_vinculos) / sum(total_estado) "
-    }
+    },
+    "quantidade_vinculos": "sum(quantidade_vinculos)"
   }
 }

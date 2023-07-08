@@ -4,7 +4,9 @@
     "range": [
       {
         "label": "Nota na Escala Brasil Transparente",
-        "value": "nota_sum"
+        "value": "nota_avg"
+        
+
       }
     ],
 

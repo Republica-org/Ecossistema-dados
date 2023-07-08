@@ -1,56 +1,131 @@
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "aggregation",
-    "chartType": "bars",
-    "domain": "ano",
     "range": [
       {
-        "label": "Total de vínculos",
+        "label": "Total de gestores",
         "value": "quantidade_sum"
       }
     ],
-    
-    
+    "domain": "ano",
     "groupBy": [
-     
       "genero",
       "cor_raca",
-      "faixa_etaria"
-    ]
+      "faixa_etaria",
+      "escolaridade"
+    ],
+    "filterBy": [
+      "genero",
+      "cor_raca",
+      "faixa_etaria",
+      "escolaridade"
+    ],
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
   },
-
-
   "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2018,
+        2021
+      ],
+      "phrasePrefix": "em"
+    },
     "genero": {
-      "label": "Gênero",
       "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        
+        {
+          "value": "Feminino",
+          "color": "dark-blue",
+          "label": "Feminino"
+        },
+        {
+          "value": "Masculino",
+          "color": "green",
+          "label": "Masculino"
+        }
+      ],
       "phrasePrefix": "do gênero"
     },
     "cor_raca": {
+      "type": "categorical",
       "label": "Cor/raça",
-      "type": "categorical",
-      "phrasePrefix": "que são"
-    },
-    "faixa_etaria": {
-      "label": "Faixa etária",
-      "type": "categorical",
-      "categories": [
-        "Até Fundamental ",
-        "Até Ensino Médio",
-        "Até Ensino Superior Completo",
-        "Até Pós Graduação"
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Branca",
+          "value": "Branca"
+        },
+        {
+          "color": "orange",
+          "label": "Preta",
+          "value": "Preta"
+        },
+        {
+          "color": "green",
+          "label": "Parda",
+          "value": "Parda"
+        },
+        {
+          "color": "light-grey",
+          "label": "Indígena",
+          "value": "Indígena"
+        }
       ],
-      "phrasePrefix": "que cursaram"
+      "phrasePrefix": "da cor/raça"
     },
-    
-    "ano": {
-      "label": "Ano",
-      "type": "categorical"
+    "escolaridade": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "red",
+          "label": "Ensino superior incompleto",
+          "value": "Ensino superior incompleto"
+        },
+        {
+          "color": "green",
+          "label": "Ensino superior completo",
+          "value": "Ensino superior completo"
+        },
+        {
+          "color": "blue",
+          "label": "Especialização",
+          "value": "Especialização"
+        },
+        {
+          "color": "orange",
+          "label": "Mestrado",
+          "value": "Mestrado"
+        },
+        {
+          "color": "purple",
+          "label": "Doutorado",
+          "value": "Doutorado"
+        }
+      ],
+      "variableId": "escolaridade",
+      "label":"Escolaridade",
+      "phrasePrefix": "com"
     },
     "quantidade": {
-      "label": "Quantidade de vínculos",
-      "type": "continuous"
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "options": [
+        "Entre 18-29",
+        "Entre 30-49",
+        "Entre 50-64",
+        "Acima de 65"
+      ],
+      "variableId": "faixa_etaria",
+      "phrasePrefix": "com idade"
     }
   }
 }

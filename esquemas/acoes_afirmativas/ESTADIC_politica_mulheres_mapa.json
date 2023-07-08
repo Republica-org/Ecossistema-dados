@@ -2,12 +2,11 @@
   "view": {
     "type": "br_map_categorical",
     "range": {"value":"existencia_priorizacao_cargo_mulher",
-    "label":"Existência de política de priorização de mulheres para cargos de liderança"
+               "label":"Existência de política de priorização de mulheres para cargos de liderança"
 
 },
-    "mapType": "municipalities_by_state",
-    "stateIdVariableId": "sigla_uf",
-    "municipalityIdVariableId": "id_municipio"
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
@@ -18,16 +17,6 @@
       "type": "categorical",
       "options": [],
       "variableId": "sigla_uf"
-    },
-    "id_municipio": {
-      "type": "categorical",
-      "options": [],
-      "variableId": "id_municipio"
-    },
-    "nome_municipio": {
-      "type": "categorical",
-      "options": [],
-      "variableId": "nome_municipio"
     },
     "existencia_priorizacao_cargo_mulher": {
       "type": "categorical",
@@ -47,6 +36,6 @@
     }
   },
   "dataSources": {
-    "MUNIC_politica_mulheres": "repositoriodedadosgpsp.acoes_afirmativas.MUNIC_politica_mulheres"
+    "ESTADIC_politica_mulheres": "repositoriodedadosgpsp.acoes_afirmativas.ESTADIC_politica_mulheres"
   }
 }

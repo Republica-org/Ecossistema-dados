@@ -12,7 +12,7 @@ SELECT ano, sexo, poderes,
 
 esfera, 
 
-sigla_uf,  "publico" as flag_publico_privado, sum(quantidade_vinculos) as quantidade_vinculos
+sigla_uf,  "Público" as flag_publico_privado, sum(quantidade_vinculos) as quantidade_vinculos
 
 FROM `repositoriodedadosgpsp.Datalake.Republica_vinculos_publicos` 
 
@@ -35,7 +35,7 @@ SELECT ano, sexo, poderes,
 
 esfera, 
 
-sigla_uf,"privado" as flag_publico_privado, sum(quantidade_vinculos) as quantidade_vinculos
+sigla_uf,"Privado" as flag_publico_privado, sum(quantidade_vinculos) as quantidade_vinculos
 
 FROM `repositoriodedadosgpsp.Datalake.RAIS_vinculos_privados` 
 

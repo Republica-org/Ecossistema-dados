@@ -24,25 +24,50 @@
   },
   "variables": {
     "ano": {
-      "type": "categorical",
+      "type": "continuous",
       "label": "Ano"
     },
     "tipo_vinculo": {
       "type": "categorical",
       "label": "Tipo de vínculo",
-      "categories": [
-        "Celetistas",
-        "Estatutários",
-        "Estagiários",
-        "Somente comissionados",
-        "Sem vínculo permanente"
+      "options": [
+
+
+
+
+        {
+          "value": "Estatutários",
+          "color": "dark-blue",
+          "label": "Estatutários"
+        },
+        {
+          "value": "Celetistas",
+          "color": "orange",
+          "label": "Celetistas"
+        },
+        {
+          "value":  "Somente comissionados",
+          "color": "green",
+          "label":  "Somente comissionados"
+        },
+        {
+          "value":  "Somente comissionados",
+          "color": "purple",
+          "label":  "Somente comissionados"
+        },
+        {
+          "value":  "Sem vínculo permanente",
+          "color": "red",
+          "label":  "Sem vínculo permanente"
+        }
+        
       ],
-      "phrasePrefix": "do vínculo"
+      "phrasePrefix": "que são"
     },
     "sigla_uf": {
       "type": "categorical",
       "label": "UF",
-      "categories": [
+      "options": [
         "IGNORADO",
         "AC",
         "AL",

@@ -1,6 +1,3 @@
-
-
-
 {
   "view": {
     "type": "br_map_continuous",
@@ -10,12 +7,16 @@
         "value": "quantidade_vinculos_sum"
       },
       {
-        "label": "Proporção de vínculos por tipo",
-        "value": "proporcao_tipo"
+        "label": "Proporção de vínculos que são",
+        "value": "proporcao_tipo",
+        "numberFormat": {
+          "style": "percent",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+      }
       }
     ],
-
-    
+    "mapType": "municipalities_by_state",
     "filterBy": [
       {
         "type": "single",
@@ -27,7 +28,6 @@
         "tipo_vinculo": "Estatutários"
       }
     },
-    "mapType": "municipalities_by_state",
     "filterByStateId": "sigla_uf",
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
@@ -37,19 +37,24 @@
     "taxa": "continuous",
     "sigla_uf": "categorical",
     "id_municipio": "categorical",
-    "tipo_ocupacao": "categorical",
-    "nome_municipio": "categorical",
-    "quantidade_vinculos": "continuous",
-    "total_municipio": "continuous",
     "tipo_vinculo": {
       "type": "categorical",
-      "label":"Tipode vínculo",
-      "options": ["Estatutários","Celetistas", "Somente comissionados","Estagiários","Sem vínculo permanente"],
+      "label": "Tipode vínculo",
+      "options": [
+        "Estatutários",
+        "Celetistas",
+        "Somente comissionados",
+        "Estagiários",
+        "Sem vínculo permanente"
+      ],
       "variableId": "tipo_vinculo",
       "phrasePrefix": " "
-    }
+    },
+    "tipo_ocupacao": "categorical",
+    "nome_municipio": "categorical",
+    "total_municipio": "continuous",
+    "quantidade_vinculos": "continuous"
   },
-  
   "valueExpressions": {
     "proporcao_tipo": "SUM(quantidade_vinculos) / SUM(total_municipio)"
   }

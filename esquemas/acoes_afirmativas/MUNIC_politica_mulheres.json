@@ -1,0 +1,34 @@
+{
+  "view": {
+    "type": "pie",
+    "range": [
+      {
+        "label": "Municípios ",
+        "value": "count_all"
+      }
+    ],
+    "domain": "existencia_priorizacao_cargo_mulher"
+  },
+  "variables": {
+    "existencia_priorizacao_cargo_mulher": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "existencia_priorizacao_cargo_mulher",
+      "label": "política de priorização de cargos para mulheres em chefia e assessoramento"
+    }
+  },
+  "dataSources": {
+    "MUNIC_politica_mulheres": "repositoriodedadosgpsp.acoes_afirmativas.MUNIC_politica_mulheres"
+  }
+}

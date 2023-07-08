@@ -67,6 +67,26 @@ Para elaboração desta tabela foi utilizada a RAIS não identificada existente 
 
 <br>
 
+
+<details>
+  <summary><b> Dicionário de variáveis:</b></summary>
+
+| Variável | Tipo | Descrição | Categorias | 
+| --- | --- | --- | --- |
+| `ano` | Inteiro | Ano de referência da observação| | 
+| `sexo` | String | Gênero autodeclarado ou não| Feminino; Masculino | 
+| `poderes` | String | Poder abrangente ao nível de esfera referente a observação| Executivo; Legislativo; Judiciário; Outros | 
+| `grau_intrucao` | String | Ano de referência da observação| Até Fundamental; Até Ensino Médio; Até Ensino Superior Completo; Até Pós Graduação  | 
+| `esfera` | String | Nível da esfera do governo referente da observação| Federal; Estadual; Municipal; Outros | 
+| `sigla_uf` | String | Sigla da Unidade da Federação referente aquela observação.| *Ver opções em [nota técnica de siglas](https://republica-em-dados.orioro.design/metodologia)* | 
+| `tipo_vinculo` | String | Regime jurídico da observação| Estatutário; CLT; Estatuário não efetivo; Diretor; Temporário; Aprendiz contratado; Avulso; CLT/Rural; ontratado/prazo determinado; Contratado/tempo determinado | 
+| `quantidade_vinculos` | Inteiro | Número total de vinculos observados| | 
+
+
+
+</details>
+<br>
+
 <details>
   <summary><b> 1º passo:</b> Recorte de tabela no GBQ: </summary>
 

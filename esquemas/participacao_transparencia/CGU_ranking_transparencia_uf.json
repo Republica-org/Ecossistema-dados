@@ -7,7 +7,8 @@
         "value": "nota_sum"
       }
     ],
-
+    "groupBy": "sigla_uf",
+    "mapType": "states",
     "filterBy": [
       {
         "type": "single",
@@ -19,36 +20,26 @@
         "ano": 2021
       }
     },
-
-
-
-    "groupBy": "sigla_uf",
-    "mapType": "states",
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
-
     "ano": {
       "type": "continuous",
       "label": "Ano",
       "options": [
-      
         2020,
         2021
       ],
       "phrasePrefix": "em"
     },
-    "sigla_uf": {
-      "type": "categorical",
-      "options": [],
-      "label":"Unidade da Federação",
-      "variableId": "sigla_uf"
-    },
-   
     "nota": {
       "type": "continuous"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "Unidade da Federação",
+      "options": [],
+      "variableId": "sigla_uf"
     }
   }
-  
-  
 }
