@@ -43,7 +43,7 @@
     },
     "tipo_vinculo": {
       "type": "categorical",
-      "label": "Tipode vínculo",
+      "label": "Tipo de vínculo",
       "options": [
         "Estatutários",
         "Celetistas",

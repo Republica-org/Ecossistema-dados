@@ -13,15 +13,18 @@
     ],
     "filterBy": [
       "ministerios"
-
     ],
+    "chartType": "bars",
     "numberFormat": {
       "style": "percent"
     },
-    "chartType": "bars",
     "defaultValues": {
       "filterBy": {
-        "ministerios": ["Ministério Da Educação","Ministério Da Saúde","Ministério Do Desenvolvimento Social"]
+        "ministerios": [
+          "Ministério Da Educação",
+          "Ministério Da Saúde",
+          "Ministério Do Desenvolvimento Social"
+        ]
       }
     },
     "dataSourceType": "aggregation"
@@ -29,46 +32,42 @@
   "variables": {
     "ano": {
       "type": "continuous",
-      "label": "ano",
-      "options": [  
+      "label": "Ano",
+      "options": [
         1999,
         2018
       ],
       "phrasePrefix": "em"
     },
+    "per_valor": {
+      "type": "continuous",
+      "label": "Proporção de vínculos"
+    },
     "ministerios": {
       "type": "categorical",
       "label": "ministério",
       "options": [
-        
         "Ministério Da Educação",
-        "Ministério Da Justiça"	,
+        "Ministério Da Justiça",
         "Ministério De Minas E Energia",
         "Ministério Do Meio Ambiente",
         "Ministério Dos Transportes, Portos E Aviação Civil",
         "Ministério Da Indústria, Comércio Exterior E Serviços",
-        "Ministério Do Turismo",	
+        "Ministério Do Turismo",
         "Ministério Do Esporte",
-        "Ministério Da Cultura",	
+        "Ministério Da Cultura",
         "Ministério Das Relações Exteriores",
-        "Ministério Da Integração Nacional",	
-        "Ministério Da Ciência, Tecnologia, Inovação E Comunicações",	
-        "Ministério Do Trabalho E Emprego",	
-        "Ministério Da Agricultura, Pecuária E Abastecimento"	,
+        "Ministério Da Integração Nacional",
+        "Ministério Da Ciência, Tecnologia, Inovação E Comunicações",
+        "Ministério Do Trabalho E Emprego",
+        "Ministério Da Agricultura, Pecuária E Abastecimento",
         "Ministério Da Fazenda",
         "Ministério Do Planejamento Desenvolvimento E Gestão",
-        "Ministério Do Desenvolvimento Social",	
+        "Ministério Do Desenvolvimento Social",
         "Ministério Da Defesa",
         "Ministério Da Saúde"
-
       ],
       "phrasePrefix": "no"
-    },
-    
-    "per_valor": {
-      "type": "continuous",
-      "label": "Proporção de vínculos"
     }
   }
-  
 }

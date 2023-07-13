@@ -59,7 +59,7 @@ República.org
 `repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_grafico`
 
 
-### Mais detalhes e passo a passo do tratamento: 
+
 
 <br>
 
