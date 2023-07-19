@@ -45,7 +45,7 @@
     },
     "ministerios": {
       "type": "categorical",
-      "label": "ministério",
+      "label": "Ministério",
       "options": [
         "Ministério Da Educação",
         "Ministério Da Justiça",

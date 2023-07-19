@@ -6,23 +6,24 @@
     "range": [
       {
         "label": "Proporção de vínculos",
-        "value": "prop_ano_sum"
+        "value": "prop_ano_sum",
+        "numberFormat": {
+          "style": "percent",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+        }
       }
     ],
     "domain": "ano",
     "groupBy": [
-      {
-        "label": "---",
-        "value": ""
-      },
       
-      "poderes",
-      "esfera"
+      "esfera",
+      "poderes"
     ],
     "filterBy": [
+      "esfera",
+      "poderes"
       
-      "poderes",
-      "esfera"
     ],
     
     "chartType": "lines",

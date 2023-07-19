@@ -3,37 +3,57 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Proporção de vínculos públicos no mercado formal de trabalho",
+        "label": "Proporção de vínculos públicos",
         "value": "prop_vinculos_publicos_sum"
       }
     ],
+    "xAxis": {
+      "angle": 45,
+      "label": {
+        "offset": 50
+      },
+      "style": {
+        "textAnchor": "start"
+      },
+      "interval": 0
+    },
     "domain": "pais",
-    "numberFormat": {
-      "style": "percent"},
-    
+    "orderBy": "prop_vinculos_publicos_sum_desc",
     "chartType": "bars",
-    
+    "numberFormat": {
+      "style": "percent",
+      "minimumFractionDigits": 2
+    },
     "dataSourceType": "aggregation"
   },
   "variables": {
-    
     "pais": {
       "type": "categorical",
       "label": "Países",
       "options": [
-        "África do Sul", "Argentina", "Bolivia", "Brasil", "Chile",
-       "Colombia", "Dinamarca", "Estados Unidos", "França", "México",
-       "Peru", "Suécia", "Uruguai", "OCDE"
+        "África do Sul",
+        "Argentina",
+        "Bolivia",
+        "Brasil",
+        "Chile",
+        "Colombia",
+        "Dinamarca",
+        "Estados Unidos",
+        "França",
+        "México",
+        "Peru",
+        "Suécia",
+        "Uruguai"
       ],
       "phrasePrefix": "dos"
-    },
-    "prop_vinculos_publicos": {
-      "type": "continuous",
-      "label": "Proporção de vínculos públicos no mercado formal de trabalho"
     },
     "flag_publico_privado": {
       "type": "categorical",
       "label": "setor"
+    },
+    "prop_vinculos_publicos": {
+      "type": "continuous",
+      "label": "Proporção de vínculos públicos no mercado formal de trabalho"
     }
   }
 }

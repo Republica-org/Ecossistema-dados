@@ -1,1 +1,0 @@
-<details><summary><b> 1º passo:</b> Recorte de tabela no GBQ: </summary> ['a', 'b'] <b>Unidade: </b> <br>Vínculos

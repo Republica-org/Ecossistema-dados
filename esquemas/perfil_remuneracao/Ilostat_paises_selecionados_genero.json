@@ -3,31 +3,46 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Quantidade de pessoas que trabalham no mercado formal de trabalho",
+        "label": "Quantidade de pessoas que trabalham",
         "value": "quantidade_sum"
       }
     ],
+    "domain": "setor",
+    "groupBy": ["pais","genero"],
+    "filterBy": [
+      "genero",
+      "pais"
+    ],
+    "chartType": "bars",
     "defaultValues": {
       "filterBy": {
-        "pais": ["Brasil","Chile","Estados Unidos"]
+        "pais": [
+          "Brasil",
+          "Chile",
+          "Estados Unidos"
+        ]
       }
     },
-    "domain": "setor",
-    "groupBy":"pais",
-    "filterBy":["genero","pais"],
-    "chartType": "bars",
-    
     "dataSourceType": "aggregation"
   },
   "variables": {
-    
     "pais": {
       "type": "categorical",
       "label": "Países",
       "options": [
-        "África do Sul", "Argentina", "Bolivia", "Brasil", "Chile",
-       "Colombia", "Dinamarca", "Estados Unidos", "França", "México",
-       "Peru", "Suécia", "Uruguai", "OCDE"
+        "África do Sul",
+        "Argentina",
+        "Bolivia",
+        "Brasil",
+        "Chile",
+        "Colombia",
+        "Dinamarca",
+        "Estados Unidos",
+        "França",
+        "México",
+        "Peru",
+        "Suécia",
+        "Uruguai"
       ],
       "phrasePrefix": "no"
     },
@@ -35,7 +50,8 @@
       "type": "categorical",
       "label": "setor",
       "options": [
-        "Público", "Privado"
+        "Público",
+        "Privado"
       ],
       "phrasePrefix": "dos"
     },
@@ -43,14 +59,14 @@
       "type": "categorical",
       "label": "Gênero",
       "options": [
-        "Feminino", "Masculino"
+        "Feminino",
+        "Masculino"
       ],
       "phrasePrefix": "do gênero"
     },
     "quantidade": {
       "type": "continuous",
       "label": "Quantidade vínculos públicos no mercado formal de trabalho"
-    
     }
   }
 }

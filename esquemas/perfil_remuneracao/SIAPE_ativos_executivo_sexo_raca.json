@@ -1,53 +1,54 @@
 {
   "view": {
     "type": "data_series",
-    "dataSourceType": "aggregation",
-    "chartType": "lines",
-    "domain": "ano",
     "range": [
       {
         "label": "Total de vínculos",
         "value": "quantidade_vinculos_sum"
       }
     ],
-    "filterBy": [
-      
+    "domain": "ano",
+    "groupBy": [
       "genero",
       "cor_raca"
     ],
-    
-    "groupBy": [
-      
-   
+    "filterBy": [
       "genero",
       "cor_raca"
-      
-    ]
+    ],
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
   },
-
-
   "variables": {
-    
-    
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
     "genero": {
-      "label": "Gênero",
       "type": "categorical",
-      "options": ["Feminino", "Masculino"],
+      "label": "Gênero",
+      "options": [
+        "Feminino",
+        "Masculino"
+      ],
       "phrasePrefix": "do gênero"
     },
     "cor_raca": {
-        "label": "Cor/Raça",
-        "type": "categorical",
-        "options": ["Negro", "Branco","Outros", "Não informado"],
-        "phrasePrefix": "da cor"
-      },
-    "ano": {
-      "label": "Ano",
-      "type": "continuous"
+      "type": "categorical",
+      "label": "Cor/Raça",
+      "options": [
+        "Preta",
+        "Branca",
+        "Parda",
+        "Amarela",
+        "Índigena",
+        "Não informado"
+      ],
+      "phrasePrefix": "da cor"
     },
     "quantidade_vinculos": {
-      "label": "Total de vínculos",
-      "type": "continuous"
+      "type": "continuous",
+      "label": "Total de vínculos"
     }
   }
 }
