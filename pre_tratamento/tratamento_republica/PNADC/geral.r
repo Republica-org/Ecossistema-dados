@@ -2,11 +2,10 @@ install.packages("Tidyverse")
 
 
 library(tidyverse)
-
 library(PNADcIBGE)
 library(survey)
 
-
+##https://rpubs.com/gabriel-assuncao-ibge/pnadc
 
 setwd("G:\\Drives compartilhados\\República.org\\4. Equipes\\Dados e Comunicação\\DADOS\\460 - Infográficos\\07 - Mulheres no serviço público\\Pasta local\\pnadc_mulheres_servidoras")
 
@@ -71,6 +70,7 @@ dadosPNADc_13$variables <- transform(dadosPNADc_13$variables, flag_lideranca=ife
 #Até 70%: 
 corte_70<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.70, ci=FALSE, na.rm=TRUE)
 corte_70
+
 #Até 5.000
 
 #Até 90%:
@@ -102,10 +102,23 @@ corte_9994
 
 
 quantidade_total = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" ), na.rm=TRUE)
+
+cv(quantidade_total)
+
 quantidade_total
 
-quantidade_super = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" & VD4016>41650 ), na.rm=TRUE)
+quantidade_super = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" & VD4016<5000 ), na.rm=TRUE)
 quantidade_super
+cv(quantidade_super)
+
+5178296/6927827
+4788637/6927827
+
+
+
+
+### Ver o total de estatutários e ir fazendo a distribuição para 
+
 
 #### Fazendo df com valores dos cortes e todos os decis: 
 

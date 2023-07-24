@@ -1,5 +1,6 @@
 <br> 
-Esta tabela foi extraída de um arquivo XML oriundo da página: https://mapadeacoesafirmativas.com/pt/index.php#. Fonte em ABNT:  AÇÕES AFIRMATIVAS RACIAIS E BUROCRACIA PÚBLICA. Mapa georreferenciado com ações afirmativas no serviço público. Disponível em: 
+Esta tabela foi extraída de um arquivo XML oriundo da página: [https://mapadeacoesafirmativas.com/pt/index.php#](https://mapadeacoesafirmativas.com/pt/index.php#). Fonte em ABNT:  AÇÕES AFIRMATIVAS RACIAIS E BUROCRACIA PÚBLICA. 
+Mapa georreferenciado com ações afirmativas no serviço público. Disponível em: 
 
 [http://www.mapadeacoesafirmativas.com](http://www.mapadeacoesafirmativas.com). Acesso em: 01/06/2023. 
 
