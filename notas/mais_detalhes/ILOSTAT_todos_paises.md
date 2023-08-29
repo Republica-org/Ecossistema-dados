@@ -14,6 +14,6 @@ Não houve.
 
 Acesso em:
 
-[https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/Ilostat_paises_selecionados_genero.ipynb](https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/Ilostat_paises_selecionados_genero.ipynb)
+[https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/Ilostat_todos_paises.ipynb](https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/Ilostat_todos_paises.ipynb)
 
 </details>

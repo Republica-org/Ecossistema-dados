@@ -3,11 +3,11 @@
     "type": "br_map_continuous",
     "range": [
       {
-        "label": "Total de médicos por mil habitantes",
+        "label": "Total de psicólogos e psicanalistas por mil habitantes",
         "value": "quantidade_vinculos_por_1000_hab"
       },
       {
-        "label": "Total de médicos",
+        "label": "Total de psicólogos e psicanalistas",
         "value": "quantidade_vinculos_sum"
       }
     ],
@@ -48,7 +48,7 @@
     "populacao_domiciliada": "continuous"
   },
   "dataSources": {
-    "CNES_medicos_mil_habitantes": "repositoriodedadosgpsp.perfil_remuneracao.CNES_medicos_mil_habitantes"
+    "CNES_psicologos_mil_habitantes": "repositoriodedadosgpsp.perfil_remuneracao.CNES_psicologos_mil_habitantes"
   },
   "valueExpressions": {
     "quantidade_vinculos_por_1000_hab": "SUM(quantidade_vinculos) / SUM(populacao_domiciliada) * 1000"

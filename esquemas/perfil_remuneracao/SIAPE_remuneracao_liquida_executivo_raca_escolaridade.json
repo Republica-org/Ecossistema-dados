@@ -1,0 +1,121 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Remuneração líquida",
+        "value": "remuneracao_liquida_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "raca_escolaridade"
+    ],
+    "filterBy": [
+      {
+        "variableId": "cor_raca"
+      }
+    ],
+    "chartType": "lines",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
+    "defaultValues": {
+      "filterBy": {
+        "cor_raca": [
+          "Negras",
+          "Brancas"
+        ]
+      }
+    },
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano",
+      "phrasePrefix": "anual"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "label": "Raça",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Amarelas",
+          "value": "Amarelas"
+        },
+        {
+          "color": "orange",
+          "label": "Brancas",
+          "value": "Brancas"
+        },
+        {
+          "color": "green",
+          "label": "Indígenas",
+          "value": "Indígenas"
+        },
+        {
+          "color": "light-grey",
+          "label": "Não informados",
+          "value": "Não informados"
+        },
+        {
+          "color": "red",
+          "label": "Negras",
+          "value": "Negras"
+        }
+      ],
+      "phrasePrefix": "de pessoas"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "label": "Grau de escolaridade",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Até Ensino Fundamental",
+          "value": "Até Ensino Fundamental"
+        },
+        {
+          "color": "orange",
+          "label": "Até Ensino Médio",
+          "value": "Até Ensino Médio"
+        },
+        {
+          "color": "green",
+          "label": "Até superior completo ou mais",
+          "value": "Até superior completo ou mais"
+        }
+      ],
+      "phrasePrefix": "com grau de escolaridade"
+    },
+    "raca_escolaridade": {
+      "type": "categorical",
+      "label": "escolaridade e raça",
+      "options": [
+        "Até Ensino Fundamental / Amarela",
+        "Até Ensino Fundamental / Branca",
+        "Até Ensino Fundamental / Indígena",
+        "Até Ensino Fundamental / Não informado",
+        "Até Ensino Fundamental / Negra",
+        "Até Ensino Médio / Amarela",
+        "Até Ensino Médio / Branca",
+        "Até Ensino Médio / Indígena",
+        "Até Ensino Médio / Não informado",
+        "Até Ensino Médio / Negra",
+        "Até superior completo ou mais / Amarela",
+        "Até superior completo ou mais / Branca",
+        "Até superior completo ou mais / Indígena",
+        "Até superior completo ou mais / Não informado",
+        "Até superior completo ou mais / Negra"
+      ],
+      "phrasePrefix": "que atuam no poder"
+    },
+    "remuneracao_liquida": {
+      "type": "continuous",
+      "label": "Remuneração líquida"
+    }
+  }
+}

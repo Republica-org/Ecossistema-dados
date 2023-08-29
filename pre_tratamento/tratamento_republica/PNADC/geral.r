@@ -1,6 +1,7 @@
 install.packages("Tidyverse")
 
 
+
 library(tidyverse)
 library(PNADcIBGE)
 library(survey)
@@ -71,6 +72,8 @@ dadosPNADc_13$variables <- transform(dadosPNADc_13$variables, flag_lideranca=ife
 corte_70<- svyquantile(x=~VD4016, design=subset(dadosPNADc_22,((V4012=="Empregado do setor público (inclusive empresas de economia mista)" ) & (V4028=="Sim") & (VD4016>1199))),quantiles=0.70, ci=FALSE, na.rm=TRUE)
 corte_70
 
+cv(corte_70)
+
 #Até 5.000
 
 #Até 90%:
@@ -107,7 +110,7 @@ cv(quantidade_total)
 
 quantidade_total
 
-quantidade_super = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" & VD4016<5000 ), na.rm=TRUE)
+quantidade_super = svytotal(x=~V4028, design=subset(dadosPNADc_22,V4012=="Empregado do setor público (inclusive empresas de economia mista)" & VD4016>41650), na.rm=TRUE)
 quantidade_super
 cv(quantidade_super)
 

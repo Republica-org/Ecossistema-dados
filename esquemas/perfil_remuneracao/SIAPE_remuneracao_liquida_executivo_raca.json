@@ -1,0 +1,43 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Remuneração líquida",
+        "value": "remuneracao_liquida_sum"
+      }
+    ],
+    "domain": "ano",
+    
+    "groupBy": [
+      "cor_raca"
+    ],
+    "chartType": "lines",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"},
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "label": "raça",
+      "options": [
+        "Amarelos",
+        "Brancos",
+        "Indígenas",
+        "Negros",
+        "Não informados"
+      ],
+      "phrasePrefix": "que atuam no poder"
+    },
+    "remuneracao_liquida": {
+      "type": "continuous",
+      "label": "Remuneração líquida"
+    }
+  }
+}
