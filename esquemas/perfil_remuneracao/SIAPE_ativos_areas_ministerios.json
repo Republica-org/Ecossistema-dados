@@ -11,8 +11,18 @@
     "groupBy": [
       "area_ministerio"
     ],
-    
+    "filterBy": [
+      "area_ministerio"
+    ],
     "chartType": "lines",
+    "defaultValues": {
+      "filterBy": {
+        "area_ministerio": [
+          "Social",
+          "Infraestrutura"
+        ]
+      }
+    },
     "dataSourceType": "aggregation"
   },
   "variables": {
@@ -20,11 +30,15 @@
       "type": "continuous",
       "label": "Ano"
     },
-    "area_ministerio" : {
+    "per_servidores": {
+      "type": "continuous",
+      "label": "Percentual de servidores ativos por ministérios"
+    },
+    "area_ministerio": {
       "type": "categorical",
       "label": "Área do ministério",
       "options": [
-        "Infraestrutura", 
+        "Infraestrutura",
         "Regulatória",
         "Social",
         "Economia Rural"
@@ -35,10 +49,6 @@
       "type": "continuous",
       "label": "Total de servidores ativos por ministérios",
       "phrasePrefix": "da cor"
-    },
-    "per_servidores": {
-      "type": "continuous",
-      "label": "Percentual de servidores ativos por ministérios"
     }
   }
 }
