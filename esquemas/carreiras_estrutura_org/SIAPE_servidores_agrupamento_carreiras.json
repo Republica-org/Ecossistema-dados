@@ -1,0 +1,46 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de servidores ativos",
+        "value": "valor_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "carreiras_area"
+    ],
+    "filterBy": [
+      {
+        "variableId": "carreiras_area"
+      }
+
+    ],
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "carreiras_area" : {
+      "type": "categorical",
+      "label": "Área das carreiras dos ministérios",
+      "options": ["Social",
+      "Economia, Finanças e Gestão",
+      "Infraestrutura, Desenvolvimento e Pesquisa",
+      "Jurídico e Policial", 
+      "Apoio Técnico e Administrativo",
+      "Regulação, Auditoria e Fiscalização",
+      "Não Classificado"
+      ],
+      "phrasePrefix": "nas áreas "
+    },
+    "valor": {
+      "type": "continuous",
+      "label": "Total de servidores por área dos ministérios"
+    }
+  }
+}
