@@ -12,14 +12,19 @@
       "carreiras_area"
     ],
     "filterBy": [
-      {
-        "variableId": "carreiras_area"
-      }
-
+         "carreiras_area"
     ],
-    "chartType": "bars",
+    "chartType": "lines", 
+    "defaultValues": {
+      "filterBy": {
+        "carreiras_area": [
+          "Social",
+          "Apoio Técnico e Administrativo"
+        ]
+      }
+    },
     "dataSourceType": "aggregation"
-  },
+},
   "variables": {
     "ano": {
       "type": "continuous",
@@ -36,11 +41,11 @@
       "Regulação, Auditoria e Fiscalização",
       "Não Classificado"
       ],
-      "phrasePrefix": "nas áreas "
+      "phrasePrefix": "na(s) área(s) "
     },
     "valor": {
       "type": "continuous",
       "label": "Total de servidores por área dos ministérios"
+      }
     }
   }
-}

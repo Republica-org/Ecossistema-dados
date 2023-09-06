@@ -5,7 +5,18 @@
       {
         "label": "Total de servidores ativos",
         "value": "servidores_ativos_ministerios_sum"
+      },
+
+      {
+        "label": "Proporção de servidores ativos",
+        "value": "per_servidores_sum", 
+        "numberFormat": {
+          "style": "percent",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
       }
+      }
+
     ],
     "domain": "ano",
     "groupBy": [
