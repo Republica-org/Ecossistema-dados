@@ -1,0 +1,46 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Indicador de Qualidade Institucional",
+        "value": "qualidade_institucional_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Segurança Pública",
+        "value": "seguranca_publica_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Qualidade do Judiciário",
+        "value": "qualidade_judiciario_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Qualidade Fiscal",
+        "value": "qualidade_fiscal_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Controle de Corrupção",
+        "value": "controle_corrupcao_sum"
+      } 
+
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+   "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "qualidade_institucional": "continuous",
+    "seguranca_publica":"continuous",
+    "qualidade_judiciario":"continuous",
+    "qualidade_fiscal":"continuous",
+    "controle_corrupcao":"continuous"
+
+  },
+  "dataSources": {
+    "FDC_capacidades_institucionais": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.FDC_capacidades_institucionais"
+  }
+}

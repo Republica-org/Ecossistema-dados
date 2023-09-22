@@ -1,0 +1,24 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Índice da Capacidade Institucional",
+        "value": "indice_capacidade_institucional_sum"
+      }   
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+   "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "indice_capacidade_institucional": "continuous"
+  },
+  "dataSources": {
+    "FDC_capacidades_institucionais": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.FDC_capacidades_institucionais"
+  }
+}

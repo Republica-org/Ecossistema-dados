@@ -1,0 +1,40 @@
+{
+  "view": {
+    "type": "br_map_continuous",
+    "range": [
+      {
+        "label": "Indicador de Qualidade da Gestão Pública",
+        "value": "qualidade_gestao_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Governo Aberto",
+        "value": "governo_aberto_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Ambiente de Negócios",
+        "value": "ambiente_negocios_sum"
+      },
+      {
+        "label": "Subelemento do Indicador: Diversidade",
+        "value": "diversidade_contratacao_publica_sum"
+      }
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+   "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "qualidade_gestao": "continuous",
+    "governo_aberto":"continuous",
+    "ambiente_negocios":"continuous",
+    "diversidade_contratacao_publica":"continuous"
+
+  },
+  "dataSources": {
+    "FDC_capacidades_institucionais": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.FDC_capacidades_institucionais"
+  }
+}
