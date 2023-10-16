@@ -1,0 +1,104 @@
+{
+  "view": { 
+    "type": "data_series",
+
+    "range": [
+      {
+        "label": "Total de escolas que possuem docentes do grupo 1",
+        "value": "per_valor_avg"
+      }
+    ],
+    "domain": "ano", 
+    "groupBy": [
+      "ano_escolar"
+    ],
+    "filterBy": [
+      "localizacao",
+      "dependencia_adm"
+    ],
+    "defaultValues": {
+      "groupBy": {
+        "ano_escolar": [
+          "Ensino Fundamental - Anos Iniciais",
+          "Ensino Fundamental - Anos Finais"
+        ]
+      }
+    },
+    "dataSourceType": "aggregation",    
+    "chartType": "lines",
+    "filterByStateId": "sigla_uf",
+    "numberFormat": {
+      "style": "percent"
+    }
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "options": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "ano_escolar": {
+      "type": "categorical",
+      "label": "Ano escolar",
+      "options": ["Ensino Médio", 
+      "Ensino Fundamental - Anos Finais",
+      "Ensino Fundamental - Anos Iniciais" 
+      ],
+      "phrasePrefix": "no"
+    },
+    "dependencia_adm": {
+      "type": "categorical",
+      "label": "Dependência Administrativa",
+      "options": ["Municipal", "Estadual", "Privada", "Federal"],
+      "phrasePrefix": "da rede"
+    },
+    "localizacao": {
+    "type": "categorical",
+    "label": "Localização da escola",
+    "options": ["Rural", "Urbana"],
+    "phrasePrefix": "em região"
+    }, 
+
+    "per_valor": {
+      "type": "continuous",
+      "label": "Percentual de docentes do grupo 1"
+    }
+  },
+  "dataSources": {
+    "INEP_adequacao_docente_temporal": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_adequacao_docente_temporal"},
+    "valueExpressions": {
+      "per_valor_avg": "AVG(per_valor) / 100"
+    }
+  }
