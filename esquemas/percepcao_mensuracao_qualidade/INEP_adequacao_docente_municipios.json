@@ -1,24 +1,104 @@
 {
-  "view": {
+  "view": { 
     "type": "br_map_continuous",
+
     "range": [
       {
-        "label": "Índice da Capacidade Institucional",
-        "value": "indice_capacidade_institucional_sum"
-      }   
+        "label": "Total de escolas, em 2022, que possuem docentes do grupo 1",
+        "value": "anos_finais_sum"
+      }
     ],
-    "mapType": "states",
-    "stateIdVariableId": "sigla_uf"
+    
+    "mapType": "municipalities_by_state",
+    "filterBy": [
+
+      {
+        "type": "single",
+        "variableId": "dependencia_adm"
+      }
+
+      
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "dependencia_adm":"Municipal"
+      
+      }
+    },
+    "filterByStateId": "sigla_uf",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+
+
   },
   "variables": {
-   "sigla_uf": {
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "options": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    }
+   },
+    
+    "id_municipio": {
       "type": "categorical",
       "options": [],
-      "variableId": "sigla_uf"
+      "variableId": "id_municipio"
     },
-    "indice_capacidade_institucional": "continuous"
-  },
-  "dataSources": {
-    "FDC_capacidades_institucionais": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_adequacao_docente_temporal"
+    
+    "nome_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome_municipio"
+    },
+
+    "ano_escolar": {
+      "type": "categorical",
+      "label": "Ano escolar",
+      "options": ["Ensino Médio", 
+      "Ensino Fundamental - Anos Finais",
+      "Ensino Fundamental - Anos Iniciais" 
+      ],
+      "phrasePrefix": "no"
+    },
+
+    "dependencia_adm": {
+      "type": "categorical",
+      "label": "Dependência Administrativa",
+      "options": ["Municipal", "Estadual", "Privada", "Federal"],
+      "phrasePrefix": "da rede"
+    },
+
+    "anos_finais": {
+      "type": "continuous",
+      "label": "Percentual de docentes do grupo 1"
+    }
   }
-}
+

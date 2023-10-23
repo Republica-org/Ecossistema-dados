@@ -3,17 +3,18 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Total de escolas que possuem docentes do grupo 1",
-        "value": "per_valor_avg"
+        "label": "Total de escolas",
+        "value": "percent_avg"
       }
     ],
     "domain": "ano",
     "groupBy": [
-      "ano_escolar"
+      "docente_niveis"
     ],
     "filterBy": [
-      "localizacao",
-      "dependencia_adm"
+      "ano_escolar",
+      "dependencia_adm",
+      "localizacao"
     ],
     "chartType": "lines",
     "numberFormat": {
@@ -22,8 +23,8 @@
     "defaultValues": {
       "groupBy": {
         "ano_escolar": [
-          "Ensino Fundamental - Anos Iniciais",
-          "Ensino Fundamental - Anos Finais"
+          "Ensino Fundamental - Anos Finais",
+          "Ensino Médio"
         ]
       }
     },
@@ -70,7 +71,7 @@
     },
     "per_valor": {
       "type": "continuous",
-      "label": "Percentual de docentes do grupo 1"
+      "label": "Percentual de docentes"
     },
     "ano_escolar": {
       "type": "categorical",
@@ -91,6 +92,19 @@
       ],
       "phrasePrefix": "em região"
     },
+    "docente_niveis": {
+      "type": "categorical",
+      "label": "Nível de esforço docente",
+      "options": [
+        "Nível 1",
+        "Nível 2",
+        "Nível 3",
+        "Nível 4",
+        "Nível 5",
+        "Nível 6"
+      ],
+      "phrasePrefix": "no"
+    },
     "dependencia_adm": {
       "type": "categorical",
       "label": "Dependência Administrativa",
@@ -104,9 +118,9 @@
     }
   },
   "dataSources": {
-    "INEP_adequacao_docente_temporal": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_adequacao_docente_temporal"
+    "INEP_adequacao_docente_temporal": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_esforco_docente_temporal"
   },
   "valueExpressions": {
-    "per_valor_avg": "AVG(per_valor) / 100"
+    "percent_avg": "AVG(percent) / 100"
   }
 }
