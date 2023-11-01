@@ -3,20 +3,20 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Total de escolas",
-        "value": "percent_avg"
+        "label": "Média das escolas",
+        "value": "per_valor_avg"
       }
     ],
-    "domain": "ano",
+    "domain": "docente_niveis",
     "groupBy": [
-      "docente_niveis"
+      "ano_escolar"
     ],
     "filterBy": [
       "ano_escolar",
       "dependencia_adm",
       "localizacao"
     ],
-    "chartType": "lines",
+    "chartType": "bars",
     "numberFormat": {
       "style": "percent"
     },
@@ -75,7 +75,7 @@
     },
     "ano_escolar": {
       "type": "categorical",
-      "label": "Ano escolar",
+      "label": "etapa de ensino",
       "options": [
         "Ensino Médio",
         "Ensino Fundamental - Anos Finais",
@@ -118,9 +118,9 @@
     }
   },
   "dataSources": {
-    "INEP_adequacao_docente_temporal": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_esforco_docente_temporal"
+    "INEP_adequacao_docente_temporal": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_esforco_docente_atual_temporal"
   },
   "valueExpressions": {
-    "percent_avg": "AVG(percent) / 100"
+    "per_valor_avg": "AVG(per_valor) / 100"
   }
 }
