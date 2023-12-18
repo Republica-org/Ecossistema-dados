@@ -1,0 +1,101 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Proibição do assédio em estatutos ou lei esparsa",
+        "value": "proibicao_assedio_moral_sexual_rju_lei"
+      },
+      {
+        "label": "Conceituação do assédio em estatutos ou lei esparsa",
+        "value": "conceito_moral_sexual_rju_lei"
+      }
+    ],
+    "mapType": "states",
+   
+
+    "stateIdVariableId": "Sigla_uf"
+  },
+  "variables": {
+    
+    "Sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "Sigla_uf"
+    },
+    "proibicao_assedio_moral_sexual_rju_lei": {
+      "type": "categorical",
+      "options": [
+
+        {
+          "color": "var(--blue)",
+          "label": "Ambos no RJU",
+          "value": "Ambos no RJU"
+        },
+        
+        {
+          "color": "var(--red)",
+          "label": "Apenas assédio Moral no RJU",
+          "value": "Apenas assédio Moral no RJU"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Ambos em lei esparsa",
+          "value": "Ambos em lei esparsa"
+        },
+       
+        {
+          "color": "var(--purple)",
+          "label": "Apenas assédio sexual em lei esparsa",
+          "value": "Apenas assédio sexual em lei esparsa"
+        },
+       
+        {
+          "color": "var(--grey)",
+          "label": "Apenas assédio moral em lei esparsa",
+          "value": "Apenas assédio moral em lei esparsa"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sem previsão legislativa",
+          "value": "Sem previsão legislativa"
+        }
+      ],
+      "variableId": "proibicao"
+    },
+    "conceito_moral_sexual_rju_lei": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--blue)",
+          "label": "Apenas conceito de assédio moral no RJU",
+          "value": "Apenas conceito de assédio moral no RJU"
+        },
+        
+        {
+          "color": "var(--red)",
+          "label": "Conceito de assédio sexual e moral em lei esparsa",
+          "value": "Conceito de assédio sexual e moral em lei esparsa"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Apenas conceito de assédio sexual em lei esparsa",
+          "value": "Apenas conceito de assédio sexual em lei esparsa"
+        },
+       
+        {
+          "color": "var(--purple)",
+          "label": "Apenas conceito de assédio moral em lei esparsa",
+          "value": "Apenas conceito de assédio moral em lei esparsa"
+        },
+       
+        {
+          "color": "var(--grey)",
+          "label": "Sem conceito para assédio",
+          "value": "Sem conceito para assédio no RJU"
+        }
+      ],
+      "variableId": "conceito"
+    }
+  }
+}

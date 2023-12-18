@@ -1,0 +1,103 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Serviços disponibilizados na internet sobre concursos públicos",
+        "value": "concursos_publicos"
+      },
+      {
+        "label": "Serviços disponibilizados na internet sobre pesquisa de satisfação relacionada aos serviços prestados pelo Estado",
+        "value": "pesquisa_satisfacao_servicos_estado"
+      },
+      {
+        "label": "Serviços disponibilizados na internet sobre Diário Oficial, Legislação Estadual e Finanças Públicas",
+        "value": "diario_legislacao_financas"
+      },
+      {
+        "label": "Serviços disponibilizados na internet sobre Ouvidoria e serviços de atendimento ao cidadão",
+        "value": "ouvidoria_atendimento_cidadao"
+      }
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": 2019,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "concursos_publicos": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "concursos_publicos"
+    },
+    "pesquisa_satisfacao_servicos_estado": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "pesquisa_satisfacao_servicos_estado"
+    },
+    "diario_legislacao_financas": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "diario_legislacao_financas" 
+    },
+    "ouvidoria_atendimento_cidadao": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "ouvidoria_atendimento_cidadao" 
+    }
+  }
+}

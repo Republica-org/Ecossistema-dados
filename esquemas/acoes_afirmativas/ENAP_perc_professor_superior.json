@@ -2,8 +2,15 @@
     "view": {
       "type": "table"
     },
+
+
     "variables": {
-      "universidade": {
+      "sigla": {
+        "variableId": "sigla",
+        "type": "categorical",
+        "label": "Sigla"
+      },
+      "nome_universidade": {
         "variableId": "universidade",
         "type": "categorical",
         "label": "Universidade"

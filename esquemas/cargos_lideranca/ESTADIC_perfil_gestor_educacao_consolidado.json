@@ -12,13 +12,13 @@
       "genero",
       "cor_raca",
       "faixa_etaria",
-      "escolaridade"
+      "grau_instrucao"
     ],
     "filterBy": [
       "genero",
       "cor_raca",
       "faixa_etaria",
-      "escolaridade"
+      "grau_instrucao"
     ],
     "chartType": "bars",
     "dataSourceType": "aggregation"
@@ -56,58 +56,49 @@
       "label": "Cor/raça",
       "options": [
         {
-          "color": "dark-blue",
+          "color": "red",
           "label": "Branca",
           "value": "Branca"
         },
         {
-          "color": "orange",
+          "color": "green",
           "label": "Preta",
           "value": "Preta"
         },
         {
-          "color": "green",
+          "color": "orange",
           "label": "Parda",
           "value": "Parda"
         },
         {
-          "color": "light-grey",
+          "color": "blue",
           "label": "Indígena",
           "value": "Indígena"
         }
       ],
       "phrasePrefix": "da cor/raça"
     },
-    "escolaridade": {
+    "grau_instrucao": {
       "type": "categorical",
       "options": [
         {
+        "color": "green",
+        "label": "Até Ensino Superior Completo",
+        "value": "Até Ensino Superior Completo"
+
+        },
+        {
           "color": "red",
-          "label": "Ensino superior incompleto",
-          "value": "Ensino superior incompleto"
-        },
-        {
-          "color": "green",
-          "label": "Ensino superior completo",
-          "value": "Ensino superior completo"
-        },
-        {
-          "color": "blue",
-          "label": "Especialização",
-          "value": "Especialização"
-        },
-        {
-          "color": "orange",
-          "label": "Mestrado",
-          "value": "Mestrado"
+          "label": "Até Pós Graduação ou Mestrado",
+          "value": "Até Pós Graduação ou Mestrado"
         },
         {
           "color": "purple",
-          "label": "Doutorado",
-          "value": "Doutorado"
+          "label": "Até Doutorado",
+          "value": "Até Doutorado"
         }
       ],
-      "variableId": "escolaridade",
+      "variableId": "grau_instrucao",
       "label":"Escolaridade"
     },
     "quantidade": {
@@ -118,9 +109,21 @@
       "type": "categorical",
       "label": "Faixa etária",
       "options": [
-        "Entre 30-49",
-        "Entre 50-64",
-        "Acima de 65"
+        {
+          "color": "orange",
+          "label": "Entre 30-49",
+          "value": "Entre 30-49"
+        }, 
+        {
+          "color": "green",
+          "label": "Entre 50-64",
+          "value": "Entre 50-64"
+        }, 
+        {
+          "color": "red",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
+        }
       ],
       "phrasePrefix": "com idade"
     }

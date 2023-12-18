@@ -1,0 +1,35 @@
+  {
+    "view": {
+      "type": "table"
+    },
+
+
+    "variables": {
+      "UF": {
+        "variableId": "UF",
+        "type": "categorical",
+        "label": "Unidade da Federação"
+      },
+      "RJU": {
+        "variableId": "RJU",
+        "type": "categorical",
+        "label": "Regime Jurídico Único"
+      },
+      "preve_assedio_proibicao_rju": {
+        "variableId": "preve_assedio_proibicao_rju",
+        "type": "categorical",
+        "label": "Prevê assédio como conduta proibida no RJU?"
+      },
+      "lei_assedio_proibicao": {
+        "variableId": "lei_assedio_proibicao",
+        "type": "categorical",
+        "label": "Qual Lei incluiu o assédio como conduta proibida no RJU?"
+      },
+      "preve_assedio_proibicao_lei_esparsa": {
+        "variableId": "preve_assedio_proibicao_lei_esparsa",
+        "type": "categorical",
+        "label": "Prevê assédio como conduta proibida em Lei esparsa?"
+      }
+      
+    }
+  }

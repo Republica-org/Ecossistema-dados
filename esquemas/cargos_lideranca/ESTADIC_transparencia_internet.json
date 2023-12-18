@@ -1,0 +1,148 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {""
+      }
+    ],
+    "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "options": [
+        2018,
+        2021
+      ],
+      "variableId": "ano",
+      "phrasePrefix": "no ano de",
+      "label":"Ano"
+    },
+    "nome": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome"
+    },
+    "genero": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Feminino",
+          "value": "Feminino"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Masculino",
+          "value": "Masculino"
+        }
+      ],
+      "variableId": "genero"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Branca",
+          "value": "Branca"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Preta",
+          "value": "Preta"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Parda",
+          "value": "Parda"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Indígena",
+          "value": "Indígena"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Amarela",
+          "value": "Amarela"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Não informou",
+          "value": "Não informou"
+        }
+      ],
+      "variableId": "cor_raca"
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Entre 30-49",
+          "value": "Entre 30-49"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Entre 50-64",
+          "value": "Entre 50-64"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
+        }
+      ],
+      "variableId": "faixa_etaria"
+    },
+    "escolaridade": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Ensino superior incompleto",
+          "value": "Ensino superior incompleto"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Ensino superior completo",
+          "value": "Ensino superior completo"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Especialização",
+          "value": "Especialização"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Mestrado",
+          "value": "Mestrado"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Doutorado",
+          "value": "Doutorado"
+        }
+      ],
+      "variableId": "escolaridade"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    }
+  }
+}
