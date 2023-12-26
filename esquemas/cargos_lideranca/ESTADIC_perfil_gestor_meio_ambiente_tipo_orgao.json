@@ -39,7 +39,7 @@
           "value": "Masculino"
         },
         {
-            "color": "var(--darkblue)",
+            "color": "var(--dark-blue)",
             "label": "Feminino",
             "value": "Feminino"
         }
@@ -50,19 +50,24 @@
       "type": "categorical",
       "options": [
         {
+        "color": "var(--green)",
+        "label": "Preta",
+        "value": "Preta"
+        },
+        {
           "color": "var(--red)",
           "label": "Branca",
           "value": "Branca"
         },
         {
-          "color": "var(--green)",
-          "label": "Preta",
-          "value": "Preta"
-        },
-        {
-          "color": "var(--darkblue)",
+          "color": "var(--orange)",
           "label": "Parda",
           "value": "Parda"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Amarela",
+          "value": "Amarela"
         }
       ],
       "variableId": "cor_raca"
@@ -75,30 +80,20 @@
     "grau_instrucao": {
       "type": "categorical",
       "options": [
-      {
-        "color": "var(--green)",
-        "label": "Ensino fundamental (1º Grau) incompleto",
-        "value": "Ensino fundamental (1º Grau) incompleto"
-      },
         {
           "color": "var(--green)",
-          "label": "Ensino superior completo",
-          "value": "Ensino superior completo"
+          "label": "Até Ensino Superior Completo",
+          "value": "Até Ensino Superior Completo"
         },
         {
-          "color": "var(--blue)",
-          "label": "Especialização",
-          "value": "Especialização"
-        },
-        {
-          "color": "var(--orange)",
-          "label": "Mestrado",
-          "value": "Mestrado"
+          "color": "var(--red)",
+          "label": "Até Pós Graduação ou Mestrado",
+          "value": "Até Pós Graduação ou Mestrado"
         },
         {
           "color": "var(--purple)",
-          "label": "Doutorado",
-          "value": "Doutorado"
+          "label": "Até Doutorado",
+          "value": "Até Doutorado"
         }
       ],
       "variableId": "grau_instrucao"
@@ -107,7 +102,7 @@
       "type": "categorical",
       "options": [
         {
-          "color": "var(--red)",
+          "color": "var(--orange)",
           "label": "Entre 30-49",
           "value": "Entre 30-49"
         },
@@ -115,6 +110,11 @@
           "color": "var(--green)",
           "label": "Entre 50-64",
           "value": "Entre 50-64"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
         }
       ],
       "variableId": "faixa_etaria"

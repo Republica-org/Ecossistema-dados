@@ -1,0 +1,128 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Perfil do gestor de educação por cor/raça",
+        "value": "cor_raca"
+      },
+      {
+        "label": "Perfil do gestor de educação por gênero",
+        "value": "genero"
+      },
+      {
+        "label": "Perfil do gestor de educação por faixa etária",
+        "value": "faixa_etaria"
+      },
+      {
+        "label": "Perfil do gestor de educação por escolaridade",
+        "value": "grau_instrucao"
+      }
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": 2020,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "genero": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--green)",
+          "label": "Masculino",
+          "value": "Masculino"
+        },
+        {
+            "color": "var(--dark-blue)",
+            "label": "Feminino",
+            "value": "Feminino"
+        }
+      ],
+      "variableId": "genero"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Branca",
+          "value": "Branca"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Preta",
+          "value": "Preta"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Parda",
+          "value": "Parda"
+        }
+      ],
+      "variableId": "cor_raca"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "options": [
+      {
+        "color": "var(--dark-blue)",
+        "label": "Até Ensino Fundamental",
+        "value": "Até Ensino Fundamental"
+      },
+        {
+          "color": "var(--orange)",
+          "label": "Até Ensino Médio",
+          "value": "Até Ensino Médio"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Até Ensino Superior Completo",
+          "value": "Até Ensino Superior Completo"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Até Pós Graduação ou Mestrado",
+          "value": "Até Pós Graduação ou Mestrado"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Até Doutorado",
+          "value": "Até Doutorado"
+        }
+      ],
+      "variableId": "grau_instrucao"
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--orange)",
+          "label": "Entre 30-49",
+          "value": "Entre 30-49"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Entre 50-64",
+          "value": "Entre 50-64"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
+        }
+      ],
+      "variableId": "faixa_etaria"
+    }
+  }
+}

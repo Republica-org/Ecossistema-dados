@@ -1,0 +1,185 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Perfil do gestor de educação por cor/raça",
+        "value": "cor_raca"
+      },
+      {
+        "label": "Perfil do gestor de educação por gênero",
+        "value": "genero"
+      },
+      {
+        "label": "Perfil do gestor de educação por faixa etária",
+        "value": "faixa_etaria"
+      },
+      {
+        "label": "Perfil do gestor de educação por escolaridade",
+        "value": "grau_instrucao"
+      }
+    ],
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "options":2018,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "nome_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome_municipio"
+    },
+    "genero": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--dark-blue)",
+          "label": "Feminino",
+          "value": "Feminino"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Masculino",
+          "value": "Masculino"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        },
+        {
+          "color": "var(--light-grey)",
+          "label": "Sem titular",
+          "value": "Sem titular"
+        }
+      ],
+      "variableId": "genero"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Branca",
+          "value": "Branca"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Preta",
+          "value": "Preta"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Parda",
+          "value": "Parda"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Indígena",
+          "value": "Indígena"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Amarela",
+          "value": "Amarela"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        },
+        {
+          "color": "var(--light-grey)",
+          "label": "Sem titular",
+          "value": "Sem titular"
+        }
+      ],
+      "variableId": "cor_raca"
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "options": [
+        {
+        "color": "var(--dark-blue)",
+        "label": "Entre 18-29",
+        "value": "Entre 18-29"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Entre 30-49",
+          "value": "Entre 30-49"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Entre 50-64",
+          "value": "Entre 50-64"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
+        }
+      ],
+      "variableId": "faixa_etaria"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "options": [
+          {
+        "color": "var(--dark-blue)",
+        "label": "Até Ensino Fundamental",
+        "value": "Até Ensino Fundamental"
+         },
+         
+        {
+          "color": "var(--orange)",
+          "label": "Até Ensino Médio",
+          "value": "Até Ensino Médio"
+        },
+
+        {
+          "color": "var(--green)",
+          "label": "Até Ensino Superior Completo",
+          "value": "Até Ensino Superior Completo"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Até Pós Graduação ou Mestrado",
+          "value": "Até Pós Graduação ou Mestrado"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Até Doutorado",
+          "value": "Até Doutorado"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        },
+        {
+          "color": "var(--light-grey)",
+          "label": "Sem titular",
+          "value": "Sem titular"
+        }
+      ],
+      "variableId": "grau_instrucao"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    }
+  }
+}
