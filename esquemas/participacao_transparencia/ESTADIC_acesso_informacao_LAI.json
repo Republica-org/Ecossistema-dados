@@ -1,0 +1,38 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Existência de legislação estadual que garante direito de acesso à informação pública em conformidade com a Lei de Acesso à Informação",
+        "value": "existencia_legislacao_LAI"
+      }
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": 2019,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "existencia_legislacao_LAI": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "existencia_legislacao_LAI"
+    }
+  }
+}

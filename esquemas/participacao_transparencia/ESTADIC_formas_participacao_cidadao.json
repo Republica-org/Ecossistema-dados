@@ -3,20 +3,20 @@
     "type": "br_map_categorical",
     "range": [
       {
-        "label": "Existência de serviços disponíveis na internet sobre concursos públicos",
-        "value": "concursos_publicos"
+        "label": "Existência de formas de participação do cidadão: Consulta pública on line",
+        "value": "consulta_publica_cidadaos"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre pesquisa de satisfação relacionada aos serviços prestados pelo Estado",
-        "value": "pesquisa_satisfacao_servicos_estado"
+        "label": "Existência de formas de participação do cidadão: Grupos de discussão como fóruns ou comunidades pela internet",
+        "value": "grupos_discussao_foruns"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre Diário Oficial, Legislação Estadual e Finanças Públicas",
-        "value": "diario_legislacao_financas"
+        "label": "Existência de formas de participação do cidadão: Votação on line para orientar a tomada de decisão",
+        "value": "votacao_orientar_decisoes"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre Ouvidoria e serviços de atendimento ao cidadão",
-        "value": "ouvidoria_atendimento_cidadao"
+        "label": "Existência de formas de participação do cidadão: Enquete on line sobre assuntos de interesse do governo estadual",
+        "value": "enquete_interesse_governo_estadual"
       }
     ],
     "mapType": "states",
@@ -35,7 +35,7 @@
       "options": [],
       "variableId": "sigla_uf"
     },
-    "concursos_publicos": {
+    "consulta_publica_cidadaos": {
       "type": "categorical",
       "options": [
         {
@@ -49,9 +49,9 @@
           "value": "Sim"
         }
       ],
-      "variableId": "concursos_publicos"
+      "variableId": "consulta_publica_cidadaos"
     },
-    "diario_legislacao_financas": {
+    "grupos_discussao_foruns": {
       "type": "categorical",
       "options": [
         {
@@ -65,9 +65,9 @@
           "value": "Sim"
         }
       ],
-      "variableId": "diario_legislacao_financas"
+      "variableId": "grupos_discussao_foruns"
     },
-    "ouvidoria_atendimento_cidadao": {
+    "votacao_orientar_decisoes": {
       "type": "categorical",
       "options": [
         {
@@ -81,9 +81,9 @@
           "value": "Sim"
         }
       ],
-      "variableId": "ouvidoria_atendimento_cidadao"
+      "variableId": "votacao_orientar_decisoes"
     },
-    "pesquisa_satisfacao_servicos_estado": {
+    "enquete_interesse_governo_estadual": {
       "type": "categorical",
       "options": [
         {
@@ -97,7 +97,7 @@
           "value": "Sim"
         }
       ],
-      "variableId": "pesquisa_satisfacao_servicos_estado"
+      "variableId": "enquete_interesse_governo_estadual"
     }
   }
 }

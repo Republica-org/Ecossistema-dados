@@ -1,0 +1,59 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Existência de legislação municipal que garante direito de acesso à informação pública em conformidade com a Lei de Acesso à Informação",
+        "value": "existencia_legislacao_LAI"
+      }
+    ],
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": 2019,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    },
+    "nome_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome_municipio"
+    },
+    "existencia_legislacao_LAI": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        }
+      ],
+      "variableId": "existencia_legislacao_LAI"
+    }
+  }
+}

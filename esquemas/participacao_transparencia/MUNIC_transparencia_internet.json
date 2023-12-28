@@ -3,24 +3,25 @@
     "type": "br_map_categorical",
     "range": [
       {
-        "label": "Existência de serviços disponíveis na internet sobre concursos públicos",
+        "label": "Existência de serviços disponíveis na internet: Concursos públicos",
         "value": "concursos_publicos"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre pesquisa de satisfação relacionada aos serviços prestados pelo Estado",
+        "label": "Existência de serviços disponíveis na internet: Pesquisa de satisfação relacionada aos serviços prestados pelo Município",
         "value": "pesquisa_satisfacao_servicos_estado"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre Diário Oficial, Legislação Estadual e Finanças Públicas",
+        "label": "Existência de serviços disponíveis na internet: Diário Oficial, Legislação Municipal e Finanças Públicas",
         "value": "diario_legislacao_financas"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre Ouvidoria e serviços de atendimento ao cidadão",
+        "label": "Existência de serviços disponíveis na internet: Ouvidoria e serviços de atendimento ao cidadão",
         "value": "ouvidoria_atendimento_cidadao"
       }
     ],
-    "mapType": "states",
-    "stateIdVariableId": "sigla_uf"
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
     "ano": {
@@ -35,6 +36,16 @@
       "options": [],
       "variableId": "sigla_uf"
     },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    },
+    "nome_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome_municipio"
+    },
     "concursos_publicos": {
       "type": "categorical",
       "options": [
@@ -47,6 +58,11 @@
           "color": "var(--green)",
           "label": "Sim",
           "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
         }
       ],
       "variableId": "concursos_publicos"
@@ -63,6 +79,11 @@
           "color": "var(--green)",
           "label": "Sim",
           "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
         }
       ],
       "variableId": "diario_legislacao_financas"
@@ -79,6 +100,11 @@
           "color": "var(--green)",
           "label": "Sim",
           "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
         }
       ],
       "variableId": "ouvidoria_atendimento_cidadao"
@@ -95,6 +121,11 @@
           "color": "var(--green)",
           "label": "Sim",
           "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
         }
       ],
       "variableId": "pesquisa_satisfacao_servicos_estado"

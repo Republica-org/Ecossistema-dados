@@ -1,0 +1,134 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Existência de formas de participação do cidadão: Consulta pública on line",
+        "value": "consulta_publica_cidadaos"
+      },
+      {
+        "label": "Existência de formas de participação do cidadão: Grupos de discussão como fóruns ou comunidades pela internet",
+        "value": "grupos_discussao_foruns"
+      },
+      {
+        "label": "Existência de formas de participação do cidadão: Votação on line para orientar a tomada de decisão",
+        "value": "votacao_orientar_decisoes"
+      },
+      {
+        "label": "Existência de formas de participação do cidadão: Enquete on line sobre assuntos de interesse do governo municipal",
+        "value": "enquete_interesse_prefeitura"
+      }
+    ],
+    "mapType": "municipalities_by_state",
+    "stateIdVariableId": "sigla_uf",
+    "municipalityIdVariableId": "id_municipio"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": 2019,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    },
+    "nome_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "nome_municipio"
+    },
+    "consulta_publica_cidadaos": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        }
+      ],
+      "variableId": "consulta_publica_cidadaos"
+    },
+    "grupos_discussao_foruns": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        }
+      ],
+      "variableId": "grupos_discussao_foruns"
+    },
+    "votacao_orientar_decisoes": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        }
+      ],
+      "variableId": "votacao_orientar_decisoes"
+    },
+    "enquete_interesse_prefeitura": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        }
+      ],
+      "variableId": "enquete_interesse_prefeitura"
+    }
+  }
+}

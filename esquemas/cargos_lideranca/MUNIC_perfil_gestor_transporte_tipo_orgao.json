@@ -3,51 +3,32 @@
     "type": "br_map_categorical",
     "range": [
       {
-        "label": "Perfil do gestor de saúde por cor/raça",
+        "label": "Perfil do gestor de transporte por cor/raça",
         "value": "cor_raca"
       },
       {
-        "label": "Perfil do gestor de saúde por gênero",
+        "label": "Perfil do gestor de transporte por gênero",
         "value": "genero"
       },
       {
-        "label": "Perfil do gestor de saúde por faixa etária",
+        "label": "Perfil do gestor de transporte por faixa etária",
         "value": "faixa_etaria"
       },
       {
-        "label": "Perfil do gestor de saúde por escolaridade",
+        "label": "Perfil do gestor de transporte por escolaridade",
         "value": "grau_instrucao"
       }
     ],
     "mapType": "municipalities_by_state",
-    "filterBy": [
-      {
-        "type": "single",
-        "variableId": "ano"
-      }
-    ],
-    "defaultValues": {
-      "filterBy": {
-        "ano": 2021
-      }
-    },
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
     "ano": {
       "type": "continuous",
-      "options":[
-        2018,
-        2021
-      ],
+      "options": 2020,
       "variableId": "ano",
       "phrasePrefix": "no ano de"
-    },
-    "nome_municipio": {
-      "type": "categorical",
-      "options": [],
-      "variableId": "nome_municipio"
     },
     "genero": {
       "type": "categorical",
@@ -116,13 +97,18 @@
       ],
       "variableId": "cor_raca"
     },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
     "faixa_etaria": {
       "type": "categorical",
       "options": [
         {
-        "color": "var(--dark-blue)",
-        "label": "Entre 18-29",
-        "value": "Entre 18-29"
+          "color": "var(--dark-blue)",
+          "label": "Entre 18-29",
+          "value": "Entre 18-29"
         },
         {
           "color": "var(--orange)",
@@ -142,21 +128,24 @@
       ],
       "variableId": "faixa_etaria"
     },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    },
     "grau_instrucao": {
       "type": "categorical",
       "options": [
         {
-        "color": "var(--dark-blue)",
-        "label": "Até Ensino Fundamental",
-        "value": "Até Ensino Fundamental"
-         },
-         
+          "color": "var(--dark-blue)",
+          "label": "Até Ensino Fundamental",
+          "value": "Até Ensino Fundamental"
+        },
         {
           "color": "var(--orange)",
           "label": "Até Ensino Médio",
           "value": "Até Ensino Médio"
         },
-
         {
           "color": "var(--green)",
           "label": "Até Ensino Superior Completo",
@@ -185,15 +174,10 @@
       ],
       "variableId": "grau_instrucao"
     },
-    "sigla_uf": {
+    "nome_municipio": {
       "type": "categorical",
       "options": [],
-      "variableId": "sigla_uf"
-    },
-    "id_municipio": {
-      "type": "categorical",
-      "options": [],
-      "variableId": "id_municipio"
+      "variableId": "nome_municipio"
     }
   }
 }

@@ -3,19 +3,19 @@
     "type": "br_map_categorical",
     "range": [
       {
-        "label": "Perfil do gestor de educação por cor/raça",
+        "label": "Perfil do gestor de meio ambiente por cor/raça",
         "value": "cor_raca"
       },
       {
-        "label": "Perfil do gestor de educação por gênero",
+        "label": "Perfil do gestor de meio ambiente por gênero",
         "value": "genero"
       },
       {
-        "label": "Perfil do gestor de educação por faixa etária",
+        "label": "Perfil do gestor de meio ambiente por faixa etária",
         "value": "faixa_etaria"
       },
       {
-        "label": "Perfil do gestor de educação por escolaridade",
+        "label": "Perfil do gestor de meio ambiente por escolaridade",
         "value": "grau_instrucao"
       }
     ],
