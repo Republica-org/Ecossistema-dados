@@ -1,0 +1,57 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Existência de Plano de Carreira vigente para os profissionais da educação não docentes",
+        "value": "plano_carreira_vigente"
+      }
+    ],
+    "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2018,
+        2021
+      ],
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "plano_carreira_vigente": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        }
+      ],
+      "variableId": "plano_carreira_vigente"
+    }
+  }
+}

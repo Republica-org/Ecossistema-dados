@@ -1,0 +1,117 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Existência de nomeação por concurso público",
+        "value": "nomeacao_concurso_publico"
+      },
+      {
+        "label": "Existência de nomeação por indicação",
+        "value": "nomeacao_indicacao"
+      },
+      {
+        "label": "Existência de nomeação por eleição",
+        "value": "nomeacao_eleicao"
+      },
+      {
+        "label": "Existência de nomeação por processo seletivo",
+        "value": "nomeacao_processo_seletivo"
+      }
+    ],
+    "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2021
+      }
+    },
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2018,
+        2021
+      ],
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "nomeacao_concurso_publico": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        }
+      ],
+      "variableId": "nomeacao_concurso_publico"
+      },
+      "nomeacao_indicacao": {
+        "type": "categorical",
+        "options":[
+          {
+            "color": "var(--green)",
+            "label": "Sim",
+            "value": "Sim"
+          },
+          {
+            "color": "var(--red)",
+            "label": "Não",
+            "value": "Não"
+          }
+        ],
+        "variableId":"nomeacao_indicacao"
+      },
+      "nomeacao_eleicao":{
+        "type":"categorical",
+        "options":[
+          {
+            "color": "var(--green)",
+            "label": "Sim",
+            "value": "Sim"
+          },
+          {
+            "color": "var(--red)",
+            "label": "Não",
+            "value": "Não"
+          }
+        ],
+        "variableId":"nomeacao_eleicao"
+      },
+      "nomeacao_processo_seletivo":{
+        "type":"categorical",
+        "options":[
+          {
+            "color": "var(--green)",
+            "label": "Sim",
+            "value": "Sim"
+          },
+          {
+            "color": "var(--red)",
+            "label": "Não",
+            "value": "Não"
+          }
+        ],
+        "variableId":"nomeacao_processo_seletivo"
+      }
+  }
+}

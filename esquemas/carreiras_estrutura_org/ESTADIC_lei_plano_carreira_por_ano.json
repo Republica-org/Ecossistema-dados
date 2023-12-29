@@ -1,0 +1,53 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Período de criação da lei que institui o plano de carreira para magistério",
+        "value": "periodo_anual"
+      }
+    ],
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": 2021,
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "periodo_anual": {
+      "type": "categorical",
+      "options": [ 
+        {
+          "color": "var(--green)",
+          "label": "Década de 90",
+          "value": "Década de 90"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Década de 2000",
+          "value": "Década de 2000"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Década de 2010",
+          "value": "Década de 2010"
+        },
+        {
+          "color": "var(--blue)",
+          "label": "Década de 2020",
+          "value": "Década de 2020"
+        }
+      ],
+      "variableId": "periodo_anual"
+    }
+  }
+}
