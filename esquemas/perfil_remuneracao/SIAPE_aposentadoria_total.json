@@ -1,0 +1,123 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de aposentadorias",
+        "value": "total_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "tipo_aposentadoria",
+      "org_lotacao",
+      "categoria_ministerios"
+    ],
+    "filterBy": [
+      "tipo_aposentadoria",
+      "categoria_ministerios"
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "categoria_ministerios": [
+          "Economia, Finanças, Planejamento, Previdência e Gestão"
+        ]
+      }
+    },
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "phrasePrefix": "em"
+    },
+    "mes": {
+      "type": "categorical",
+      "label": "mês",
+      "options": [
+        11
+      ]
+    },
+    "total": {
+      "type": "continuous",
+      "label": "Total de vínculos"
+    },
+    "tipo_aposentadoria": {
+      "type": "categorical",
+      "label": "Tipo de aposentadoria",
+      "options": [
+        "Aposentadoria por invalidez",
+        "Aposentadoria voluntária",
+        "Aposentadoria compulsória",
+        "Aposentadoria por incapacidade",
+        "Outros"
+      ],
+      "phrasePrefix": "por"
+    },
+    "org_lotacao": {
+      "type": "categorical",
+      "label": "Órgão de lotação",
+      "options": [
+        "Ministério Do Turismo",
+        "Ministério Da Economia",
+        "Ministério Da Saúde",
+        "Ministério Da Justiça E Segurança Pública",
+        "Ministério Da Educação",
+        "Ministério De Minas E Energia",
+        "Ministério Da Defesa",
+        "Ministério Da Ciência, Tecnologia, Inovações E Comunicações",
+        "Ministério Da Infraestrutura",
+        "Presidência Da República",
+        "Ministério Das Relações Exteriores",
+        "Ministério Da Agricultura, Pecuária E Abastecimento",
+        "Ministério Do Desenvolvimento Regional",
+        "Ministério Do Meio Ambiente",
+        "Controladoria-Geral Da União",
+        "Ministério Do Desenvolvimento Social",
+        "Defensoria Pública Da União",
+        "Conselho Nacional De Desenvolvimento Científico E Tecnológico",
+        "Ministério Gestão E Inovação Em Serviços Públicos",
+        "Ministério Da Cultura",
+        "Ministério Dos Transportes",
+        "Ministério Da Previdência Social",
+        "Ministério Do Planejamento E Orçamento",
+        "Ministério da Integração e do Desenvolvimento Regional",
+        "Ministério do Desenvolvimento Agrário e Agricultura Familiar",
+        "Ministério dos Povos Indígenas",
+        "Ministério Do Trabalho E Emprego",
+        "Ministério De Portos E Aeroportos",
+        "Ministério do Desenvolvimento, Indústria, Comércio e Serviços",
+        "Ministério Da Fazenda",
+        "Ministério Das Comunicações",
+        "Caixa De Financiamento Imobiliário Da Aeronáutica",
+        "Ministério Do Trabalho E Previdência"
+      ],
+      "phrasePrefix": "no"
+    },
+    "categoria_ministerios": {
+      "type": "categorical",
+      "label": "Setores",
+      "options": [
+        "Economia, Finanças, Planejamento, Previdência e Gestão",
+        "Cultura, Turismo e Esportes",
+        "Saúde",
+        "Justiça, Segurança e Órgãos de Controle e Defesa",
+        "Educação e Ciência e Tecnologia",
+        "Infraestrutura, Transporte, Desenvolvimento Regional, Portos e Aeroportos, Minas e Energia",
+        "Relações Exteriores",
+        "Presidência Da República",
+        "Meio ambiente, Agricultura e Agropecuária",
+        "Desenvolvimento Social e Direitos Humanos"
+      ],
+      "phrasePrefix": "no(s) setor(es) de"
+    }
+  }
+}

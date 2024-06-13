@@ -1,0 +1,46 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de ingressantes",
+        "value": "quantidade_ingressos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+     
+      "genero"
+    ],
+    "filterBy": [
+      
+      "genero"
+    ],
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Feminino",
+        "Masculino"
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    
+    "quantidade_ingressos": {
+      "type": "continuous",
+      "label": "Quantidade de ingressos"
+    }
+  }
+}
