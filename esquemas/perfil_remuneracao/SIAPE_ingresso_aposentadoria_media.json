@@ -3,90 +3,35 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Média de tempo de contribuição por década no serviço público",
-        "value": "media_por_decada_aposentadoria"
+        "label": "Média de tempo de contribuição",
+        "value": "media_contribuicao_avg",
+        "numberFormat": {
+         "style":"decimal",
+          "maximumFractionDigits": 1,
+          "minimumFractionDigits": 1
+        }
+      },
+      {
+        "label": "Quantidade total de aposentadorias",
+        "value": "quantidade_vinculos_sum"
       }
     ],
-    "domain": "década_aposentadoria",
+    "domain": "decada_aposentadoria",
     "groupBy": [
       "tipo_aposentadoria",
       "categoria_ministerios"
     ],
     "chartType": "lines",
-    "numberFormat": {
-      "style": "currency",
-      "currency": "BRL"
-    },
-    "dataSourceType": "staticValues",
-    "dimensionVariableId": "variavel",
-    "dimensionValueVariableId": "categoria"
+    "dataSourceType": "aggregation"
   },
   "variables": {
-    "ano": {
+    "media_contribuicao": {
       "type": "continuous",
-      "label": "Ano",
-      "options": [
-        2023
-      ],
-      "phrasePrefix": "em"
+      "label": "Média de tempo de contribuição"
     },
-    "mes": {
-      "type": "categorical",
-      "label": "Mês",
-      "options": [
-        11
-      ]
-    },
-    "total": {
+    "quantidade_vinculos":{
       "type": "continuous",
-      "label": "Total de vínculos"
-    },
-    "org_lotacao": {
-      "type": "categorical",
-      "label": "Órgão de lotação",
-      "options": [
-        "Ministério Gestão E Inovação Em Serviços Públicos",
-        "Ministério Da Cultura",
-        "Ministério Da Saúde",
-        "Ministério Da Defesa",
-        "Ministério Da Educação",
-        "Ministério dos Povos Indígenas",
-        "Presidência Da República",
-        "Ministério De Minas E Energia",
-        "Ministério Da Justiça E Segurança Pública",
-        "Ministério Da Ciência, Tecnologia, Inovações E Comunicações",
-        "Ministério Dos Transportes",
-        "Ministério Da Previdência Social",
-        "Ministério Do Planejamento E Orçamento",
-        "Ministério Da Fazenda",
-        "Ministério Das Relações Exteriores",
-        "Ministério Da Agricultura, Pecuária E Abastecimento",
-        "Ministério da Integração e do Desenvolvimento Regional",
-        "Ministério do Desenvolvimento Agrário e Agricultura Familiar",
-        "Ministério Do Meio Ambiente",
-        "Ministério Do Turismo",
-        "Ministério Do Trabalho E Emprego",
-        "Ministério De Portos E Aeroportos",
-        "Ministério do Desenvolvimento, Indústria, Comércio e Serviços",
-        "Controladoria-Geral Da União",
-        "Ministério Das Comunicações",
-        "Ministério Do Trabalho E Previdencia",
-        "Defensoria Pública Da União",
-        "Ministério Da Economia"
-      ],
-      "phrasePrefix": "no"
-    },
-    "ano_ingresso": {
-      "type": "continuous",
-      "label": "Ano de ingresso"
-    },
-    "ano_aposentadoria": {
-      "type": "continuous",
-      "label": "Ano da aposentadoria"
-    },
-    "data_aposentadoria": {
-      "type": "continuous",
-      "label": "Data da aposentadoria"
+      "label": "Quantidade total de aposentadorias"
     },
     "tipo_aposentadoria": {
       "type": "categorical",
@@ -100,50 +45,26 @@
       ],
       "phrasePrefix": "por"
     },
+    "decada_aposentadoria": {
+      "type": "continuous",
+      "label": "Década de Aposentadoria"
+    },
     "categoria_ministerios": {
       "type": "categorical",
       "label": "Setores",
       "options": [
-        "Economia, finanças, planejamento e gestão",
-        "Cultura, turismo e esportes",
+        "Economia, Finanças, Planejamento, Previdência e Gestão",
+        "Cultura, Turismo e Esportes",
         "Saúde",
-        "Justiça, segurança e órgãos de controle e defesa",
-        "Educação e Ciência e tecnologia",
-        "Desenvolvimento Social, previdência e direitos humanos",
-        "Presidência Da República",
-        "Infraestrutura, transporte, desenvolvimento regional, portos e aeroportos, minas e energia",
-        "Relações exteriores",
-        "Meio ambiente, agricultura e agropecuária"
+        "Justiça, Segurança e Órgãos de Controle e Defesa",
+        "Educação e Ciência e Tecnologia",
+        "Desenvolvimento Social e Direitos Humanos",
+        "Presidência da República",
+        "Infraestrutura, Transporte, Desenvolvimento Regional, Portos e Aeroportos, Minas e Energia",
+        "Relações Exteriores",
+        "Meio ambiente, Agricultura e Agropecuária"
       ],
       "phrasePrefix": "no(s) setor(es) de"
-    },
-    "década_aposentadoria": {
-      "type": "categorical",
-      "label": "Década da aposentadoria",
-      "options": [
-        "Década de 50",
-        "Década de 60",
-        "Década de 70",
-        "Década de 80",
-        "Década de 90",
-        "Década de 2000",
-        "Década de 2010",
-        "Década de 2020"
-      ]
-    },
-    "media_por_decada_aposentadoria": {
-      "type": "continuous",
-      "label": "Média de tempo de contribuição por década no serviço público"
-    },
-    "tempo_contribuicao_servico_publico": {
-      "type": "continuous",
-      "label": "Tempo de contribuição no serviço público"
-    },
-    "data_diploma_ingresso_servicopublico": {
-      "type": "continuous",
-      "label": "Data de ingresso"
     }
   }
 }
-
-
