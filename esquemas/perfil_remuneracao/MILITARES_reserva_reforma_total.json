@@ -1,0 +1,74 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de aposentadorias",
+        "value": "total_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+     {
+       "label": "---",
+       "value": ""
+     },
+      "tipo_aposentadoria",
+      "org_lotacao"
+    ],
+    "filterBy": [
+      "tipo_aposentadoria",
+      "org_lotacao"
+    ],
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "phrasePrefix": "em"
+    },
+    "mes": {
+      "type": "categorical",
+      "label": "mês",
+      "options": [
+        4
+      ]
+    },
+    "total": {
+      "type": "continuous",
+      "label": "Total de vínculos"
+    },
+    "tipo_aposentadoria": {
+      "type": "categorical",
+      "label": "Tipo de aposentadoria",
+      "options": [
+        "Reforma Por Invalidez",
+        "Reforma",
+        "Reforma Por Doença",
+        "Reserva",
+        "Reserva Ou Reforma Por Decisão Judicial",
+        "Reserva Por Doença"
+      ],
+      "phrasePrefix": "por"
+    },
+    "org_lotacao": {
+      "type": "categorical",
+      "label": "Órgão de lotação",
+      "options": [
+        "Comando do Exército",
+        "Comando da Aeronáutica",
+        "Comando da Marinha"
+      ],
+      "phrasePrefix": "no"
+    }
+  }
+}
