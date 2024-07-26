@@ -1,15 +1,24 @@
 
-<br> 
+<br>
 
- O dado original que consta no Atlas do Estado Brasileiro pode ser acessado em : [https://www.ipea.gov.br/atlasestado/consulta/85](https://www.ipea.gov.br/atlasestado/consulta/85)
+Para elaboração desta tabela foi utilizada a RAIS não identificada existente na plataforma da [Base dos Dados](https://basedosdados.org/dataset/3e7c4d58-96ba-448e-b053-d385a829ef00?table=c3a5121e-f00d-41ff-b46f-bd26be8d4af3). Para consultar dados originados da RAIS identificada, o [Atlas do Estado Brasileiro](https://www.ipea.gov.br/atlasestado/), vinculado ao IPEA, disponibiliza tabulações refinadas a partir de um tratamento longitudinal dos vínculos. 
 
 <br>
 
 
+
 <details>
-  <summary><b> 1º passo:</b> Tratamento: </summary>
+  <summary><b> 1º passo:</b> Pré-tratamento: </summary>
 
 Acesso em:
 
-[https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/RAIS_poder_nivel_vinculos.ipynb](https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/RAIS_poder_nivel_vinculos.ipynb)
+[https://github.com/Republica-org/Ecossistema-dados/blob/main/pre_tratamento/tratamento_republica/Datalake/RAIS_vinculos_publicos.sql](https://github.com/Republica-org/Ecossistema-dados/blob/main/pre_tratamento/tratamento_republica/Datalake/RAIS_vinculos_publicos.sql)
+</details>
+<details>
+  <summary><b> 2º passo:</b> Tratamento e subir no GBQ da República.org:</summary>
+
+Acesso em:
+
+[https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/RAIS_vinculos_publicos_grafico.sql](https://github.com/Republica-org/Ecossistema-dados/blob/main/tratamento_GBQ/perfil_remuneracao/RAIS_vinculos_publicos_grafico.sql)
+
 </details>

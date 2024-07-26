@@ -1,0 +1,69 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de pensionistas",
+        "value": "total_sum"
+      }
+    ],
+   "domain": "ano",
+   "groupBy": [
+     {
+       "label": "---",
+       "value": ""
+     },
+     "tipo_pensao_agrupado"
+   ],
+   "filterBy": [
+     "tipo_pensao_agrupado"
+   ],
+   "defaultValues": {
+    "filterBy":{
+      "tipo_pensao_agrupado":[
+        "Cônjuge ou ex-cônjuge",
+        "Filhos, netos, enteados ou menores em tutela"
+      ]
+    }
+   },
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+    },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "phrasePrefix": "em"
+    },
+    "mes": {
+      "type": "categorical",
+      "label": "Mês",
+      "options": [
+        4
+      ]
+    },
+    "total": {
+      "type": "continuous",
+      "label": "Total de pensionistas"
+    },
+    "tipo_pensao_agrupado": {
+      "type": "categorical",
+      "label": "Tipo de Pensão",
+      "options": [
+        "Cônjuge ou ex-cônjuge",
+        "Filhos, netos, enteados ou menores em tutela",
+        "Pais",
+        "Irmão (ã)",
+        "Pessoa designada",
+        "Outros"      ],
+      "phrasePrefix": "por"
+    }
+  }
+}
