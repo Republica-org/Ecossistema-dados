@@ -1,8 +1,16 @@
+WITH tabela_1 AS (
+  SELECT nome,nome_regiao, b.* FROM
+    `basedosdados.br_bd_diretorios_brasil.municipio`  AS a
+      RIGHT JOIN `basedosdados.br_me_rais.microdados_vinculos` AS b 
+      ON a.id_municipio = b.id_municipio )
 
  SELECT 
 
   ano, 
   sigla_uf,
+  nome AS nome_municipio,  
+  id_municipio,
+  nome_regiao,
 
   CASE 
     WHEN natureza_juridica IN ('1015','1023', '1031') THEN 'Executivo'
@@ -12,6 +20,7 @@
   END AS poderes,
 
   
+
   CASE 
     WHEN natureza_juridica IN ('1015','1040', '1074', '1104','1139', '1163', '1252', '1287', '1317', '1341') THEN 'Federal'
     WHEN natureza_juridica IN ('1023','1058', '1082', '1112', '1147', '1171', '1236','1260',  '1295', '1325') THEN 'Estadual'
@@ -91,26 +100,7 @@
     WHEN faixa_etaria = '7'  THEN '50 a 64 anos'
     WHEN faixa_etaria = '8'  THEN '65 anos ou mais'
   END AS faixa_etaria,
-
-  CASE
-    WHEN indicador_portador_deficiencia = 0  THEN 'Não'
-    WHEN indicador_portador_deficiencia = 1  THEN 'Sim'
-    ELSE "Ignorado"
-  END AS  indicador_portador_deficiencia,
-
-
-  AVG(tempo_emprego) AS media_tempo_emprego,
-
-
-  CASE
-    WHEN quantidade_horas_contratadas >= 40   THEN '40 horas ou mais'
-    WHEN quantidade_horas_contratadas = 30  THEN '30 horas'
-    WHEN quantidade_horas_contratadas = 20 THEN '20 horas'
-    ELSE "Ignorado"
-  END AS  carga_horaria,
-
-
-CASE 
+  CASE 
     WHEN tipo_vinculo = '10' THEN 'CLT'
     WHEN tipo_vinculo = '15' THEN 'CLT'
     WHEN tipo_vinculo = '20' THEN 'CLT/Rural'
@@ -132,30 +122,41 @@ CASE
     WHEN tipo_vinculo = '97' THEN 'Contratado/tempo determinado'
     ELSE 'Ignorado' 
   END AS tipo_vinculo,
+  quantidade_horas_contratadas,
+
+  --CASE
+  --  WHEN indicador_portador_deficiencia = 0  THEN 'Não'
+  --  WHEN indicador_portador_deficiencia = 1  THEN 'Sim'
+  --  ELSE "Ignorado"
+ -- END AS  indicador_portador_deficiencia,
 
   COUNT(*) AS quantidade_vinculos
 
-FROM `basedosdados.br_me_rais.microdados_vinculos`
+
+
+FROM tabela_1
 WHERE (natureza_juridica LIKE "1%" 
 OR natureza_juridica IN ('2011', '2038'))
 AND natureza_juridica != '1228'
 AND cbo_2002 NOT LIKE "0%" 
-AND vinculo_ativo_3112 = 1
+AND vinculo_ativo_3112= '1'
 
 GROUP BY 
 
   ano, 
   sigla_uf,
+  id_municipio, 
   poderes,
   esfera,
   tipologia, 
+  tipo_vinculo,
+  quantidade_horas_contratadas,
   sexo, 
   raca, 
-  indicador_portador_deficiencia,
+ -- indicador_portador_deficiencia,
   faixa_etaria,
   grau_instrucao_apos_2005,
   grau_instrucao_1985_2005,
   grau_instrucao,
-  tempo_emprego, 
-  carga_horaria,
-  tipo_vinculo
+  nome_regiao,
+  nome_municipio
