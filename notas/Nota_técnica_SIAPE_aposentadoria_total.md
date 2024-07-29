@@ -1,6 +1,6 @@
 ## Nota técnica sobre tratamento dos dados para o Google Big Query do Total de aposentadorias por ano
 
-Como descrito no gráfico de Quantidade de Aposentadorias Civis no Executivo Federal, por haver divergências nominais nos nomes dos ministérios ao longo dos anos, foi feito uma categorização, denominada 'Setores', para que os órgãos de lotação fossem alocados em grupos. Desta forma, ao usar determinados filtros em 'Setores', tem-se algumas curvas diferenciadas das demais.
+Como descrito na descrição do gráfico de Quantidade de Aposentadorias Civis no Executivo Federal, por haver divergências nominais nos nomes dos ministérios ao longo dos anos, foi feito uma categorização, denominada 'Setores', para que os órgãos de lotação fossem alocados em grupos. Desta forma, ao usar determinados filtros em 'Setores', tem-se algumas curvas diferenciadas das demais.
 
 Por exemplo, ao filtrar apenas por 'Presidência da República', vê-se em 2020, 10.102 vínculos; em 2021, 3.110 vínculos ; em 2022: 3981 vínculos; e em 2023, 12.966 vínculos. Trata-se de uma questão estrutural que muda ao longo dos mandatos, portanto, não significa que de fato aumentou ou diminuiu os vínculos de aposentadorias. Um exemplo disso, é o Ministério de Agricultura, Pecuária e Abastecimento que teve vínculos realocados para a Presidência da República, por isso que há um aumento de 8985 de 2022 para 2023.
 
