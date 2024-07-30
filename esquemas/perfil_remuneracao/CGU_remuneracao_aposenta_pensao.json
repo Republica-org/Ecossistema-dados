@@ -1,0 +1,70 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Média de tempo de contribuição",
+        "value": "media_contribuicao_avg",
+        "numberFormat": {
+         "style":"decimal",
+          "maximumFractionDigits": 1,
+          "minimumFractionDigits": 1
+        }
+      },
+      {
+        "label": "Quantidade total de aposentadorias",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "decada_aposentadoria",
+    "groupBy": [
+      "tipo_aposentadoria",
+      "categoria_ministerios"
+    ],
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "media_contribuicao": {
+      "type": "continuous",
+      "label": "Média de tempo de contribuição"
+    },
+    "quantidade_vinculos":{
+      "type": "continuous",
+      "label": "Quantidade total de aposentadorias"
+    },
+    "tipo_aposentadoria": {
+      "type": "categorical",
+      "label": "Tipo de aposentadoria",
+      "options": [
+        "Aposentadoria por invalidez",
+        "Aposentadoria voluntária",
+        "Aposentadoria compulsória",
+        "Aposentadoria por incapacidade",
+        "Outros"
+      ],
+      "phrasePrefix": "por"
+    },
+    "decada_aposentadoria": {
+      "type": "continuous",
+      "label": "Década de Aposentadoria"
+    },
+    "categoria_ministerios": {
+      "type": "categorical",
+      "label": "Setores",
+      "options": [
+        "Economia, Finanças, Planejamento, Previdência e Gestão",
+        "Cultura, Turismo e Esportes",
+        "Saúde",
+        "Justiça, Segurança e Órgãos de Controle e Defesa",
+        "Educação e Ciência e Tecnologia",
+        "Desenvolvimento Social e Direitos Humanos",
+        "Presidência da República",
+        "Infraestrutura, Transporte, Desenvolvimento Regional, Portos e Aeroportos, Minas e Energia",
+        "Relações Exteriores",
+        "Meio ambiente, Agricultura e Agropecuária"
+      ],
+      "phrasePrefix": "no(s) setor(es) de"
+    }
+  }
+}
