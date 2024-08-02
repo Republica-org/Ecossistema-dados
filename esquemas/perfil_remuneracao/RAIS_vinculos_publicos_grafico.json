@@ -18,18 +18,20 @@
       "sexo",
       "poderes",
       "grau_instrucao",
+      "tipo_adm",
+      "tipo_adm_detalhado",
       "esfera",
       "faixa_etaria",
-      "carga_horaria",
       "tipo_vinculo"
     ],
     "filterBy": [
       "sexo",
       "poderes",
       "grau_instrucao",
+      "tipo_adm",
+      "tipo_adm_detalhado",
       "esfera",
       "faixa_etaria",
-      "carga_horaria",
       "tipo_vinculo"
     ],
     
@@ -235,16 +237,29 @@
       ],
       "phrasePrefix": "com vínculo do tipo"
     },
-    "carga_horaria": {
+    "tipo_adm": {
       "type": "categorical",
-      "label": "Carga horária",
+      "label": "Tipo de administração",
       "options": [
-        "20 horas",
-        "30 horas",
-        "40 horas ou mais",
-        "Ignorado"
+        "Adm Direta",
+        "Fundação pública de direito público ou autarquia",
+        "Órgão público autônomo",
+        "Fundação pública de direito privado",
+        "Empresa Pública",
+        "Outros"
       ],
-      "phrasePrefix": "com carga horária de"
+      "phrasePrefix": "da"
+    },
+    "tipo_adm_detalhado": {
+      "type": "categorical",
+      "label": "Tipo de administração detalhado",
+      "options": [
+        "Adm Direta",
+        "Indireta",
+        "Empresa Pública",
+        "Outros"
+      ],
+      "phrasePrefix": "da"
     },
     "grau_instrucao": {
       "type": "categorical",

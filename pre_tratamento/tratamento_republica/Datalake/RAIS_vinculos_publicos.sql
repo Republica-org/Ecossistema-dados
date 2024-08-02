@@ -12,8 +12,10 @@ WITH tabela_1 AS (
   id_municipio,
   nome_regiao,
 
+  -- códigos da natureza jurídica: 
+--https://concla.ibge.gov.br/estrutura/natjur-estrutura/natureza-juridica-2021.html
   CASE 
-    WHEN natureza_juridica IN ('1015','1023', '1031') THEN 'Executivo'
+    WHEN natureza_juridica IN ('1015','1023', '1031','1104','1139','1112', '1147','1236','1120', '1155','1180','1341') THEN 'Executivo'-- aqui será adicionada autarquias e fundações de direito público. 
     WHEN natureza_juridica IN ('1040','1058', '1066') THEN 'Legislativo'
     WHEN natureza_juridica IN ('1074','1082') THEN 'Judiciário'
     ELSE 'Outros' 
@@ -34,6 +36,16 @@ WITH tabela_1 AS (
     WHEN natureza_juridica IN ('2013', '2038') THEN 'Empresa Pública'
     ELSE 'Outros' 
   END AS tipologia,
+
+-- adicionar outras esferas Abaixo tem apenas a federal
+   CASE 
+    WHEN natureza_juridica IN ( '1015','1040','1074','1023','1058','1082','1031','1066') THEN 'Adm Direta'
+    WHEN natureza_juridica IN ('1104','1112','1120','1139','1147','1155') THEN 'Fundação pública de direito público ou autarquia'
+    WHEN natureza_juridica IN ('1163','1171','1180') THEN 'Órgão público autônomo' 
+    WHEN natureza_juridica IN ('1252','1260','1279') THEN 'Fundação pública de direito privado' 
+    WHEN natureza_juridica IN ('2013', '2038') THEN 'Empresa Pública'
+    ELSE 'Outros' 
+  END AS tipologia2,
 
   CASE 
     WHEN sexo = '1' THEN 'Masculino'
