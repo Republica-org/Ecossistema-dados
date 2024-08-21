@@ -8,7 +8,10 @@
       }
     ],
     "domain": "setor",
-    "groupBy": ["pais","genero"],
+    "groupBy": [
+      "pais",
+      "genero"
+    ],
     "filterBy": [
       "genero",
       "pais"
@@ -32,16 +35,16 @@
       "options": [
         "África do Sul",
         "Argentina",
-        "Bolivia",
+        "Austrália",
+        "Bolívia",
         "Brasil",
         "Chile",
-        "Colombia",
-        "Dinamarca",
+        "Colômbia",
         "Estados Unidos",
         "França",
         "México",
         "Peru",
-        "Suécia",
+        "Reino Unido",
         "Uruguai"
       ],
       "phrasePrefix": "no"
@@ -59,8 +62,8 @@
       "type": "categorical",
       "label": "Gênero",
       "options": [
-        "Feminino",
-        "Masculino"
+        "Mulher",
+        "Homem"
       ],
       "phrasePrefix": "do gênero"
     },

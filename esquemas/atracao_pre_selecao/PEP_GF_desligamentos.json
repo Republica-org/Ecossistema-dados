@@ -1,60 +1,60 @@
-
-
-
 {
-    "view": { 
-      "type": "data_series",
-  
-      "range": [
-        {
-          "label": "Total de desligamentos",
-          "value": "quantidade_desligamentos_sum"
-        }
-      ],
-      "domain": "ano",
-      "groupBy": [
-        {
-          "label": "---",
-          "value": ""
-        },
-        "tipo_desligamento",
-        "status_estabilidade"
-      ],
-      "filterBy": [
-        "tipo_desligamento",
-        "status_estabilidade"
-      ],
-      
-      "chartType": "lines",
-      "dataSourceType": "aggregation"
-    },
-    "variables": {
-      "ano": {
-        "type": "categorical",
-        "label": "Ano"
-      },
-      "tipo_desligamento": {
-        "type": "categorical",
-        "label": "Tipo de desligamento",
-        "categories": [
-          "Decisão judicial", "Penalidade disciplinar", "Exoneração",
-         "Falecimento", "Posse outro cargo inacumulável",
-         "Demais desligamentos", "Programa de desligamento volun",
-         "Acumulação ilícita"
-        ],
-        "phrasePrefix": "por"
-      },
-      "status_estabilidade": {
-        "type": "categorical",
-        "label": "status_estabilidade",
-        "categories": [
-          "Estável", "Não Estável"
-        ],
-        "phrasePrefix": "que é"
-      },
-      "quantidade_desligamentos": {
-        "type": "continuous",
-        "label": "Quantidade de desligamentos"
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de desligamentos",
+        "value": "quantidade_desligamentos_sum"
       }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      "tipo_desligamento",
+      "status_estabilidade"
+    ],
+    "filterBy": [
+      "tipo_desligamento",
+      "status_estabilidade"
+    ],
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "categorical",
+      "label": "Ano"
+    },
+    "tipo_desligamento": {
+      "type": "categorical",
+      "label": "Tipo de desligamento",
+      "options": [
+        "Decisão judicial",
+        "Penalidade disciplinar",
+        "Exoneração",
+        "Falecimento",
+        "Posse outro cargo inacumulável",
+        "Demais desligamentos",
+        "Programa de desligamento volun",
+        "Acumulação ilícita"
+      ],
+      "phrasePrefix": "por"
+    },
+    "status_estabilidade": {
+      "type": "categorical",
+      "label": "Status de estabilidade",
+      "options": [
+        "Estável",
+        "Não Estável"
+      ],
+      "phrasePrefix": "que é"
+    },
+    "quantidade_desligamentos": {
+      "type": "continuous",
+      "label": "Quantidade de desligamentos"
     }
   }
+}
