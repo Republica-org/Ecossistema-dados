@@ -1,0 +1,39 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Quantidade de planos/carreiras por faixa de números de servidores no Governo Federal",
+        "value": "qtde_planos_sum",
+        "orderBy": "qtde_planos_sum_desc"
+      },
+      {
+        "label": "Proporção de planos/carreiras por faixa de números de servidores no Governo Federal",
+        "value": "perc_planos_sum",
+        "orderBy": "perc_planos_sum_desc"
+      }
+    ],
+    "domain": "faixa_cargos",
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "perc_planos": {
+      "type": "continuous",
+      "label": "Proporção de vínculos",
+      "numberFormat": {
+        "style": "percent",
+        "maximumFractionDigits": 2,
+        "minimumFractionDigits": 2
+      }
+    },
+    "qtde_planos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    },
+    "faixa_cargos": {
+      "type": "categorical",
+      "label": "Faixas de Cargos"
+    }
+  }
+}
