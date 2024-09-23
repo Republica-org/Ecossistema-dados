@@ -1,0 +1,38 @@
+{
+    "view": {
+      "type": "table"
+    },
+    "variables": {
+      "remuneracao": {
+        "type": "continuous",
+        "label": "Remuneração",
+        "variableId": "remuneracao",
+        "numberFormat": {
+          "style": "currency",
+          "currency": "BRL",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      },
+      "cce_unitario": {
+        "type": "categorical",
+        "label": "CCE Unitário",
+        "variableId": "cce_unitario"
+      },
+      "nome_cargo_funcao": {
+        "type": "categorical",
+        "label": "Nome do Cargo ou Função",
+        "variableId": "nome_cargo_funcao"
+      },
+      "nivel_cargo_funcao": {
+        "type": "categorical",
+        "label": "Nível do Cargo ou Função",
+        "variableId": "nivel_cargo_funcao"
+      },
+      "sigla_cargo_funcao": {
+        "type": "categorical",
+        "label": "Sigla do Cargo ou Função",
+        "variableId": "sigla_cargo_funcao"
+      }
+    }
+  }

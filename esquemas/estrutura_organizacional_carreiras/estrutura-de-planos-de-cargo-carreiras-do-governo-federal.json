@@ -1,0 +1,92 @@
+{
+    "view": {
+      "type": "table"
+    },
+    "variables": {
+      "orgao_sigla": {
+        "type": "categorical",
+        "label": "Órgão (sigla)",
+        "variableId": "orgao_sigla"
+      },
+      "nome_do_cargo": {
+        "type": "categorical",
+        "label": "Nome do Cargo",
+        "variableId": "nome_do_cargo"
+      },
+      "plano_carreira": {
+        "type": "categorical",
+        "label": "Plano/Carreira",
+        "variableId": "plano_carreira"
+      },
+      "codigo_do_cargo": {
+        "type": "continuous",
+        "label": "Código do Cargo",
+        "variableId": "codigo_do_cargo"
+      },
+      "cargo_com_codigo": {
+        "type": "categorical",
+        "label": "Cargo (com código)",
+        "variableId": "cargo_com_codigo"
+      },
+      "qtd_cargos_vagos": {
+        "type": "continuous",
+        "label": "Qtd. Cargos Vagos",
+        "variableId": "qtd_cargos_vagos"
+      },
+      "grupo_cargo_sigla": {
+        "type": "categorical",
+        "label": "Grupo-Cargo (sigla)",
+        "variableId": "grupo_cargo_sigla"
+      },
+      "subsidio_indicador": {
+        "type": "categorical",
+        "label": "Subsídio (indicador)",
+        "variableId": "subsidio_indicador"
+      },
+      "qtd_cargos_ocupados": {
+        "type": "continuous",
+        "label": "Qtd. Cargos Ocupados",
+        "variableId": "qtd_cargos_ocupados"
+      },
+      "qtd_cargos_aprovados": {
+        "type": "continuous",
+        "label": "Qtd. Cargos Aprovados",
+        "variableId": "qtd_cargos_aprovados"
+      },
+      "escolaridade_do_cargo": {
+        "type": "categorical",
+        "label": "Escolaridade do Cargo",
+        "variableId": "escolaridade_do_cargo"
+      },
+      "qtd_cargos_distribuidos": {
+        "type": "continuous",
+        "label": "Qtd. Cargos Distribuidos",
+        "variableId": "qtd_cargos_distribuidos"
+      },
+      "agrupamentos_de_cargos_1": {
+        "type": "categorical",
+        "label": "Agrupamentos de Cargos 1",
+        "variableId": "agrupamentos_de_cargos_1"
+      },
+      "agrupamentos_de_cargos_2": {
+        "type": "categorical",
+        "label": "Agrupamentos de Cargos 2",
+        "variableId": "agrupamentos_de_cargos_2"
+      },
+      "cargo_em_extincao_indicador": {
+        "type": "categorical",
+        "label": "Cargo em Extinção (indicador)",
+        "variableId": "cargo_em_extincao_indicador"
+      },
+      "remuneracao_maximo_valor_final": {
+        "type": "continuous",
+        "label": "Remuneração - Máximo Valor Final",
+        "variableId": "remuneracao_maximo_valor_final"
+      },
+      "remuneracao_minimo_valor_inicial": {
+        "type": "continuous",
+        "label": "Remuneração - Mínimo Valor Inicial",
+        "variableId": "remuneracao_minimo_valor_inicial"
+      }
+    }
+  }

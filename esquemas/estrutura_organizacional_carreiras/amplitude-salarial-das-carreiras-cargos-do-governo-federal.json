@@ -1,0 +1,48 @@
+{
+    "view": {
+      "type": "table"
+    },
+    "variables": {
+      "salario_final": {
+        "type": "continuous",
+        "label": "Salário Final",
+        "order": 2,
+        "variableId": "salario_final",
+        "numberFormat": {
+          "style": "currency",
+          "currency": "BRL",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      },
+      "salario_inicial": {
+        "type": "continuous",
+        "label": "Salário Inicial",
+        "order": 1,
+        "variableId": "salario_inicial",
+        "numberFormat": {
+          "style": "currency",
+          "currency": "BRL",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      },
+      "cargo_com_codigo": {
+        "type": "categorical",
+        "label": "Cargo",
+        "order": 0,
+        "variableId": "cargo_com_codigo"
+      },
+      "amplitude_salarial": {
+        "type": "continuous",
+        "label": "Amplitude Salarial",
+        "order": 3,
+        "variableId": "amplitude_salarial",
+        "numberFormat": {
+          "style": "percent",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      }
+    }
+  }
