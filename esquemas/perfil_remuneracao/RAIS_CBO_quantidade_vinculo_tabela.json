@@ -1,0 +1,52 @@
+{
+  "view": {
+    "type": "table"
+  },
+  "variables": {
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos",
+      "order":6,
+      "variableId": "quantidade_vinculos"
+    },
+    "grupo_ocupacao": {
+      "type": "categorical",
+      "label": "Grupo da ocupação",
+      "order":1,
+      "variableId": "grupo_ocupacao"
+    },
+    "nome_ocupacao": {
+      "type": "categorical",
+      "label": "Nome da ocupação",
+      "order":3,
+      "variableId": "nome_ocupacao"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "order":5,
+      "variableId": "genero"
+    },
+    "esfera": {
+      "type": "categorical",
+      "label": "Nível da esfera do governo",
+      "order":4,
+      "variableId": "esfera"
+    },
+    "codigo": {
+      "type": "continuous",
+      "label": "Código CBO",
+      "order":2,
+      "variableId": "codigo"
+    },
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "order":0,
+      "variableId": "ano",
+      "format": "####"
+    }
+  }
+}
+
+

@@ -1,0 +1,161 @@
+
+{
+  "view": { 
+    "type": "data_series", 
+
+    "range": [
+      {
+        "label": "Idade média",
+        "value": "idade_ingresso_avg"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      "esc_cargo",
+      "escolaridade",
+      "sexo",
+      "cor_origem_etnica"
+      
+      
+    ],
+    "filterBy": [
+     "esc_cargo",
+      "escolaridade",
+      "sexo",
+      "cor_origem_etnica"
+
+    
+    ],
+    
+    "chartType": "lines",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "esc_cargo": {
+      "type": "categorical",
+      "label": "Ecolaridade cargo",
+      "options": [
+
+
+        {
+          "value": "NS",
+          "label": "NS"
+        },
+        {
+          "value": "NI",
+          "label": "NI"
+        },
+        {
+          "value": "NM",
+          "label": "NM"
+        }
+
+        
+        
+      ],
+      "phrasePrefix": "da escolaridade do cargo"
+    },
+    "escolaridade": {
+      "type": "categorical",
+      "label": "escolaridade",
+      "options": [
+
+
+        {
+          "value": "SUPERIOR",
+          "label": "SUPERIOR"
+        },
+        {
+          "value": "MESTRADO",
+          "label": "MESTRADO"
+        },
+        {
+          "value": "DOUTORADO",
+          "label": "DOUTORADO"
+        },
+        {
+          "value": "POS GRADUACAO",
+          "label": "POS GRADUACAO"
+        },
+        {
+          "value": "ENSINO MEDIO",
+          "label": "ENSINO MEDIO"
+        },
+        {
+          "value": "ATE FUNDAMENTAL",
+          "label": "ATE FUNDAMENTAL"
+        },
+        {
+          "value": "SEM_INFO",
+          "label": "SEM_INFO"
+        }
+        
+      ],
+      "phrasePrefix": "escolaridade"
+    },
+    "sexo": {
+      "type": "categorical",
+      "label": "Sexo",
+      "options": [
+
+
+        {
+          "value": "MAS",
+          "label": "MAS"
+        },
+        {
+          "value": "FEM",
+          "label": "FEM"
+        }        
+        
+      ],
+      "phrasePrefix": "do sexo"
+    },
+"cor_origem_etnica": {
+      "type": "categorical",
+      "label": "Cor",
+      "options": [
+
+
+        {
+          "value": "BRANCA",
+          "label": "BRANCA"
+        },
+        {
+          "value": "NEGRA",
+          "label": "NEGRA"
+        },
+        {
+          "value": "AMARELA",
+          "label": "AMARELA"
+        },
+        {
+          "value": "INDIGENA",
+          "label": "INDIGENA"
+        },
+        {
+          "value": "NAO INFORMADO",
+          "label": "NAO INFORMADO"
+        }          
+        
+      ],
+      "phrasePrefix": "da cor/etnia"
+    },
+
+
+
+
+    "idade_ingresso": {
+      "type": "continuous",
+      "label": "Média de idade"
+    }
+  }
+}

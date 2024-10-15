@@ -1,0 +1,89 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Quantidade de vínculos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "grupo_ocupacao",
+    "groupBy": [
+      "genero",
+      "esfera"
+      
+    ],
+    "filterBy": [
+      "esfera",
+      "genero",
+      "grupo_ocupacao"
+    ],
+    "chartType": "bars",
+    "defaultValues": {
+      "groupBy": {
+        "genero": [
+          "Feminino",
+          "Masculino"
+        ]
+      },
+      "filterBy": {
+        "genero": [
+          "Feminino",
+          "Masculino"
+        ],
+        "grupo_ocupacao": [
+          "Profissionais De Medicina, Enfermagem E Afins"
+        ],
+        "esfera":
+        ["Municipal"] 
+      }
+    },
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "esfera": {
+      "type": "categorical",
+      "label": "Esfera do governo",
+      "options": [
+        "Federal",
+        "Estadual",
+        "Municipal",
+        "Outros"
+      ],
+      "phrasePrefix": "na esfera"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Feminino",
+        "Masculino",
+        "Não identificado"
+      ],
+      "phrasePrefix": "do gênero"
+    },
+    "grupo_ocupacao": {
+      "type": "categorical",
+      "label": "Grupo de ocupação",
+      "options": [
+        "Membros Superiores Do Poder Público, Dirigentes De Organizações De Interesse Público E De Empresas, Gerentes",
+        "Profissionais De Medicina, Enfermagem E Serviços Da Saúde",
+        "Profissionais De Ciência De Ensino Superior",
+        "Profissionais De Ensino",
+        "Profissionais De Artes De Ensino Superior",
+        "Técnicos De Nível Médio",
+        "Trabalhadores De Serviços Administrativos",
+        "Trabalhadores Dos Serviços, Vendedores Do Comércio Em Lojas E Mercados",
+        "Trabalhadores Nos Serviços De Proteção E Segurança",
+        "Trabalhadores Agropecuários, Florestais E Da Pesca",
+        "Trabalhadores Da Produção De Bens E Serviços Industriais",
+        "Trabalhadores Em Serviços De Reparação E Manutenção"
+      ],
+      "phrasePrefix": "no grupo"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos por ocupação"
+    }
+  }
+}
