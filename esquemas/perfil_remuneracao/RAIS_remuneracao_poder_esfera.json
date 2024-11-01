@@ -1,42 +1,45 @@
-  {
-    "view": {
-      "type": "data_series",
-      "range": [
-      
-        "mediana_ajustada"
-      ],
-      "domain": "Categoria",
-      "groupBy": [
-        {
-          "label": "Esfera",
-          "value": "Esfera"
-        },
-        {
-          "label": "Esfera e poder",
-          "value": "Esfera e poder"
-        }
-      ],
-      "chartType": "bars",
-      "numberFormat": {
-        "style": "currency",
-        "currency": "BRL"
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      "mediana"
+    ],
+    "domain": "grupo",
+    "groupBy": [
+      {
+        "label": "Esfera",
+        "value": "Esfera"
       },
-      "dataSourceType": "staticValues",
-      "dimensionVariableId": "Categoria",
-      "dimensionValueVariableId": "Grupo"
-    },
-    "variables": {
-      
-      "Categoria": {
-        "type": "categorical"
+      {
+        "label": "Esfera e poder",
+        "value": "Esfera e Poder"
       },
-      "Grupo": {
-        "type": "categorical"
-      },
-      "media_ajustada": {
-        "type": "continuous",
-        "label": "Remuneração mediana",
-        "expression": "mediana_ajustada"
+      {
+        "label": "Poder",
+        "value": "Poder"
       }
+    ],
+    "chartType": "bars",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
+    "dataSourceType": "staticValues",
+    "dimensionVariableId": "grupo",
+    "dimensionValueVariableId": "poder_esfera"
+  },
+  "variables": {
+    "grupo": {
+      "type": "categorical",
+      "label": "Poder e Esfera"
+    },
+    "mediana": {
+      "type": "continuous",
+      "label": "Remuneração mediana",
+      "expression": "mediana"
+    },
+    "poder_esfera": {
+      "type": "categorical"
     }
   }
+}

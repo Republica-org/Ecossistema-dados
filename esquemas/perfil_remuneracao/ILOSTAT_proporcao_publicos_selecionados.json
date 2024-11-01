@@ -3,26 +3,28 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Proporção de vínculos públicos",
-        "value": "prop_vinculos_publicos_sum"
+        "label": "Quantidade de pessoas que trabalham",
+        "value": "quantidade_sum"
       }
     ],
-    "xAxis": {
-      "angle": 45,
-      "label": {
-        "offset": 50
-      },
-      "style": {
-        "textAnchor": "start"
-      },
-      "interval": 0
-    },
-    "domain": "pais",
-    "orderBy": "prop_vinculos_publicos_sum_desc",
+    "domain": "setor",
+    "groupBy": [
+      "pais",
+      "genero"
+    ],
+    "filterBy": [
+      "genero",
+      "pais"
+    ],
     "chartType": "bars",
-    "numberFormat": {
-      "style": "percent",
-      "minimumFractionDigits": 2
+    "defaultValues": {
+      "filterBy": {
+        "pais": [
+          "Brasil",
+          "Chile",
+          "Estados Unidos"
+        ]
+      }
     },
     "dataSourceType": "aggregation"
   },
@@ -33,27 +35,41 @@
       "options": [
         "África do Sul",
         "Argentina",
-        "Bolivia",
+        "Austrália",
+        "Bolívia",
         "Brasil",
         "Chile",
-        "Colombia",
-        "Dinamarca",
+        "Colômbia",
         "Estados Unidos",
         "França",
         "México",
         "Peru",
-        "Suécia",
+        "Reino Unido",
         "Uruguai"
+      ],
+      "phrasePrefix": "no"
+    },
+    "setor": {
+      "type": "categorical",
+      "label": "setor",
+      "options": [
+        "Público",
+        "Privado"
       ],
       "phrasePrefix": "dos"
     },
-    "flag_publico_privado": {
+    "genero": {
       "type": "categorical",
-      "label": "setor"
+      "label": "Gênero",
+      "options": [
+        "Mulher",
+        "Homem"
+      ],
+      "phrasePrefix": "do gênero"
     },
-    "prop_vinculos_publicos": {
+    "quantidade": {
       "type": "continuous",
-      "label": "Proporção de vínculos públicos no mercado formal de trabalho"
+      "label": "Quantidade vínculos públicos no mercado formal de trabalho"
     }
   }
 }

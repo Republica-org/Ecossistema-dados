@@ -31,7 +31,7 @@ WITH tabela_1 AS (
   END AS esfera,
 
   CASE 
-    WHEN natureza_juridica IN ( '1015','1040','1074','1023','1058','1082','1031','1066','1317','1325','1333') THEN 'Adm Direta'
+    WHEN natureza_juridica IN ( '1015','1040','1074','1023','1058','1082','1031','1066','1317','1325','1333') THEN 'Adm Direta' -- Excluir os fundoss públicos
     WHEN natureza_juridica IN ('1104','1139','1163','1252','1112','1147','1171','1236','1260','1120','1155','1180','1244','1279','1287','1295','1309') THEN 'Indireta'
     WHEN natureza_juridica IN ('2013', '2038') THEN 'Empresa Pública'
     ELSE 'Outros' 
