@@ -1,0 +1,73 @@
+
+{
+  "view": { 
+    "type": "data_series", 
+
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      
+      "esfera",
+      "poderes"
+      
+    ],
+    
+    "chartType": "lines",
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "poderes": {
+      "type": "categorical",
+      "label": "Poder",
+      "options": [
+        "Executivo",
+        "Judiciário",
+        "Legislativo"
+      ],
+      "phrasePrefix": "que atuam no poder"
+
+    },
+    "esfera": {
+      "type": "categorical",
+      "label": "Esfera federativa",
+      "options": [
+        {
+          "value": "Municipal",
+          "color": "dark-blue",
+          "label": "Municipal"
+        },
+        {
+          "value": "Estadual",
+          "color": "orange",
+          "label": "Estadual"
+        },
+        {
+          "value": "Federal",
+          "color": "green",
+          "label": "Federal"
+        }
+      ],
+      "phrasePrefix": "que atuam na esfera"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "options": []
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}
