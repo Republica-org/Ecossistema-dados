@@ -3,68 +3,48 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Média de tempo de contribuição",
-        "value": "media_contribuicao_avg",
-        "numberFormat": {
-         "style":"decimal",
-          "maximumFractionDigits": 1,
-          "minimumFractionDigits": 1
-        }
+        "label": "Média da remuneração",
+        "value": "media_corrigido_sum"
       },
       {
-        "label": "Quantidade total de aposentadorias",
-        "value": "quantidade_vinculos_sum"
+        "label": "Mediana da remuneração",
+        "value": "mediana_corrigido_sum"
       }
     ],
-    "domain": "decada_aposentadoria",
+    "domain": "ano",
     "groupBy": [
-      "tipo_aposentadoria",
-      "categoria_ministerios"
+      "detalhamento"
     ],
     "chartType": "lines",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
     "dataSourceType": "aggregation"
   },
   "variables": {
-    "media_contribuicao": {
+    "ano": {
       "type": "continuous",
-      "label": "Média de tempo de contribuição"
+      "label": "Ano"
     },
-    "quantidade_vinculos":{
-      "type": "continuous",
-      "label": "Quantidade total de aposentadorias"
-    },
-    "tipo_aposentadoria": {
+    "detalhamento": {
       "type": "categorical",
-      "label": "Tipo de aposentadoria",
+      "label": "tipo de aposentadoria/pensão",
       "options": [
-        "Aposentadoria por invalidez",
-        "Aposentadoria voluntária",
-        "Aposentadoria compulsória",
-        "Aposentadoria por incapacidade",
-        "Outros"
+        "Aposentadoria civil",
+        "Pensão militar",
+        "Reserva ou Reforma militar",
+        "Pensão civil"
       ],
       "phrasePrefix": "por"
     },
-    "decada_aposentadoria": {
+    "media_corrigido": {
       "type": "continuous",
-      "label": "Década de Aposentadoria"
+      "label": "Média da remuneração"
     },
-    "categoria_ministerios": {
-      "type": "categorical",
-      "label": "Setores",
-      "options": [
-        "Economia, Finanças, Planejamento, Previdência e Gestão",
-        "Cultura, Turismo e Esportes",
-        "Saúde",
-        "Justiça, Segurança e Órgãos de Controle e Defesa",
-        "Educação e Ciência e Tecnologia",
-        "Desenvolvimento Social e Direitos Humanos",
-        "Presidência da República",
-        "Infraestrutura, Transporte, Desenvolvimento Regional, Portos e Aeroportos, Minas e Energia",
-        "Relações Exteriores",
-        "Meio ambiente, Agricultura e Agropecuária"
-      ],
-      "phrasePrefix": "no(s) setor(es) de"
+    "mediana_corrigido": {
+      "type": "continuous",
+      "label": "Mediana da remuneração"
     }
   }
 }
