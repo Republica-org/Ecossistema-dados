@@ -1,0 +1,201 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de vínculos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "flag_publico_privado",
+    "groupBy": [
+      "sexo",
+      "poderes"
+    ],
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "chartType": "bars",
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2023
+      }
+    },
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "phrasePrefix": "em"
+    },
+    "sexo": {
+      "type": "categorical",
+      "label": "Sexo",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Feminino",
+          "value": "Feminino"
+        },
+        {
+          "color": "green",
+          "label": "Masculino",
+          "value": "Masculino"
+        }
+      ],
+      "phrasePrefix": "do sexo"
+    },
+    "esfera": {
+      "type": "categorical",
+      "label": "Esfera federativa",
+      "options": [
+        {
+          "id": "Municipal",
+          "color": "dark-blue",
+          "label": "Municipal"
+        },
+        {
+          "id": "Estadual",
+          "color": "orange",
+          "label": "Estadual"
+        },
+        {
+          "id": "Federal",
+          "color": "green",
+          "label": "Federal"
+        },
+        {
+          "id": "Outros",
+          "color": "light-grey",
+          "label": "Outros"
+        }
+      ],
+      "phrasePrefix": "que atuam na esfera"
+    },
+    "poderes": {
+      "type": "categorical",
+      "label": "Poderes",
+      "options": [
+        "Executivo",
+        "Judiciário",
+        "Legislativo",
+        "Outros"
+      ],
+      "phrasePrefix": "que atuam no poder"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "options": [
+        "IGNORADO",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "options": [
+        "Entre 18 e 29 anos",
+        "Entre 30 e 49 anos",
+        "Entre 50 e 65 anos",
+        "Acima de 65 anos",
+        "Ignorado"
+      ],
+      "phrasePrefix": "com idade"
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipo de vínculo",
+      "options": [
+        "Aprendiz contratado",
+        "Avulso",
+        "CLT",
+        "CLT/Rural",
+        "Contratado/prazo determinado",
+        "Contratado/tempo determinado",
+        "Diretor",
+        "Estatutário",
+        "Estatutário não efetivo",
+        "Temporário"
+      ],
+      "phrasePrefix": "com vínculo do tipo"
+    },
+    "carga_horaria": {
+      "type": "categorical",
+      "label": "Carga horária",
+      "options": [
+        "20 horas",
+        "30 horas",
+        "40 horas ou mais",
+        "Ignorado"
+      ],
+      "phrasePrefix": "com carga horária de"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "label": "Grau de instrução",
+      "options": [
+        "Até Fundamental ",
+        "Até Ensino Médio",
+        "Até Ensino Superior Completo",
+        "Até Pós Graduação"
+      ],
+      "phrasePrefix": "que cursaram"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    },
+    "flag_publico_privado": {
+      "type": "categorical",
+      "label": "setor"
+    }
+  },
+  "dataSources": {
+    "RAIS_vinculos_publicos_privados": "repositoriodedadosgpsp.perfil_remuneracao.RAIS_vinculos_publicos_privados"
+  }
+}
