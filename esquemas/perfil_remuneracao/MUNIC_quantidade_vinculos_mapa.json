@@ -23,8 +23,12 @@
     ],
     "defaultValues": {
       "filterBy": {
-        "ano": 2023,
-        "tipo_vinculo":"Estatutários"
+        "tipo_vinculo":[
+          "Estatutários"
+        ],
+        "ano":[
+          2021
+        ]
       }
     },
     "filterByStateId": "sigla_uf",
