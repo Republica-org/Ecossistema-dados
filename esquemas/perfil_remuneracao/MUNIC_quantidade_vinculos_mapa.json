@@ -18,14 +18,13 @@
     ],
     "mapType": "municipalities_by_state",
     "filterBy": [
-      {
-        "type": "single",
-        "variableId": "tipo_vinculo"
-      }
+      "ano",
+      "tipo_vinculo"
     ],
     "defaultValues": {
       "filterBy": {
-        "tipo_vinculo": "Estatutários"
+        "ano": 2023,
+        "tipo_vinculo":"Estatutários"
       }
     },
     "filterByStateId": "sigla_uf",
@@ -33,7 +32,15 @@
     "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
-    "ano": "categorical",
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2021,
+        2023
+      ],
+      "phrasePrefix": "no ano de"
+    },
     "taxa": "continuous",
     "sigla_uf": "categorical",
     "id_municipio": "categorical",
@@ -47,7 +54,6 @@
         "Estagiários",
         "Sem vínculo permanente"
       ],
-      "variableId": "tipo_vinculo",
       "phrasePrefix": " "
     },
     "tipo_ocupacao": "categorical",
