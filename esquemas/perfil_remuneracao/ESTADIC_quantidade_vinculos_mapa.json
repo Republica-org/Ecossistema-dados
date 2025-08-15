@@ -11,20 +11,24 @@
         "value": "proporcao_tipo",
         "numberFormat": {
           "style": "percent",
-          "minimumFractionDigits": 2,
-          "maximumFractionDigits": 2
-      }}
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      }
     ],
     "mapType": "states",
     "filterBy": [
-      {
-        "type": "single",
-        "variableId": "tipo_vinculo"
-      }
+      "ano",
+      "tipo_vinculo"
     ],
     "defaultValues": {
       "filterBy": {
-        "tipo_vinculo": "Estatutários"
+        "ano": [
+          2021
+        ],
+        "tipo_vinculo": [
+          "Estatutários"
+        ]
       }
     },
     "stateIdVariableId": "sigla_uf"
@@ -32,9 +36,12 @@
   "variables": {
     "ano": {
       "type": "continuous",
-      "categories": [
-        2021
-      ]
+      "label": "Ano",
+      "options": [
+        2021,
+        2023
+      ],
+      "phrasePrefix": "no ano de"
     },
     "sigla_uf": {
       "type": "categorical",
