@@ -18,7 +18,10 @@
     ],
     "mapType": "states",
     "filterBy": [
-      "ano",
+      {
+        "type":"single",
+        "variableId":"ano"
+      },
       "tipo_vinculo"
     ],
     "defaultValues": {
