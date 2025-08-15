@@ -16,7 +16,7 @@
       "genero",
       "cor_raca"
     ],
-    "chartType": "lines", 
+    "chartType": "lines",
     "defaultValues": {
       "filterBy": {
         "genero": [
@@ -26,31 +26,31 @@
       }
     },
     "dataSourceType": "aggregation"
-},
+  },
   "variables": {
-    "ano_ingresso": {
-      "type": "continuous",
-      "label": "Ano de ingresso"
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Feminino",
+        "Masculino"
+      ],
+      "phrasePrefix": "do gênero"
     },
     "cor_raca": {
       "type": "categorical",
       "label": "Raça",
-      "options":[
-        "Branca", 
-        "Não informada", 
-        "Negra", 
+      "options": [
+        "Branca",
+        "Não informada",
+        "Negra",
         "Outros"
       ],
       "phrasePrefix": "da cor"
     },
-    "genero" : {
-      "type": "categorical",
-      "label": "Gênero",
-      "options": [
-        "Feminino", 
-        "Masculino"
-      ],
-      "phrasePrefix": "do gênero"
+    "ano_ingresso": {
+      "type": "continuous",
+      "label": "Ano de ingresso"
     },
     "quantidade_vinculos": {
       "type": "continuous",
