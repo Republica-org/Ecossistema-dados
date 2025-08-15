@@ -1,8 +1,6 @@
-
 {
-  "view": { 
+  "view": {
     "type": "data_series",
-
     "range": [
       {
         "label": "Total de policiais militares",
@@ -10,37 +8,49 @@
       }
     ],
     "domain": "genero",
-   
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
     "chartType": "bars",
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2023
+      }
+    },
     "dataSourceType": "aggregation",
-
-    
-
-    "filterByStateId": "sigla_uf"
-
+    "filterByStateId": "sigla_uf",
+    "stateIdVariableId": "sigla_uf"
   },
   "variables": {
-    
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2019,
+        2023
+      ],
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
     "genero": {
       "type": "categorical",
       "label": "Gênero",
       "options": [
         {
-          "value": "Feminino",
           "color": "dark-blue",
-          "label": "Feminino"
+          "label": "Feminino",
+          "value": "Feminino"
         },
         {
-          "value": "Masculino",
           "color": "green",
-          "label": "Masculino"
+          "label": "Masculino",
+          "value": "Masculino"
         }
       ],
       "phrasePrefix": "do sexo"
-    },
-    "quantidade_pessoas": {
-      "type": "continuous",
-      "label": "Quantidade de policiais militares"
     },
     "sigla_uf": {
       "type": "categorical",
@@ -75,9 +85,10 @@
         "SP",
         "TO"
       ]
+    },
+    "quantidade_pessoas": {
+      "type": "continuous",
+      "label": "Quantidade de policiais militares"
     }
   }
-  
 }
-
-
