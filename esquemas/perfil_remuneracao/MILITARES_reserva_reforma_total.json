@@ -9,10 +9,10 @@
     ],
     "domain": "ano",
     "groupBy": [
-     {
-       "label": "---",
-       "value": ""
-     },
+      {
+        "label": "---",
+        "value": ""
+      },
       "tipo_aposentadoria",
       "org_lotacao"
     ],
@@ -32,7 +32,8 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
       ],
       "phrasePrefix": "em"
     },
@@ -47,6 +48,16 @@
       "type": "continuous",
       "label": "Total de vínculos"
     },
+    "org_lotacao": {
+      "type": "categorical",
+      "label": "Órgão de lotação",
+      "options": [
+        "Comando do Exército",
+        "Comando da Aeronáutica",
+        "Comando da Marinha"
+      ],
+      "phrasePrefix": "no"
+    },
     "tipo_aposentadoria": {
       "type": "categorical",
       "label": "Tipo de aposentadoria",
@@ -59,16 +70,6 @@
         "Reserva Por Doença"
       ],
       "phrasePrefix": "por"
-    },
-    "org_lotacao": {
-      "type": "categorical",
-      "label": "Órgão de lotação",
-      "options": [
-        "Comando do Exército",
-        "Comando da Aeronáutica",
-        "Comando da Marinha"
-      ],
-      "phrasePrefix": "no"
     }
   }
 }
