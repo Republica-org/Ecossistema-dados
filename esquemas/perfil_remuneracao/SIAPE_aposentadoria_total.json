@@ -17,6 +17,7 @@
       "tipo_aposentadoria",
       "categoria_ministerios"
     ],
+    "chartType": "lines",
     "defaultValues": {
       "filterBy": {
         "categoria_ministerios": [
@@ -24,7 +25,6 @@
         ]
       }
     },
-    "chartType": "lines",
     "dataSourceType": "aggregation"
   },
   "variables": {
@@ -35,7 +35,8 @@
         2020,
         2021,
         2022,
-        2023
+        2023,
+        2024
       ],
       "phrasePrefix": "em"
     },
@@ -49,18 +50,6 @@
     "total": {
       "type": "continuous",
       "label": "Total de vínculos"
-    },
-    "tipo_aposentadoria": {
-      "type": "categorical",
-      "label": "Tipo de aposentadoria",
-      "options": [
-        "Aposentadoria por invalidez",
-        "Aposentadoria voluntária",
-        "Aposentadoria compulsória",
-        "Aposentadoria por incapacidade",
-        "Outros"
-      ],
-      "phrasePrefix": "por"
     },
     "org_lotacao": {
       "type": "categorical",
@@ -101,6 +90,18 @@
         "Ministério Do Trabalho E Previdência"
       ],
       "phrasePrefix": "no"
+    },
+    "tipo_aposentadoria": {
+      "type": "categorical",
+      "label": "Tipo de aposentadoria",
+      "options": [
+        "Aposentadoria por invalidez",
+        "Aposentadoria voluntária",
+        "Aposentadoria compulsória",
+        "Aposentadoria por incapacidade",
+        "Outros"
+      ],
+      "phrasePrefix": "por"
     },
     "categoria_ministerios": {
       "type": "categorical",
