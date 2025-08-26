@@ -7,28 +7,28 @@
         "value": "total_sum"
       }
     ],
-   "domain": "ano",
-   "groupBy": [
-     {
-       "label": "---",
-       "value": ""
-     },
-     "tipo_pensao_agrupado"
-   ],
-   "filterBy": [
-     "tipo_pensao_agrupado"
-   ],
-   "defaultValues": {
-    "filterBy":{
-      "tipo_pensao_agrupado":[
-        "Cônjuge ou ex-cônjuge",
-        "Filhos, netos, enteados ou menores em tutela"
-      ]
-    }
-   },
+    "domain": "ano",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      "tipo_pensao_agrupado"
+    ],
+    "filterBy": [
+      "tipo_pensao_agrupado"
+    ],
     "chartType": "lines",
-    "dataSourceType": "aggregation"
+    "defaultValues": {
+      "filterBy": {
+        "tipo_pensao_agrupado": [
+          "Cônjuge ou ex-cônjuge",
+          "Filhos, netos, enteados ou menores em tutela"
+        ]
+      }
     },
+    "dataSourceType": "aggregation"
+  },
   "variables": {
     "ano": {
       "type": "continuous",
@@ -38,7 +38,8 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
       ],
       "phrasePrefix": "em"
     },
@@ -62,7 +63,8 @@
         "Pais",
         "Irmão (ã)",
         "Pessoa designada",
-        "Outros"      ],
+        "Outros"
+      ],
       "phrasePrefix": "por"
     }
   }
