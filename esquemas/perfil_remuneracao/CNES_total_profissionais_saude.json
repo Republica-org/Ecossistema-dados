@@ -36,7 +36,7 @@
   "variables": {
     "ano": {
       "type": "categorical",
-      "label":"Ano"
+      "label": "Ano"
     },
     "sigla_uf": "categorical",
     "tipo_ocupacao": {
@@ -62,7 +62,6 @@
     "quantidade_vinculos": "continuous"
   },
   "dataSources": {
-    "CNES_total_profissionais_saude": "repositoriodedadosgpsp.perfil_remuneracao.CNES_total_profissionais_saude"
+    "CNES_total_profissionais_saude": "repositoriodedadosgpsp.perfil_remuneracao.CNES_total_profissionais_saude_v1"
   }
- 
 }
