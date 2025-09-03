@@ -6,7 +6,7 @@
         "label": "Média de tempo de contribuição",
         "value": "media_contribuicao_avg",
         "numberFormat": {
-         "style":"decimal",
+          "style": "decimal",
           "maximumFractionDigits": 1,
           "minimumFractionDigits": 1
         }
@@ -24,14 +24,11 @@
     "chartType": "lines",
     "dataSourceType": "aggregation"
   },
+  "version": 1,
   "variables": {
     "media_contribuicao": {
       "type": "continuous",
       "label": "Média de tempo de contribuição"
-    },
-    "quantidade_vinculos":{
-      "type": "continuous",
-      "label": "Quantidade total de aposentadorias"
     },
     "tipo_aposentadoria": {
       "type": "categorical",
@@ -44,6 +41,10 @@
         "Outros"
       ],
       "phrasePrefix": "por"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade total de aposentadorias"
     },
     "decada_aposentadoria": {
       "type": "continuous",
