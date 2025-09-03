@@ -7,28 +7,28 @@
         "value": "total_sum"
       }
     ],
-   "domain": "decada_inicio_pensao",
-   "groupBy": [
-     {
-       "label": "---",
-       "value": ""
-     },
-     "tipo_pensao_agrupado"
-   ],
-   "filterBy": [
-     "tipo_pensao_agrupado"
-   ],
-   "defaultValues": {
-    "filterBy":{
-      "tipo_pensao_agrupado":[
-        "Cônjuge ou ex-cônjuge",
-        "Filhos, netos, enteados ou menores em tutela"
-      ]
-    }
-   },
+    "domain": "decada_inicio_pensao",
+    "groupBy": [
+      {
+        "label": "---",
+        "value": ""
+      },
+      "tipo_pensao_agrupado"
+    ],
+    "filterBy": [
+      "tipo_pensao_agrupado"
+    ],
     "chartType": "lines",
-    "dataSourceType": "aggregation"
+    "defaultValues": {
+      "filterBy": {
+        "tipo_pensao_agrupado": [
+          "Cônjuge ou ex-cônjuge",
+          "Filhos, netos, enteados ou menores em tutela"
+        ]
+      }
     },
+    "dataSourceType": "aggregation"
+  },
   "variables": {
     "ano": {
       "type": "continuous",
@@ -41,6 +41,11 @@
     "total": {
       "type": "continuous",
       "label": "Total de pensionistas"
+    },
+    "decada_inicio_pensao": {
+      "type": "continuous",
+      "label": "Década de início da pensão",
+      "phrasePrefix": "por"
     },
     "tipo_pensao_agrupado": {
       "type": "categorical",
@@ -56,12 +61,6 @@
         "Outros (Pessoas sem Vínculo Militar)"
       ],
       "phrasePrefix": "por"
-    },
-    "decada_inicio_pensao": {
-      "type": "continuous",
-      "label": "Década de início da pensão",
-      "phrasePrefix": "por"
     }
-
   }
 }
