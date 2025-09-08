@@ -1,27 +1,67 @@
-SELECT ano, sexo, poderes, tipologia as tipo_adm, tipologia2 as tipo_adm_detalhado,
+-- Etapa 1: Usar uma CTE para classificar os dados primeiro
+WITH dados_classificados AS (
+  SELECT
+    ano,
+    sexo,
+    poderes,
+    tipologia,
+    tipologia2,
+    esfera,
+    sigla_uf,
+    quantidade_horas_contratadas,
+    tipo_vinculo,
+    quantidade_vinculos,
 
- CASE 
-    WHEN grau_instrucao in ('Analfabeto','Até 5.a inc', '5.a completo ','6.a ao 9.a fund','Fund completo','Médio incompleto') THEN 'Até Fundamental '
-    WHEN grau_instrucao in ('Médio completo','Sup. incompleto') THEN 'Até Ensino Médio'
-    WHEN grau_instrucao in ('Sup. completo') THEN 'Até Ensino Superior Completo'
-    WHEN grau_instrucao in ('Mestrado','Doutorado') THEN 'Até Pós Graduação'
-    ELSE 'Ignorado' 
+    -- Cria a nova coluna com o agrupamento de grau de instrução
+    CASE
+      WHEN grau_instrucao IN ('Analfabeto', 'Até 5.a inc', '5.a completo ', '6.a ao 9.a fund', 'Fund completo', 'Médio incompleto') THEN 'Até Fundamental'
+      WHEN grau_instrucao IN ('Médio completo', 'Sup. incompleto') THEN 'Até Ensino Médio'
+      WHEN grau_instrucao IN ('Sup. completo') THEN 'Até Ensino Superior Completo'
+      WHEN grau_instrucao IN ('Mestrado', 'Doutorado') THEN 'Até Pós Graduação'
+      ELSE 'Ignorado'
+    END AS grupo_instrucao,
 
-  END AS grau_instrucao,
+    -- Cria a nova coluna com o agrupamento de faixa etária
+    CASE
+      WHEN faixa_etaria IN ('18 a 24 anos', '25 a 29 anos') THEN 'Entre 18 e 29 anos'
+      WHEN faixa_etaria IN ('30 a 39 anos', '40 a 49 anos') THEN 'Entre 30 e 49 anos'
+      WHEN faixa_etaria IN ('50 a 64 anos') THEN 'Entre 50 e 64 anos'
+      WHEN faixa_etaria IN ('65 anos ou mais') THEN 'Acima de 65 anos'
+      ELSE 'Ignorado'
+    END AS grupo_etario
 
-esfera, 
+  FROM
+    `repositoriodedadosgpsp.Datalake.RAIS_vinculos_publicos_pre_tratamento`
+)
 
-Case 
-  WHEN faixa_etaria in ('18 a 24 anos','25 a 29 anos') then 'Entre 18 e 29 anos'
-  WHEN faixa_etaria in ('30 a 39 anos','40 a 49 anos') then 'Entre 30 e 49 anos'
-  WHEN faixa_etaria in ('50 a 64 anos') then 'Entre 50 e 65 anos'
-  WHEN faixa_etaria in ('65 anos ou mais') then 'Acima de 65 anos'
-  ELSE 'Ignorado' end as faixa_etaria, sigla_uf, quantidade_horas_contratadas as carga_horaria,tipo_vinculo, sum(quantidade_vinculos) as quantidade_vinculos
-
-FROM `repositoriodedadosgpsp.Datalake.RAIS_vinculos_publicos_pre_tratamento` 
-
-group by  ano, sexo,poderes, grau_instrucao,esfera,faixa_etaria, sigla_uf,carga_horaria,tipo_vinculo,tipo_adm,tipo_adm_detalhado
-
-
-
-
+-- Etapa 2: Fazer a agregação final usando os campos já classificados e com os nomes finais
+SELECT
+  ano,
+  sexo,
+  poderes,
+  tipologia AS tipo_adm,
+  tipologia2 AS tipo_adm_detalhado,
+  grupo_instrucao AS grau_instrucao, -- Usa o grupo criado e renomeia para o nome final
+  esfera,
+  grupo_etario AS faixa_etaria, -- Usa o grupo criado e renomeia para o nome final
+  sigla_uf,
+  quantidade_horas_contratadas AS carga_horaria,
+  tipo_vinculo,
+  SUM(quantidade_vinculos) AS quantidade_vinculos
+FROM
+  dados_classificados
+GROUP BY
+  ano,
+  sexo,
+  poderes,
+  tipo_adm,
+  tipo_adm_detalhado,
+  grau_instrucao,
+  esfera,
+  faixa_etaria,
+  sigla_uf,
+  carga_horaria,
+  tipo_vinculo
+ORDER BY
+  ano,
+  sigla_uf;
