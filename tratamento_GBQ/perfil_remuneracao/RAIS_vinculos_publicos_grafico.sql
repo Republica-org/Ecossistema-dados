@@ -18,7 +18,7 @@ Case
   WHEN faixa_etaria in ('65 anos ou mais') then 'Acima de 65 anos'
   ELSE 'Ignorado' end as faixa_etaria, sigla_uf, quantidade_horas_contratadas as carga_horaria,tipo_vinculo, sum(quantidade_vinculos) as quantidade_vinculos
 
-FROM `repositoriodedadosgpsp.Datalake.RAIS_vinculos_publicos` 
+FROM `repositoriodedadosgpsp.Datalake.RAIS_vinculos_publicos_pre_tratamento` 
 
 group by  ano, sexo,poderes, grau_instrucao,esfera,faixa_etaria, sigla_uf,carga_horaria,tipo_vinculo,tipo_adm,tipo_adm_detalhado
 
