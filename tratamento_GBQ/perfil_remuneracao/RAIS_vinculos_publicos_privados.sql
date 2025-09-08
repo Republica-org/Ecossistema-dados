@@ -16,7 +16,7 @@ SELECT
   "Público" AS flag_publico_privado,
   SUM(quantidade_vinculos) AS quantidade_vinculos
 FROM
-  `repositoriodedadosgpsp.Datalake.Republica_vinculos_publicos`
+  `repositoriodedadosgpsp.Datalake.RAIS_vinculos_publicos_pre_tratamento`
 GROUP BY
   1, 2, 3, 4, 5, 6, 7  -- Agrupando pela posição das colunas
 
@@ -40,6 +40,6 @@ SELECT
   "Privado" AS flag_publico_privado,
   SUM(quantidade_vinculos) AS quantidade_vinculos
 FROM
-  `repositoriodedadosgpsp.Datalake.RAIS_vinculos_privados`
+  `repositoriodedadosgpsp.Datalake.RAIS_vinculos_privados_v1`
 GROUP BY
   1, 2, 3, 4, 5, 6, 7; -- Agrupando pela posição das colunas
