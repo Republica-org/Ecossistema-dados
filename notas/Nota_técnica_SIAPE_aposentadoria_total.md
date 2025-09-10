@@ -8,6 +8,8 @@ Sendo assim, ao filtrar apenas por 'Meio ambiente, Agricultura e Agropecuária',
 
 Além disso, ao filtrar apenas por 'Desenvolvimento Social e Direitos Humanos', vê-se um aumento ente 2022 e 2023 devido a criação do Ministério dos Povos Indígenas.
 
+Por fim, o gráfico pode apresentar certas descontinuidades, principalmente ao se filtrar por minitérios, isto acontece também devido ao fato exposto anteriormente acerca da mudança de nome dos ministérios.
+
 O gráfico 'Quantidade de Aposentadorias Civis no Executivo Federal' pode ser acessado em:
 https://dados.republica.org/dados/quantidade-de-aposentadorias-civis-executivo-federal 
 

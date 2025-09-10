@@ -14,7 +14,8 @@
     ],
     "filterBy": [
       "genero",
-      "pais"
+      "pais",
+      "ano_pesquisa"
     ],
     "chartType": "bars",
     "defaultValues": {
@@ -23,19 +24,33 @@
           "Brasil",
           "Chile",
           "Estados Unidos"
+        ],
+        "ano_pesquisa" : [
+          2021,
+          2023
         ]
       }
     },
     "dataSourceType": "aggregation"
   },
   "variables": {
+    "ano_pesquisa": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "phrasePrefix": "no ano de"
+    },
     "pais": {
       "type": "categorical",
       "label": "Países",
       "options": [
         "África do Sul",
         "Argentina",
-        "Austrália",
         "Bolívia",
         "Brasil",
         "Chile",
@@ -44,7 +59,6 @@
         "França",
         "México",
         "Peru",
-        "Reino Unido",
         "Uruguai"
       ],
       "phrasePrefix": "no"

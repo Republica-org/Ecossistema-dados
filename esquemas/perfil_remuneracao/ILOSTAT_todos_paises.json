@@ -1,22 +1,47 @@
 {
-    "view": {
-      "type": "table"
+  "view": {
+    "type": "table"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "variableId": "ano"
     },
-    "variables": {
-      "pais": {"variableId":"pais","type":"categorical","label":"País"},
-      "fonte_pesquisa": {"variableId":"fonte_pesquisa","type":"categorical","label":"Fonte da Pesquisa"},
-      "ano": {"variableId":"ano","type":"continuous","label":"Ano"},
-      "setor": {"variableId":"setor","type":"categorical","label":"Setor"},
-      "quantidade_vinculos": {"variableId":"quantidade_vinculos","type":"continuous","label":"Quantidade de vínculos (por mil)"},
-      "total_ano": {"variableId":"total_ano","type":"continuous","label":"Total no ano"},
-      "prop": {"variableId":"prop","type":"continuous","label":"Proporção naquele setor","numberFormat": {
-        "style": "percent","minimumFractionDigits": 2,
-        "maximumFractionDigits": 2
+    "pais": {
+      "type": "categorical",
+      "label": "País",
+      "variableId": "pais"
+    },
+    "prop": {
+      "type": "continuous",
+      "label": "Proporção naquele setor",
+      "variableId": "prop",
+      "numberFormat": {
+        "style": "percent",
+        "maximumFractionDigits": 2,
+        "minimumFractionDigits": 2
       }
-    
-    
-    }
+    },
+    "setor": {
+      "type": "categorical",
+      "label": "Setor",
+      "variableId": "setor"
+    },
+    "total_ano": {
+      "type": "continuous",
+      "label": "Total no ano",
+      "variableId": "total_ano"
+    },
+    "fonte_pesquisa": {
+      "type": "categorical",
+      "label": "Fonte da Pesquisa",
+      "variableId": "fonte_pesquisa"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos (por mil)",
+      "variableId": "quantidade_vinculos"
     }
   }
-
- 
+}

@@ -1,8 +1,6 @@
-
 {
-  "view": { 
-    "type": "data_series", 
-
+  "view": {
+    "type": "data_series",
     "range": [
       {
         "label": "Total de vínculos",
@@ -11,21 +9,39 @@
     ],
     "domain": "ano",
     "groupBy": [
-      
       "esfera",
       "poderes"
-      
     ],
-    
     "chartType": "lines",
     "dataSourceType": "aggregation",
     "filterByStateId": "sigla_uf"
-
   },
   "variables": {
     "ano": {
       "type": "continuous",
       "label": "Ano"
+    },
+    "esfera": {
+      "type": "categorical",
+      "label": "Esfera federativa",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Municipal",
+          "value": "Municipal"
+        },
+        {
+          "color": "orange",
+          "label": "Estadual",
+          "value": "Estadual"
+        },
+        {
+          "color": "green",
+          "label": "Federal",
+          "value": "Federal"
+        }
+      ],
+      "phrasePrefix": "que atuam na esfera"
     },
     "poderes": {
       "type": "categorical",
@@ -36,29 +52,6 @@
         "Legislativo"
       ],
       "phrasePrefix": "que atuam no poder"
-
-    },
-    "esfera": {
-      "type": "categorical",
-      "label": "Esfera federativa",
-      "options": [
-        {
-          "value": "Municipal",
-          "color": "dark-blue",
-          "label": "Municipal"
-        },
-        {
-          "value": "Estadual",
-          "color": "orange",
-          "label": "Estadual"
-        },
-        {
-          "value": "Federal",
-          "color": "green",
-          "label": "Federal"
-        }
-      ],
-      "phrasePrefix": "que atuam na esfera"
     },
     "sigla_uf": {
       "type": "categorical",
