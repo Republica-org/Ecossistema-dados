@@ -68,17 +68,22 @@
       "options": [
         {
           "color": "var(--blue)",
+          "label": "Conceito de assédio sexual e moral no RJU",
+          "value": "Ambos no RJU"
+        },
+        {
+          "color": "var(--red)",
           "label": "Apenas conceito de assédio moral no RJU",
           "value": "Apenas conceito de assédio moral no RJU"
         },
         
         {
-          "color": "var(--red)",
+          "color": "var(--orange)",
           "label": "Conceito de assédio sexual e moral em lei esparsa",
           "value": "Conceito de assédio sexual e moral em lei esparsa"
         },
         {
-          "color": "var(--orange)",
+          "color": "var(--purple)",
           "label": "Apenas conceito de assédio sexual em lei esparsa",
           "value": "Apenas conceito de assédio sexual em lei esparsa"
         },
