@@ -1,8 +1,6 @@
-
 {
-  "view": { 
+  "view": {
     "type": "data_series",
-
     "range": [
       {
         "label": "Total de vínculos estaduais",
@@ -11,13 +9,11 @@
     ],
     "domain": "ano",
     "groupBy": [
-      
       "tipo_vinculo"
     ],
     "filterBy": [
       "tipo_vinculo"
     ],
-    
     "chartType": "lines",
     "dataSourceType": "aggregation",
     "filterByStateId": "sigla_uf"
@@ -26,43 +22,6 @@
     "ano": {
       "type": "continuous",
       "label": "Ano"
-    },
-    "tipo_vinculo": {
-      "type": "categorical",
-      "label": "Tipo de vínculo",
-      "options": [
-
-
-
-
-        {
-          "value": "Estatutários",
-          "color": "dark-blue",
-          "label": "Estatutários"
-        },
-        {
-          "value": "Celetistas",
-          "color": "orange",
-          "label": "Celetistas"
-        },
-        {
-          "value":  "Somente comissionados",
-          "color": "green",
-          "label":  "Somente comissionados"
-        },
-        {
-          "value":  "Somente comissionados",
-          "color": "purple",
-          "label":  "Somente comissionados"
-        },
-        {
-          "value":  "Sem vínculo permanente",
-          "color": "red",
-          "label":  "Sem vínculo permanente"
-        }
-        
-      ],
-      "phrasePrefix": "que são"
     },
     "sigla_uf": {
       "type": "categorical",
@@ -97,6 +56,33 @@
         "SP",
         "TO"
       ]
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipo de vínculo",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Estatutários",
+          "value": "Estatutários"
+        },
+        {
+          "color": "orange",
+          "label": "Celetistas",
+          "value": "Celetistas"
+        },
+        {
+          "color": "green",
+          "label": "Somente comissionados",
+          "value": "Somente comissionados"
+        },
+        {
+          "color": "red",
+          "label": "Sem vínculo permanente",
+          "value": "Sem vínculo permanente"
+        }
+      ],
+      "phrasePrefix": "que são"
     },
     "quantidade_vinculos": {
       "type": "continuous",

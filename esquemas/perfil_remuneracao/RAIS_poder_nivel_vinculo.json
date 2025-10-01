@@ -1,31 +1,21 @@
-
 {
-  "view": { 
+  "view": {
     "type": "data_series",
-
     "range": [
       {
-        "label": "Proporção de vínculos",
-        "value": "prop_ano_sum",
-        "numberFormat": {
-          "style": "percent",
-          "minimumFractionDigits": 2,
-          "maximumFractionDigits": 2
-        }
+        "label": "Total de vínculos",
+        "value": "quantidade_vinculos_sum"
       }
     ],
     "domain": "ano",
     "groupBy": [
-      
       "esfera",
       "poderes"
     ],
     "filterBy": [
       "esfera",
       "poderes"
-      
     ],
-    
     "chartType": "lines",
     "dataSourceType": "aggregation"
   },
@@ -34,30 +24,24 @@
       "type": "continuous",
       "label": "Ano"
     },
-    
     "esfera": {
       "type": "categorical",
       "label": "Esfera federativa",
       "options": [
         {
-          "value": "Municipal",
           "color": "dark-blue",
-          "label": "Municipal"
+          "label": "Municipal",
+          "value": "Municipal"
         },
         {
-          "value": "Estadual",
           "color": "orange",
-          "label": "Estadual"
+          "label": "Estadual",
+          "value": "Estadual"
         },
         {
-          "value": "Federal",
           "color": "green",
-          "label": "Federal"
-        },
-        {
-          "value": "Outros",
-          "color": "light-grey",
-          "label": "Outros"
+          "label": "Federal",
+          "value": "Federal"
         }
       ],
       "phrasePrefix": "que atuam na esfera"
@@ -68,14 +52,13 @@
       "options": [
         "Executivo",
         "Judiciário",
-        "Legislativo",
-        "Outros"
+        "Legislativo"
       ],
       "phrasePrefix": "que atuam no poder"
     },
-    "prop_ano": {
+    "quantidade_vinculos": {
       "type": "continuous",
-      "label": "Proporção de vínculos"
+      "label": "Total de vínculos"
     }
   }
 }

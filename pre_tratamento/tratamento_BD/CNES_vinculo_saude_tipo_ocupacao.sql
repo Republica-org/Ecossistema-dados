@@ -20,16 +20,16 @@ estabelecimentos AS(
     sigla_uf,
 
     CASE 
-      WHEN ano < 2013 AND esfera_administrativa = '1' THEN 'Federal'
-      WHEN ano < 2013 AND esfera_administrativa = '2' THEN 'Estadual'
-      WHEN ano < 2013 AND esfera_administrativa = '3' THEN 'Municipal'
-      WHEN ano < 2013 AND esfera_administrativa = '4' THEN 'Privado'
-      WHEN natureza_juridica IN ('1015','1040', '1074', '1104','1139', '1163', '1252', '1287', '1317', '1341') THEN 'Federal'
-      WHEN natureza_juridica IN ('1023','1058', '1082', '1112', '1147', '1171', '1236','1260',  '1295', '1325') THEN 'Estadual'
-      WHEN natureza_juridica IN ('1031','1066', '1120', '1155', '1180', '1244', '1279', '1309', '1333') THEN 'Municipal'
-      WHEN natureza_juridica IN ('2011', '2038') THEN 'Empresa Pública'
-      WHEN natureza_juridica NOT LIKE  "1%" AND natureza_juridica NOT IN ('2011', '2038') THEN 'Privado'
-    END as esfera_administrativa,
+      WHEN ano < 2013 AND tipo_esfera_administrativa = '1' THEN 'Federal'
+      WHEN ano < 2013 AND tipo_esfera_administrativa = '2' THEN 'Estadual'
+      WHEN ano < 2013 AND tipo_esfera_administrativa = '3' THEN 'Municipal'
+      WHEN ano < 2013 AND tipo_esfera_administrativa = '4' THEN 'Privado'
+      WHEN id_natureza_juridica IN ('1015','1040', '1074', '1104','1139', '1163', '1252', '1287', '1317', '1341') THEN 'Federal'
+      WHEN id_natureza_juridica IN ('1023','1058', '1082', '1112', '1147', '1171', '1236','1260',  '1295', '1325') THEN 'Estadual'
+      WHEN id_natureza_juridica IN ('1031','1066', '1120', '1155', '1180', '1244', '1279', '1309', '1333') THEN 'Municipal'
+      WHEN id_natureza_juridica IN ('2011', '2038') THEN 'Empresa Pública'
+      WHEN id_natureza_juridica NOT LIKE  "1%" AND id_natureza_juridica NOT IN ('2011', '2038') THEN 'Privado'
+    END as tipo_esfera_administrativa,
   FROM `basedosdados-dev.br_ms_cnes.estabelecimento`
   WHERE mes = 1
 )
@@ -39,10 +39,10 @@ SELECT
   estabelecimentos.id_municipio,
   estabelecimentos.sigla_uf,
   uf.regiao,
-  estabelecimentos.esfera_administrativa,
+  estabelecimentos.tipo_esfera_administrativa,
   CASE 
-    WHEN esfera_administrativa = 'Privado' THEN 'Privado'
-    WHEN esfera_administrativa IS NOT NULL THEN 'Público'
+    WHEN tipo_esfera_administrativa = 'Privado' THEN 'Privado'
+    WHEN tipo_esfera_administrativa IS NOT NULL THEN 'Público'
   END AS publico_privado,
   profissionais.tipo_ocupacao,
   SUM(profissionais.n_profissionais) as n_profissionais

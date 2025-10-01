@@ -20,13 +20,27 @@
       }
     ],
     "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2023
+      }
+    },
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2018,
+      "options": [
+        2018,
+        2023
+      ],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
     },
@@ -39,9 +53,9 @@
           "value": "Masculino"
         },
         {
-            "color": "var(--dark-blue)",
-            "label": "Feminino",
-            "value": "Feminino"
+          "color": "var(--dark-blue)",
+          "label": "Feminino",
+          "value": "Feminino"
         }
       ],
       "variableId": "genero"
@@ -58,6 +72,16 @@
           "color": "var(--orange)",
           "label": "Parda",
           "value": "Parda"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Amarela",
+          "value": "Amarela"
+        },
+        {
+          "color": "var(--dark-blue)",
+          "label": "Preta",
+          "value": "Preta"
         }
       ],
       "variableId": "cor_raca"
@@ -67,30 +91,14 @@
       "options": [],
       "variableId": "sigla_uf"
     },
-    "grau_instrucao": {
-      "type": "categorical",
-      "options": [
-        {
-          "color": "var(--orange)",
-          "label": "Até Ensino Médio",
-          "value": "Até Ensino Médio"
-        },
-        {
-          "color": "var(--green)",
-          "label": "Até Ensino Superior Completo",
-          "value": "Até Ensino Superior Completo"
-        },
-        {
-          "color": "var(--red)",
-          "label": "Até Pós Graduação ou Mestrado",
-          "value": "Até Pós Graduação ou Mestrado"
-        }
-      ],
-      "variableId": "grau_instrucao"
-    },
     "faixa_etaria": {
       "type": "categorical",
       "options": [
+        {
+          "color": "var(--dark-blue)",
+          "label": "Entre 18-29",
+          "value": "Entre 18-29"
+        },
         {
           "color": "var(--orange)",
           "label": "Entre 30-49",
@@ -108,6 +116,37 @@
         }
       ],
       "variableId": "faixa_etaria"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--dark-blue)",
+          "label": "Até Ensino Fundamental",
+          "value": "Até Ensino Fundamental"
+        },
+        {
+          "color": "var(--orange)",
+          "label": "Até Ensino Médio",
+          "value": "Até Ensino Médio"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Até Ensino Superior Completo",
+          "value": "Até Ensino Superior Completo"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Até Pós Graduação ou Mestrado",
+          "value": "Até Pós Graduação ou Mestrado"
+        },
+        {
+          "color": "var(--purple)",
+          "label": "Até Doutorado",
+          "value": "Até Doutorado"
+        }
+      ],
+      "variableId": "grau_instrucao"
     }
   }
 }

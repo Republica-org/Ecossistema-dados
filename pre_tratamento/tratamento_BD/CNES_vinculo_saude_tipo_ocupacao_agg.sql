@@ -1,0 +1,1 @@
+SELECT ano, tipo_ocupacao,sigla_uf,id_municipio, sum(n_profissionais) as quantidade_vinculos  FROM `repositoriodedadosgpsp.Datalake.CNES_profissionais_saude_ocupacao_v1` where publico_privado='Público' group by ano, tipo_ocupacao, sigla_uf,id_municipio

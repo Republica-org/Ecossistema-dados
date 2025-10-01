@@ -1,8 +1,6 @@
-
 {
-  "view": { 
-    "type": "data_series", 
-
+  "view": {
+    "type": "data_series",
     "range": [
       {
         "label": "Total de vínculos",
@@ -34,7 +32,6 @@
       "faixa_etaria",
       "tipo_vinculo"
     ],
-    
     "chartType": "lines",
     "dataSourceType": "aggregation",
     "filterByStateId": "sigla_uf"
@@ -48,20 +45,16 @@
       "type": "categorical",
       "label": "Gênero",
       "options": [
-
-
         {
-          "value": "Feminino",
           "color": "dark-blue",
-          "label": "Feminino"
+          "label": "Feminino",
+          "value": "Feminino"
         },
         {
-          "value": "Masculino",
           "color": "green",
-          "label": "Masculino"
+          "label": "Masculino",
+          "value": "Masculino"
         }
-        
-        
       ],
       "phrasePrefix": "do gênero"
     },
@@ -70,24 +63,24 @@
       "label": "Esfera federativa",
       "options": [
         {
-          "value": "Municipal",
           "color": "dark-blue",
-          "label": "Municipal"
+          "label": "Municipal",
+          "value": "Municipal"
         },
         {
-          "value": "Estadual",
           "color": "orange",
-          "label": "Estadual"
+          "label": "Estadual",
+          "value": "Estadual"
         },
         {
-          "value": "Federal",
           "color": "green",
-          "label": "Federal"
+          "label": "Federal",
+          "value": "Federal"
         },
         {
-          "value": "Outros",
           "color": "light-grey",
-          "label": "Outros"
+          "label": "Outros",
+          "value": "Outros"
         }
       ],
       "phrasePrefix": "que atuam na esfera"
@@ -96,27 +89,25 @@
       "type": "categorical",
       "label": "Poderes",
       "options": [
-
-
         {
-          "value": "Executivo",
           "color": "dark-blue",
-          "label": "Executivo"
+          "label": "Executivo",
+          "value": "Executivo"
         },
         {
-          "value": "Legislativo",
           "color": "orange",
-          "label": "Legislativo"
+          "label": "Legislativo",
+          "value": "Legislativo"
         },
         {
-          "value": "Judiciário",
           "color": "green",
-          "label": "Judiciário"
+          "label": "Judiciário",
+          "value": "Judiciário"
         },
         {
-          "value": "Outros",
           "color": "light-grey",
-          "label": "Outros"
+          "label": "Outros",
+          "value": "Outros"
         }
       ],
       "phrasePrefix": "que atuam no poder"
@@ -155,88 +146,6 @@
         "TO"
       ]
     },
-    "faixa_etaria": {
-      "type": "categorical",
-      "label": "Faixa etária",
-      "options": [
-
-
-        {
-          "value": "Entre 18 e 29 anos",
-          "color": "dark-blue",
-          "label": "Entre 18 e 29 anos"
-        },
-        {
-          "value": "Entre 30 e 49 anos",
-          "color": "orange",
-          "label": "Entre 30 e 49 anos"
-        },
-        {
-          "value":  "Entre 50 e 65 anos",
-          "color": "green",
-          "label":  "Entre 50 e 65 anos"
-        },
-        {
-          "value":  "Acima de 65 anos",
-          "color": "red",
-          "label":  "Acima de 65 anos"
-        },
-        {
-          "value":  "Ignorado",
-          "color": "light-grey",
-          "label":  "Ignorado"
-        }
-
-        
-      ],
-      "phrasePrefix": "com idade"
-    },
-    "tipo_vinculo": {
-      "type": "categorical",
-      "label": "Tipo de vínculo",
-      "options": [
-
-
-        {
-          "value": "Estatutário",
-          "color": "dark-blue",
-          "label": "Estatutário"
-        },
-        {
-          "value": "CLT",
-          "color": "orange",
-          "label": "CLT"
-        },
-        {
-          "value":  "Estatutário não efetivo",
-          "color": "green",
-          "label":  "Estatutário não efetivo"
-        },
-        {
-          "value":  "Diretor",
-          "color": "purple",
-          "label":  "Diretor"
-        },
-        {
-          "value":  "Temporário",
-          "color": "red",
-          "label":  "Ignorado"
-        },
-        {
-          "value":  "Aprendiz contratado",
-          "color": "pale-green",
-          "label":  "Aprendiz contratado"
-        },
-        
-        "Avulso",
-        "CLT/Rural",
-        "Contratado/prazo determinado",
-        "Contratado/tempo determinado"
-       
-        
-      ],
-      "phrasePrefix": "com vínculo do tipo"
-    },
     "tipo_adm": {
       "type": "categorical",
       "label": "Tipo de administração",
@@ -250,6 +159,106 @@
       ],
       "phrasePrefix": "da"
     },
+    "faixa_etaria": {
+      "type": "categorical",
+      "label": "Faixa etária",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Entre 18 e 29 anos",
+          "value": "Entre 18 e 29 anos"
+        },
+        {
+          "color": "orange",
+          "label": "Entre 30 e 49 anos",
+          "value": "Entre 30 e 49 anos"
+        },
+        {
+          "color": "green",
+          "label": "Entre 50 e 65 anos",
+          "value": "Entre 50 e 65 anos"
+        },
+        {
+          "color": "red",
+          "label": "Acima de 65 anos",
+          "value": "Acima de 65 anos"
+        },
+        {
+          "color": "light-grey",
+          "label": "Ignorado",
+          "value": "Ignorado"
+        }
+      ],
+      "phrasePrefix": "com idade"
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipo de vínculo",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Estatutário",
+          "value": "Estatutário"
+        },
+        {
+          "color": "orange",
+          "label": "CLT",
+          "value": "CLT"
+        },
+        {
+          "color": "green",
+          "label": "Estatutário não efetivo",
+          "value": "Estatutário não efetivo"
+        },
+        {
+          "color": "purple",
+          "label": "Diretor",
+          "value": "Diretor"
+        },
+        {
+          "color": "red",
+          "label": "Ignorado",
+          "value": "Temporário"
+        },
+        {
+          "color": "pale-green",
+          "label": "Aprendiz contratado",
+          "value": "Aprendiz contratado"
+        },
+        "Avulso",
+        "CLT/Rural",
+        "Contratado/prazo determinado",
+        "Contratado/tempo determinado"
+      ],
+      "phrasePrefix": "com vínculo do tipo"
+    },
+    "grau_instrucao": {
+      "type": "categorical",
+      "label": "Grau de instrução",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Até Fundamental ",
+          "value": "Até Fundamental "
+        },
+        {
+          "color": "orange",
+          "label": "Até Ensino Médio",
+          "value": "Até Ensino Médio"
+        },
+        {
+          "color": "green",
+          "label": "Até Ensino Superior Completo",
+          "value": "Até Ensino Superior Completo"
+        },
+        {
+          "color": "red",
+          "label": "Até Pós Graduação",
+          "value": "Até Pós Graduação"
+        }
+      ],
+      "phrasePrefix": "que cursaram"
+    },
     "tipo_adm_detalhado": {
       "type": "categorical",
       "label": "Tipo de administração detalhado",
@@ -260,33 +269,6 @@
         "Outros"
       ],
       "phrasePrefix": "da"
-    },
-    "grau_instrucao": {
-      "type": "categorical",
-      "label": "Grau de instrução",
-      "options": [
-        {
-          "value": "Até Fundamental ",
-          "color": "dark-blue",
-          "label": "Até Fundamental "
-        },
-        {
-          "value": "Até Ensino Médio",
-          "color": "orange",
-          "label": "Até Ensino Médio"
-        },
-        {
-          "value":  "Até Ensino Superior Completo",
-          "color": "green",
-          "label":  "Até Ensino Superior Completo"
-        },
-        {
-          "value":  "Até Pós Graduação",
-          "color": "red",
-          "label":  "Até Pós Graduação"
-        }
-      ],
-      "phrasePrefix": "que cursaram"
     },
     "quantidade_vinculos": {
       "type": "continuous",

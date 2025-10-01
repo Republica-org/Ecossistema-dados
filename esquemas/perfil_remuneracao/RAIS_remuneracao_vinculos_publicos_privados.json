@@ -14,7 +14,6 @@
         "label": "Poderes",
         "value": "poderes"
       },
-      
       {
         "label": "Nível de governo",
         "value": "nivel_governo"
@@ -37,7 +36,7 @@
     },
     "defaultValues": {
       "filterBy": {
-        "ano": 2021
+        "ano": 2023
       }
     },
     "dataSourceType": "staticValues",
@@ -60,7 +59,9 @@
         2018,
         2019,
         2020,
-        2021
+        2021,
+        2022,
+        2023
       ],
       "phrasePrefix": "em"
     },
@@ -70,7 +71,6 @@
     "categoria": {
       "type": "categorical"
     },
-    
     "flag_publico_privado": {
       "type": "categorical",
       "label": "Tipo de setor"

@@ -1,0 +1,89 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Quantidade de pessoas que trabalham",
+        "value": "quantidade_sum"
+      }
+    ],
+    "domain": "setor",
+    "groupBy": [
+      "pais",
+      "genero"
+    ],
+    "filterBy": [
+      "genero",
+      "pais",
+      "ano_pesquisa"
+    ],
+    "chartType": "bars",
+    "defaultValues": {
+      "filterBy": {
+        "pais": [
+          "Brasil",
+          "Chile",
+          "Estados Unidos"
+        ],
+        "ano_pesquisa" : [
+          2021,
+          2023
+        ]
+      }
+    },
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano_pesquisa": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "phrasePrefix": "no ano de"
+    },
+    "pais": {
+      "type": "categorical",
+      "label": "Países",
+      "options": [
+        "África do Sul",
+        "Argentina",
+        "Bolívia",
+        "Brasil",
+        "Chile",
+        "Colômbia",
+        "Estados Unidos",
+        "França",
+        "México",
+        "Peru",
+        "Uruguai"
+      ],
+      "phrasePrefix": "no"
+    },
+    "setor": {
+      "type": "categorical",
+      "label": "setor",
+      "options": [
+        "Público",
+        "Privado"
+      ],
+      "phrasePrefix": "dos"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Mulher",
+        "Homem"
+      ],
+      "phrasePrefix": "do gênero"
+    },
+    "quantidade": {
+      "type": "continuous",
+      "label": "Quantidade vínculos públicos no mercado formal de trabalho"
+    }
+  }
+}

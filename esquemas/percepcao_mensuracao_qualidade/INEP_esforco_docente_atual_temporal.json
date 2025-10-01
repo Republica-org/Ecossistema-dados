@@ -36,6 +36,10 @@
       "type": "continuous",
       "label": "Ano"
     },
+    "percent": {
+      "type": "continuous",
+      "label": "Percentual de docentes"
+    },
     "sigla_uf": {
       "type": "categorical",
       "label": "UF",
@@ -68,10 +72,6 @@
         "SP",
         "TO"
       ]
-    },
-    "per_valor": {
-      "type": "continuous",
-      "label": "Percentual de docentes"
     },
     "ano_escolar": {
       "type": "categorical",
@@ -121,6 +121,6 @@
     "INEP_adequacao_docente_temporal": "repositoriodedadosgpsp.percepcao_mensuracao_qualidade_estado.INEP_esforco_docente_atual_temporal"
   },
   "valueExpressions": {
-    "per_valor_avg": "AVG(per_valor) / 100"
+    "per_valor_avg": "AVG(percent) / 100"
   }
 }

@@ -13,38 +13,39 @@ WITH tabela_1 AS (
   nome_regiao,
 
   -- códigos da natureza jurídica: 
---https://concla.ibge.gov.br/estrutura/natjur-estrutura/natureza-juridica-2021.html
-  CASE 
-    WHEN natureza_juridica IN ('1015','1023', '1031','1104','1139','1112', '1147','1236','1120', '1155','1180','1341') THEN 'Executivo'-- aqui será adicionada autarquias e fundações de direito público. 
-    WHEN natureza_juridica IN ('1040','1058', '1066') THEN 'Legislativo'
-    WHEN natureza_juridica IN ('1074','1082') THEN 'Judiciário'
-    ELSE 'Outros' 
+  --https://concla.ibge.gov.br/estrutura/natjur-estrutura/natureza-juridica-2021.html
+  -- Classificação por Poder
+  CASE
+    WHEN natureza_juridica IN ('1015','1023','1031','1104','1139','1112','1147','1236','1120','1155','1180','1341','1244') THEN 'Executivo' --certo
+    WHEN natureza_juridica IN ('1040','1058','1066') THEN 'Legislativo' --certo
+    WHEN natureza_juridica IN ('1074','1082') THEN 'Judiciário' --certo
+    ELSE 'Outros'
   END AS poderes,
 
-  
-
-  CASE 
-    WHEN natureza_juridica IN ('1015','1040', '1074', '1104','1139', '1163', '1252', '1287', '1317', '1341') THEN 'Federal'
-    WHEN natureza_juridica IN ('1023','1058', '1082', '1112', '1147', '1171', '1236','1260',  '1295', '1325') THEN 'Estadual'
-    WHEN natureza_juridica IN ('1031','1066', '1120', '1155', '1180', '1244', '1279', '1309', '1333') THEN 'Municipal'
-    ELSE 'Outros' 
+  -- Classificação por Esfera
+  CASE
+    WHEN natureza_juridica IN ('1015','1040','1074','1104','1139','1163','1252','1287','1317','1341') THEN 'Federal' --certo
+    WHEN natureza_juridica IN ('1023','1058','1082','1112','1147','1171','1236','1260','1295','1325') THEN 'Estadual' --certo
+    WHEN natureza_juridica IN ('1031','1066','1120','1155','1180','1244','1279','1309','1333') THEN 'Municipal' --certo 
+    ELSE 'Outros'
   END AS esfera,
 
-  CASE 
-    WHEN natureza_juridica IN ( '1015','1040','1074','1023','1058','1082','1031','1066','1317','1325','1333') THEN 'Adm Direta' -- Excluir os fundoss públicos
-    WHEN natureza_juridica IN ('1104','1139','1163','1252','1112','1147','1171','1236','1260','1120','1155','1180','1244','1279','1287','1295','1309') THEN 'Indireta'
-    WHEN natureza_juridica IN ('2013', '2038') THEN 'Empresa Pública'
-    ELSE 'Outros' 
+  -- Classificação por Tipologia da Administração
+  CASE
+    WHEN natureza_juridica IN ('1015','1031','1066','1236','1244','1341') THEN 'Adm Direta'
+    WHEN natureza_juridica IN ('1104','1139','1163','1252','1112','1147','1171','1260','1120','1155','1180','1244','1279') THEN 'Indireta'
+    WHEN natureza_juridica IN ('2013','2038') THEN 'Empresa Pública'
+    ELSE 'Outros'
   END AS tipologia,
 
--- adicionar outras esferas Abaixo tem apenas a federal
-   CASE 
-    WHEN natureza_juridica IN ( '1015','1040','1074','1023','1058','1082','1031','1066') THEN 'Adm Direta'
+  -- Classificação mais detalhada da Tipologia
+  CASE
+    WHEN natureza_juridica IN ('1015','1031','1066','1236','1244','1341') THEN 'Adm Direta'
     WHEN natureza_juridica IN ('1104','1112','1120','1139','1147','1155') THEN 'Fundação pública de direito público ou autarquia'
-    WHEN natureza_juridica IN ('1163','1171','1180') THEN 'Órgão público autônomo' 
-    WHEN natureza_juridica IN ('1252','1260','1279') THEN 'Fundação pública de direito privado' 
-    WHEN natureza_juridica IN ('2013', '2038') THEN 'Empresa Pública'
-    ELSE 'Outros' 
+    WHEN natureza_juridica IN ('1163','1171','1180') THEN 'Órgão público autônomo'
+    WHEN natureza_juridica IN ('1252','1260','1279') THEN 'Fundação pública de direito privado'
+    WHEN natureza_juridica IN ('2013','2038') THEN 'Empresa Pública'
+    ELSE 'Outros'
   END AS tipologia2,
 
   CASE 
@@ -152,6 +153,7 @@ OR natureza_juridica IN ('2011', '2038'))
 AND natureza_juridica != '1228'
 AND cbo_2002 NOT LIKE "0%" 
 AND vinculo_ativo_3112= '1'
+AND ano != 2024
 
 GROUP BY 
 
@@ -161,6 +163,7 @@ GROUP BY
   poderes,
   esfera,
   tipologia, 
+  tipologia2,
   tipo_vinculo,
   quantidade_horas_contratadas,
   sexo, 

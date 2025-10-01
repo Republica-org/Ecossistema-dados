@@ -20,20 +20,29 @@
       }
     ],
     "mapType": "municipalities_by_state",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2023
+      }
+    },
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
   "variables": {
     "ano": {
       "type": "continuous",
-      "options": 2019,
+      "options": [
+        2019,
+        2023
+      ],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
-    },
-    "nome_municipio": {
-      "type": "categorical",
-      "options": [],
-      "variableId": "nome_municipio"
     },
     "genero": {
       "type": "categorical",
@@ -102,13 +111,18 @@
       ],
       "variableId": "cor_raca"
     },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
     "faixa_etaria": {
       "type": "categorical",
       "options": [
         {
-        "color": "var(--dark-blue)",
-        "label": "Entre 18-29",
-        "value": "Entre 18-29"
+          "color": "var(--dark-blue)",
+          "label": "Entre 18-29",
+          "value": "Entre 18-29"
         },
         {
           "color": "var(--orange)",
@@ -128,21 +142,24 @@
       ],
       "variableId": "faixa_etaria"
     },
+    "id_municipio": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "id_municipio"
+    },
     "grau_instrucao": {
       "type": "categorical",
       "options": [
         {
-        "color": "var(--dark-blue)",
-        "label": "Até Ensino Fundamental",
-        "value": "Até Ensino Fundamental"
-         },
-         
+          "color": "var(--dark-blue)",
+          "label": "Até Ensino Fundamental",
+          "value": "Até Ensino Fundamental"
+        },
         {
           "color": "var(--orange)",
           "label": "Até Ensino Médio",
           "value": "Até Ensino Médio"
         },
-
         {
           "color": "var(--green)",
           "label": "Até Ensino Superior Completo",
@@ -171,15 +188,10 @@
       ],
       "variableId": "grau_instrucao"
     },
-    "sigla_uf": {
+    "nome_municipio": {
       "type": "categorical",
       "options": [],
-      "variableId": "sigla_uf"
-    },
-    "id_municipio": {
-      "type": "categorical",
-      "options": [],
-      "variableId": "id_municipio"
+      "variableId": "nome_municipio"
     }
   }
 }

@@ -13,9 +13,30 @@
       }
     ],
     "mapType": "states",
-    "stateIdVariableId": "sigla_uf"
+    "stateIdVariableId": "sigla_uf",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2023
+      }
+    }
   },
   "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2019,
+        2023
+      ],
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
     "sigla_uf": {
       "type": "categorical",
       "options": [],

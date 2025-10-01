@@ -21,7 +21,7 @@
     "chartType": "bars",
     "defaultValues": {
       "filterBy": {
-        "ano": 2021
+        "ano": 2023
       }
     },
     "dataSourceType": "aggregation",
@@ -40,7 +40,9 @@
         2018,
         2019,
         2020,
-        2021
+        2021,
+        2022,
+        2023
       ],
       "phrasePrefix": "em"
     },

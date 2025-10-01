@@ -27,20 +27,20 @@
     "cor_raca": {
       "type": "categorical",
       "label": "Raça",
-      "options":[
-        "Branca", 
+      "options": [
+        "Branca",
         "Não informada",
         "Negra",
         "Outros"
       ],
       "phrasePrefix": "da cor"
     },
-    "natureza_juridica" : {
+    "natureza_juridica": {
       "type": "categorical",
       "label": "Natureza Jurídica",
       "options": [
-        "Autarquia Federal", 
-        "Fundação Federal", 
+        "Autarquia Federal",
+        "Fundação Federal",
         "Poder Executivo Federal"
       ],
       "phrasePrefix": "da natureza jurídica denominada"

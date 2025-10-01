@@ -20,7 +20,7 @@
     ],
     "defaultValues": {
       "filterBy": {
-        "ano": 2021
+        "ano": 2024
       }
     },
     "filterByStateId": "sigla_uf",
@@ -35,7 +35,10 @@
         2018,
         2019,
         2020,
-        2021
+        2021,
+        2022,
+        2023,
+        2024
       ],
       "phrasePrefix": "em"
     },
@@ -48,10 +51,9 @@
     "populacao_domiciliada": "continuous"
   },
   "dataSources": {
-    "CNES_assistentes_sociais_mil_habitantes": "repositoriodedadosgpsp.perfil_remuneracao.CNES_assistentes_sociais_mil_habitantes"
+    "CNES_assistentes_sociais_mil_habitantes": "repositoriodedadosgpsp.perfil_remuneracao.CNES_assistentes_sociais_mil_habitantes_v1"
   },
   "valueExpressions": {
     "quantidade_vinculos_por_1000_hab": "SUM(quantidade_vinculos) / SUM(populacao_domiciliada) * 1000"
   }
 }
-
