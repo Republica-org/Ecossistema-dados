@@ -31,9 +31,9 @@ SELECT
   id_municipio,
   nome_regiao,
 
-  -- Classificação por Poder
+ -- Classificação por Poder
   CASE
-    WHEN natureza_juridica IN ('1015','1023','1031','1104','1139','1112','1147','1236','1120','1155','1180','1341') THEN 'Executivo' --certo
+    WHEN natureza_juridica IN ('1015','1023','1031','1104','1139','1112','1147','1236','1120','1155','1180','1341','1244') THEN 'Executivo' --certo
     WHEN natureza_juridica IN ('1040','1058','1066') THEN 'Legislativo' --certo
     WHEN natureza_juridica IN ('1074','1082') THEN 'Judiciário' --certo
     ELSE 'Outros'
@@ -43,21 +43,22 @@ SELECT
   CASE
     WHEN natureza_juridica IN ('1015','1040','1074','1104','1139','1163','1252','1287','1317','1341') THEN 'Federal' --certo
     WHEN natureza_juridica IN ('1023','1058','1082','1112','1147','1171','1236','1260','1295','1325') THEN 'Estadual' --certo
-    WHEN natureza_juridica IN ('1031','1066','1120','1155','1180','1244','1279','1309','1333') THEN 'Municipal' --certo 
+    WHEN natureza_juridica IN 
+    ('1031','1066','1120','1155','1180','1244','1279','1309','1333') THEN 'Municipal' --certo 
     ELSE 'Outros'
   END AS esfera,
 
   -- Classificação por Tipologia da Administração
   CASE
-    WHEN natureza_juridica IN ('1015','1040','1074','1023','1058','1082','1031','1066','1317','1325','1333') THEN 'Adm Direta'
-    WHEN natureza_juridica IN ('1104','1139','1163','1252','1112','1147','1171','1236','1260','1120','1155','1180','1244','1279','1287','1295','1309') THEN 'Indireta'
+    WHEN natureza_juridica IN ('1015','1031','1066','1236'.'1244','1341') THEN 'Adm Direta'
+    WHEN natureza_juridica IN ('1104','1139','1163','1252','1112','1147','1171','1260','1120','1155','1180','1244','1279') THEN 'Indireta'
     WHEN natureza_juridica IN ('2013','2038') THEN 'Empresa Pública'
     ELSE 'Outros'
   END AS tipologia,
 
   -- Classificação mais detalhada da Tipologia
   CASE
-    WHEN natureza_juridica IN ('1015','1040','1074','1023','1058','1082','1031','1066') THEN 'Adm Direta'
+    WHEN natureza_juridica IN ('1015','1031','1066','1236','1244','1341') THEN 'Adm Direta'
     WHEN natureza_juridica IN ('1104','1112','1120','1139','1147','1155') THEN 'Fundação pública de direito público ou autarquia'
     WHEN natureza_juridica IN ('1163','1171','1180') THEN 'Órgão público autônomo'
     WHEN natureza_juridica IN ('1252','1260','1279') THEN 'Fundação pública de direito privado'

@@ -28,11 +28,11 @@ SELECT
   id_municipio,
   nome_regiao,
 
-  -- Classificação de Poderes
+-- Classificação por Poder
   CASE
-    WHEN natureza_juridica IN ('1015', '1023', '1031') THEN 'Executivo'
-    WHEN natureza_juridica IN ('1040', '1058', '1066') THEN 'Legislativo'
-    WHEN natureza_juridica IN ('1074', '1082') THEN 'Judiciário'
+    WHEN natureza_juridica IN ('1015','1023','1031','1104','1139','1112','1147','1236','1120','1155','1180','1341','1244') THEN 'Executivo' --certo
+    WHEN natureza_juridica IN ('1040','1058','1066') THEN 'Legislativo' --certo
+    WHEN natureza_juridica IN ('1074','1082') THEN 'Judiciário' --certo
     ELSE 'Outros'
   END AS poderes,
 
