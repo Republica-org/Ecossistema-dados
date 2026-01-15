@@ -3,98 +3,68 @@
     "type": "data_series",
     "range": [
       {
-        "label": "Total de pessoas que trabalham no setor público",
-        "value": "total_arredondado_sum"
+        "label": "Quantidade de vínculos públicos",
+        "value": "quantidade_vinculos_sum"
       }
     ],
-    "domain": "esfera",
+    "domain": "ano",
     "groupBy": [
-      
-      "sexo",
-      "cor"
-      
+      "genero",
+      "cor_raca"
     ],
     "filterBy": [
-      "sexo",
-      "cor"
+      "genero",
+      "cor_raca",
+      "ano"
     ],
-    
-    "chartType": "bars",
-    
-    "dataSourceType": "aggregation"
+    "dataSourceType": "aggregation",
+    "chartType": "bars"
   },
   "variables": {
-    
-    "sexo": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2024,
+        2025
+      ],
+      "phrasePrefix": "em"
+    },
+    "genero": {
       "type": "categorical",
       "label": "gênero",
       "options": [
         {
-          "color": "dark-blue",
           "label": "Feminino",
           "value": "Mulher"
         },
         {
-          "color": "green",
           "label": "Masculino",
           "value": "Homem"
         }
       ],
       "phrasePrefix": "do gênero"
     },
-    "cor": {
+    "cor_raca": {
       "type": "categorical",
       "label": "cor",
       "options": [
         {
-          "color": "dark-blue",
           "label": "Branca",
           "value": "Branca"
         },
         {
-          "color": "green",
           "label": "Negra",
           "value": "Negra"
         },
         {
-          "color": "orange",
           "label": "Outra",
           "value": "Outra"
         }
       ],
       "phrasePrefix": "da cor"
     },
-    "esfera": {
-      "type": "categorical",
-      "label": "Esfera federativa",
-      "options": [
-        {
-          "value": "Municipal",
-          "color": "dark-blue",
-          "label": "Municipal", 
-          "order":1
-
-        },
-        {
-          "value": "Estadual",
-          "color": "orange",
-          "label": "Estadual",
-          "order":2
-        },
-        {
-          "value": "Federal",
-          "color": "green",
-          "label": "Federal",
-          "order":3
-        },
-        {
-          "value": "Outros",
-          "color": "light-grey",
-          "label": "Outros"
-        }
-      ],
-      "phrasePrefix": "que atuam na esfera"},
-    "total_arredondado": {
+    "quantidade_vinculos": {
       "type": "continuous",
       "label": "Quantidade de vínculos"
     }

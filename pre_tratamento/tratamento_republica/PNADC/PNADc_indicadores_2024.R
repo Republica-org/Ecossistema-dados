@@ -467,7 +467,20 @@ ggplot(data = t7, mapping = aes(x = cor, y = prop, fill = sexo, group = as.facto
 ggsave(filename = 'Z:/Temp/Helena/indicador_pnad7.png', plot = last_plot(), device = 'png',
        width = 26, height = 15, units = 'cm', bg = 'white')
 
+# 7v2. Quantidade e porcentagem de pessoas que trabalham no setor público por raça e gênero em posição de liderança ----
+out_07_v2 <- pnadc_setor_publico |>
+  drop_na(cor) |> 
+  # filter(VD4011 == 'Diretores e gerentes') |> 
+  filter(V4010 != '1345') |> 
+  filter(V4010 >= '1111' & V4010 <= '1439') |> 
+  group_by(interact(sexo = V2007, cor)) |> 
+  summarise(
+    freq = survey_total(vartype = c('se', 'cv')),
+    prop = survey_mean(vartype = c('se', 'cv')),
+    .groups = 'drop'
+  )
 
+out_07_v2
 
 ### 8. Quantidade e porcentagem de pessoas que trabalham no setor público por raça, gênero e por faixa de remuneração ####
 
