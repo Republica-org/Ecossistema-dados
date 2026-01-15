@@ -5,10 +5,10 @@ WITH profissionais AS (
     id_estabelecimento_cnes,
     descricao_familia as tipo_ocupacao,
     COUNT(*) as n_profissionais
-  FROM `basedosdados-dev.br_ms_cnes.profissional` as prof
-  INNER JOIN `basedosdados-dev.br_bd_diretorios_brasil.cbo_2002` as cbo
+  FROM `basedosdados.br_ms_cnes.profissional` as prof
+  INNER JOIN `basedosdados.br_bd_diretorios_brasil.cbo_2002` as cbo
   ON prof.cbo_2002 = cbo.cbo_2002
-  WHERE mes = 1
+  WHERE mes = 6
   GROUP BY 1,2,3,4),
 
 estabelecimentos AS(
@@ -30,8 +30,8 @@ estabelecimentos AS(
       WHEN id_natureza_juridica IN ('2011', '2038') THEN 'Empresa Pública'
       WHEN id_natureza_juridica NOT LIKE  "1%" AND id_natureza_juridica NOT IN ('2011', '2038') THEN 'Privado'
     END as tipo_esfera_administrativa,
-  FROM `basedosdados-dev.br_ms_cnes.estabelecimento`
-  WHERE mes = 1
+  FROM `basedosdados.br_ms_cnes.estabelecimento`
+  WHERE mes = 6
 )
 
 SELECT 
@@ -49,6 +49,6 @@ SELECT
 FROM estabelecimentos 
 INNER JOIN profissionais 
 ON estabelecimentos.ano = profissionais.ano AND estabelecimentos.id_estabelecimento_cnes = profissionais.id_estabelecimento_cnes
-INNER JOIN `basedosdados-dev.br_bd_diretorios_brasil.uf` as uf
+INNER JOIN `basedosdados.br_bd_diretorios_brasil.uf` as uf
 ON estabelecimentos.sigla_uf = uf.sigla
 GROUP BY 1,2,3,4,5,6,7

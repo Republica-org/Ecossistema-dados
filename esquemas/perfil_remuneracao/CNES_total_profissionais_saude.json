@@ -62,6 +62,6 @@
     "quantidade_vinculos": "continuous"
   },
   "dataSources": {
-    "CNES_total_profissionais_saude": "repositoriodedadosgpsp.perfil_remuneracao.CNES_total_profissionais_saude_v1"
+    "CNES_total_profissionais_saude": "repositoriodedadosgpsp.perfil_remuneracao.CNES_total_profissionais_saude"
   }
 }

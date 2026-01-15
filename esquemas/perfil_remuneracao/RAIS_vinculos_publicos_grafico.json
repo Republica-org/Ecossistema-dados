@@ -16,8 +16,6 @@
       "sexo",
       "poderes",
       "grau_instrucao",
-      "tipo_adm",
-      "tipo_adm_detalhado",
       "esfera",
       "faixa_etaria",
       "tipo_vinculo"
@@ -26,8 +24,6 @@
       "sexo",
       "poderes",
       "grau_instrucao",
-      "tipo_adm",
-      "tipo_adm_detalhado",
       "esfera",
       "faixa_etaria",
       "tipo_vinculo"

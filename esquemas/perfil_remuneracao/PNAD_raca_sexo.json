@@ -1,0 +1,92 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de pessoas que trabalham no setor público em cargos de liderança",
+        "value": "total_arredondado_sum"
+      }
+    ],
+    "domain": "sexo",
+    "groupBy": [
+      "cor"
+    ],
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "cor": {
+      "type": "categorical",
+      "label": "cor",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Branca",
+          "value": "Branca"
+        },
+        {
+          "color": "green",
+          "label": "Negra",
+          "value": "Negra"
+        },
+        {
+          "color": "orange",
+          "label": "Outra",
+          "value": "Outra"
+        }
+      ],
+      "phrasePrefix": "da cor"
+    },
+    "sexo": {
+      "type": "categorical",
+      "label": "gênero",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Feminino",
+          "value": "Mulher"
+        },
+        {
+          "color": "green",
+          "label": "Masculino",
+          "value": "Homem"
+        }
+      ],
+      "phrasePrefix": "do gênero"
+    },
+    "esfera": {
+      "type": "categorical",
+      "label": "Esfera federativa",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Municipal",
+          "order": 1,
+          "value": "Municipal"
+        },
+        {
+          "color": "orange",
+          "label": "Estadual",
+          "order": 2,
+          "value": "Estadual"
+        },
+        {
+          "color": "green",
+          "label": "Federal",
+          "order": 3,
+          "value": "Federal"
+        },
+        {
+          "color": "light-grey",
+          "label": "Outros",
+          "value": "Outros"
+        }
+      ],
+      "phrasePrefix": "que atuam na esfera"
+    },
+    "total_arredondado": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+ {
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Quantidade de vínculos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "area",
+    "groupBy": [
+      "orgao",
+      "area"
+      
+    ],
+    "filterBy": [
+      "orgao",
+      "area"
+    ],
+    "chartType": "bars"
+    },
+    "dataSourceType": "aggregation",
+  "variables": {
+
+    "orgao": {
+      "type": "categorical",
+      "label": "Órgão",
+      "options": [ "Advocacia-Geral Da União", 
+      "Controladoria-Geral Da União",
+       "Defensoria Pública Da União", 
+       "Ministério Das Mulheres",
+       "Ministério De Minas E Energia", 
+       "Ministério Do Turismo",
+       "Ministério Dos Transportes",
+       "Ministério Gestão E Inovação Em Serviços Públicos",
+       "Ministério Da Agricultura E Pecuária",
+       "Ministério Da Ciência, Tecnologia E Inovação",
+       "Ministério Da Cultura",
+       "Ministério Da Defesa",
+       "Ministério Da Educação",
+       "Ministério Da Fazenda",
+       "Ministério Da Igualdade Racial",
+       "Ministério Da Integração E Do Desenvolvimento Regional",
+       "Ministério Da Justiça E Segurança Pública",
+       "Ministério Da Pesca E Aquicultura",
+       "Ministério Da Previdência Social",
+       "Ministério Da Saúde",
+       "Ministério Das Cidades",
+       "Ministério Das Comunicações",
+       "Ministério Das Relações Exteriores",
+       "Ministério De Portos E Aeroportos",
+       "Ministério Do Desenvolvimento Agrário E Agricultura Familia",
+       "Ministério Do Desenvolvimento E Assistência Social, Família E Combate À Fome",
+       "Ministério Do Desenvolvimento, Indústria, Comércio E Serviços",
+       "Ministério Do Empreendedorismo, Da Microempresa E Da Empresa De Pequeno Porte",
+       "Ministério Do Esporte",
+       "Ministério Do Meio Ambiente E Mudança Do Clima",
+       "Ministério Do Planejamento E Orçamento",
+       "Ministério Do Trabalho E Emprego",
+       "Ministério Dos Povos Indígenas",
+       "Ministérios Dos Direitos Humanos E Da Cidadania",
+       "Presidência Da Republica",
+      "Vice-Presidência Da República"
+      ]
+    },
+    "area": {
+      "type": "categorical",
+      "label": "Área",
+      "options": [
+      "Defesa, Segurança E Justiça",
+      "Regulatória E Controle", 
+      "Social",
+      "Infraestrutura, Desenvolvimento Econômico E Meio Ambiente",
+      "Economia, Gestão E Planejamento"
+      ]
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": [
+        "Feminino", "Masculino"
+      ]
+    },
+    "prop_genero": {
+      "type": "continuous",
+      "label": "Proporção de gênero"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": {"value":"possui_cota",
+    "label":"Existência de legislação estadual de ações afirmativas em concursos públicos"
+
+},
+    "mapType": "states",
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "variableId": "ano"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "possui_cota": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "possui_cota"
+    }
+  },
+  "dataSources": {
+    "FLACSO_acoes_afirmativas_2025": "repositoriodedadosgpsp.acoes_afirmativas.FLACSO_acoes_afirmativas_2025"
+  }
+}
