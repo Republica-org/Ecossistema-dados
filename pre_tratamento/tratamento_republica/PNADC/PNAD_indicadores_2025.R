@@ -358,7 +358,7 @@ list(
   "indicador_pnad_05" = out_05,
   "indicador_pnad_06" = out_06,
   "indicador_pnad_07" = out_07,
-  "indicador_pnad_07_v2" = out_07_v2, # Essa versão é a utilizada para o gráfico
+  "indicador_pnad_07_v2" = out_07_v2, # Essa versão é a utilizada pa o grafico
   "indicador_pnad_08" = out_08
 ) |> 
   write_xlsx('outputs/_pnad_indicadores.xlsx')
