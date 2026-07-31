@@ -1,0 +1,50 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Média da remuneração",
+        "value": "media_corrigido_sum"
+      },
+      {
+        "label": "Mediana da remuneração",
+        "value": "mediana_corrigido_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "detalhamento"
+    ],
+    "chartType": "lines",
+    "numberFormat": {
+      "style": "currency",
+      "currency": "BRL"
+    },
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "detalhamento": {
+      "type": "categorical",
+      "label": "tipo de aposentadoria/pensão",
+      "options": [
+        "Aposentadoria civil",
+        "Pensão militar",
+        "Reserva ou Reforma militar",
+        "Pensão civil"
+      ],
+      "phrasePrefix": "por"
+    },
+    "media_corrigido": {
+      "type": "continuous",
+      "label": "Média da remuneração"
+    },
+    "mediana_corrigido": {
+      "type": "continuous",
+      "label": "Mediana da remuneração"
+    }
+  }
+}

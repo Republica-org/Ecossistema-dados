@@ -1,0 +1,92 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de vínculos estaduais",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "tipo_vinculo"
+    ],
+    "filterBy": [
+      "tipo_vinculo"
+    ],
+    "chartType": "lines",
+    "dataSourceType": "aggregation",
+    "filterByStateId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "label": "UF",
+      "options": [
+        "IGNORADO",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "tipo_vinculo": {
+      "type": "categorical",
+      "label": "Tipo de vínculo",
+      "options": [
+        {
+          "color": "dark-blue",
+          "label": "Estatutários",
+          "value": "Estatutários"
+        },
+        {
+          "color": "orange",
+          "label": "Celetistas",
+          "value": "Celetistas"
+        },
+        {
+          "color": "green",
+          "label": "Somente comissionados",
+          "value": "Somente comissionados"
+        },
+        {
+          "color": "red",
+          "label": "Sem vínculo permanente",
+          "value": "Sem vínculo permanente"
+        }
+      ],
+      "phrasePrefix": "que são"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}
