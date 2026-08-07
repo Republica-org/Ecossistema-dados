@@ -62,7 +62,7 @@
       "label": "Tipo de vínculo",
       "options": [
         {
-          "color": "dark-blue",
+          "color": "blue",
           "label": "Estatutários",
           "value": "Estatutários"
         },
@@ -80,6 +80,11 @@
           "color": "red",
           "label": "Sem vínculo permanente",
           "value": "Sem vínculo permanente"
+        },
+        {
+          "color": "purple",
+          "label": "Estagiários",
+          "value": "Estagiários"
         }
       ],
       "phrasePrefix": "que são"
