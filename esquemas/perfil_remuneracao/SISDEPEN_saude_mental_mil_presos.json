@@ -3,12 +3,12 @@
     "type": "br_map_continuous",
     "range": [
       {
-        "label": "Total de profissionais por mil pessoas no sistema carcerário",
-        "value": "medicos_mental_por_1000_1"
+        "label": "Total de médicos sistema prisional",
+        "value": "total_medicos_mental_sum"
       },
       {
-        "label": "Total de profissionais de saúde mental no sistema carcerário",
-        "value": "total_medicos_mental_sum"
+        "label": "Total de médicos por mil pessoas sistema prisional",
+        "value": "medicos_mental_por_1000_1"
       }
     ],
     "mapType": "states",
@@ -18,6 +18,11 @@
         "variableId": "ano"
       }
     ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2025
+      }
+    },
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
@@ -33,7 +38,8 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
       ],
       "variableId": "ano",
       "phrasePrefix": "em"
@@ -67,7 +73,7 @@
     "SENAPPEN_profissionais_saude_mental_mil_presos": "repositoriodedadosgpsp.perfil_remuneracao.SENAPPEN_profissionais_saude_mental_mil_presos"
   },
   "valueExpressions": {
-    "total_medicos_mental": "sum(total_medicos_mental)",
+    "total_medicos_mental_sum": "sum(total_medicos_mental)",
     "medicos_mental_por_1000_1": {
       "label": "Profissionais por mil pessoas presas",
       "value": "sum(total_medicos_mental) / (sum(pop_total) / 1000)"
