@@ -20,13 +20,24 @@
       }
     ],
     "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2020,
+    "options": [2020, 2024],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
     },
@@ -42,6 +53,11 @@
             "color": "var(--dark-blue)",
             "label": "Feminino",
             "value": "Feminino"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Não informou",
+          "value": "Não informou"
         }
       ],
       "variableId": "genero"
@@ -63,6 +79,11 @@
           "color": "var(--green)",
           "label": "Preta",
           "value": "Preta"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Não informou",
+          "value": "Não informou"
         }
       ],
       "variableId": "cor_raca"
@@ -82,13 +103,18 @@
       },
         {
           "color": "var(--green)",
-          "label": "Até Ensino Superior Completo",
-          "value": "Até Ensino Superior Completo"
+          "label": "Até Ensino Superior",
+          "value": "Até Ensino Superior"
         },
         {
           "color": "var(--red)",
           "label": "Até Pós Graduação ou Mestrado",
           "value": "Até Pós Graduação ou Mestrado"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Não informou",
+          "value": "Não informou"
         }
       ],
       "variableId": "grau_instrucao"
@@ -105,6 +131,11 @@
           "color": "var(--green)",
           "label": "Entre 50-64",
           "value": "Entre 50-64"
+        },
+        {
+          "color": "#8292fa",
+          "label": "Entre 18-29",
+          "value": "Entre 18-29"
         },
         {
           "color": "var(--red)",

@@ -20,7 +20,7 @@
     ],
     "defaultValues": {
       "filterBy": {
-        "ano": 2024
+        "ano": 2026
       }
     },
     "filterByStateId": "sigla_uf",
@@ -38,7 +38,9 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025,
+        2026
       ],
       "phrasePrefix": "em"
     },

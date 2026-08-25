@@ -21,27 +21,9 @@
     "domain": "faixa_servidores",
     "orderBy": "qtde_planos_sum_desc",
     "chartType": "bars",
-    "filterBy": [
-      {
-        "type": "single",
-        "variableId": "ano"
-      }
-    ],
-    "defaultValues": {
-      "filterBy": {
-        "ano": 2026
-      }
-    },
     "dataSourceType": "aggregation"
   },
   "variables": {
-    "ano": {
-      "type": "continuous",
-      "label": "Ano",
-    "options": [2023, 2026],
-      "variableId": "ano",
-      "phrasePrefix": "no ano de"
-    },
     "perc_planos": {
       "type": "continuous",
       "label": "Proporção de vínculos"

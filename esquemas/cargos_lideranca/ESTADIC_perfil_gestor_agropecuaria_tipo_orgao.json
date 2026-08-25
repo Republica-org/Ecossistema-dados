@@ -20,13 +20,27 @@
       }
     ],
     "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2020,
+      "options": [
+        2020,
+        2024
+      ],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
     },
@@ -39,9 +53,14 @@
           "value": "Masculino"
         },
         {
-            "color": "var(--dark-blue)",
-            "label": "Feminino",
-            "value": "Feminino"
+          "color": "var(--dark-blue)",
+          "label": "Feminino",
+          "value": "Feminino"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Sem dados",
+          "value": "Não informou"
         }
       ],
       "variableId": "genero"
@@ -63,6 +82,11 @@
           "color": "var(--orange)",
           "label": "Parda",
           "value": "Parda"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Sem dados",
+          "value": "Não informou"
         }
       ],
       "variableId": "cor_raca"
@@ -72,14 +96,40 @@
       "options": [],
       "variableId": "sigla_uf"
     },
+    "faixa_etaria": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--orange)",
+          "label": "Entre 30-49",
+          "value": "Entre 30-49"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Entre 50-64",
+          "value": "Entre 50-64"
+        },
+        {
+          "color": "var(--red)",
+          "label": "Acima de 65",
+          "value": "Acima de 65"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Sem dados",
+          "value": "Não informou"
+        }
+      ],
+      "variableId": "faixa_etaria"
+    },
     "grau_instrucao": {
       "type": "categorical",
       "options": [
-      {
-        "color": "var(--dark-blue)",
-        "label": "Até Ensino Fundamental",
-        "value": "Até Ensino Fundamental"
-      },
+        {
+          "color": "var(--dark-blue)",
+          "label": "Até Ensino Fundamental",
+          "value": "Até Ensino Fundamental"
+        },
         {
           "color": "var(--orange)",
           "label": "Até Ensino Médio",
@@ -99,30 +149,14 @@
           "color": "var(--purple)",
           "label": "Até Doutorado",
           "value": "Até Doutorado"
+        },
+        {
+          "color": "#CCCCCC",
+          "label": "Sem dados",
+          "value": "Não informou"
         }
       ],
       "variableId": "grau_instrucao"
-    },
-    "faixa_etaria": {
-      "type": "categorical",
-      "options": [
-        {
-          "color": "var(--orange)",
-          "label": "Entre 30-49",
-          "value": "Entre 30-49"
-        },
-        {
-          "color": "var(--green)",
-          "label": "Entre 50-64",
-          "value": "Entre 50-64"
-        },
-        {
-          "color": "var(--red)",
-          "label": "Acima de 65",
-          "value": "Acima de 65"
-        }
-      ],
-      "variableId": "faixa_etaria"
     }
   }
 }

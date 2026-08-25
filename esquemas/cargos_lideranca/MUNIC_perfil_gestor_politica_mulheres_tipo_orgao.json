@@ -3,19 +3,19 @@
     "type": "br_map_categorical",
     "range": [
       {
-        "label": "Perfil do gestor de transporte por cor/raça",
+        "label": "Política para mulheres por cor/raça",
         "value": "cor_raca"
       },
       {
-        "label": "Perfil do gestor de transporte por gênero",
+        "label": "Política para mulheres por gênero",
         "value": "genero"
       },
       {
-        "label": "Perfil do gestor de transporte por faixa etária",
+        "label": "Política para mulheres por faixa etária",
         "value": "faixa_etaria"
       },
       {
-        "label": "Perfil do gestor de transporte por escolaridade",
+        "label": "Política para mulheres por escolaridade",
         "value": "grau_instrucao"
       }
     ],

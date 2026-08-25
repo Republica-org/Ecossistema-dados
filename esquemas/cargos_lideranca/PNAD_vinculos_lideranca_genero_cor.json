@@ -1,0 +1,89 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Quantidade de vínculos públicos",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "genero",
+      "cor_raca"
+    ],
+    "filterBy": [
+      "genero",
+      "cor_raca",
+      "ano"
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": [2026, 2025, 2023]
+      }
+    },
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "phrasePrefix": "em"
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "gênero",
+      "options": [
+        {
+          "label": "Feminino",
+          "value": "Mulher"
+        },
+        {
+          "label": "Masculino",
+          "value": "Homem"
+        }
+      ],
+      "phrasePrefix": "do gênero"
+    },
+    "cor_raca": {
+      "type": "categorical",
+      "label": "cor",
+      "options": [
+        {
+          "label": "Branca",
+          "value": "Branca"
+        },
+        {
+          "label": "Negra",
+          "value": "Negra"
+        },
+        {
+          "label": "Outra",
+          "value": "Outra"
+        }
+      ],
+      "phrasePrefix": "da cor"
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Quantidade de vínculos"
+    }
+  }
+}

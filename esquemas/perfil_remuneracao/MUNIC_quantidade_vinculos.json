@@ -80,6 +80,11 @@
           "color": "red",
           "label": "Sem vínculo permanente",
           "value": "Sem vínculo permanente"
+        },
+        {
+          "color": "blue",
+          "label": "Estagiários",
+          "value": "Estagiários"
         }
       ],
       "phrasePrefix": "que são"
