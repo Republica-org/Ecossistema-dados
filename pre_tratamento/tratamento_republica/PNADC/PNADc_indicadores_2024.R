@@ -1,4 +1,15 @@
 
+#install.packages(c(
+ # "tidyverse",
+  #"PNADcIBGE",
+  #"survey",
+  #"srvyr",
+  #"ggrepel",
+  #"scales",
+  #"MetBrewer",
+  #"writexl"))
+
+
 # 1. SET UP -----------------------------------------------------------------------
 gc()
 rm(list=ls())
@@ -76,8 +87,8 @@ ggplot(data = t1, mapping = aes(x = '', y = prop, fill = sexo)) +
   theme(legend.position = 'right')
 
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad1.png', plot = last_plot(), device = 'png',
-       width = 15, height = 15, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad1.png', plot = last_plot(), device = 'png',
+      # width = 15, height = 15, units = 'cm', bg = 'white')
 
 #### 2. Quantidade e porcentagem de pessoas que trabalham no setor público por gênero e por esfera ####
 
@@ -133,8 +144,8 @@ ggplot(data = t2, mapping = aes(x = '', y = prop, fill = sexo)) +
   theme(legend.position = 'right')
 
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad2.png', plot = last_plot(), device = 'png',
-       width = 26, height = 10, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad2.png', plot = last_plot(), device = 'png',
+ #      width = 26, height = 10, units = 'cm', bg = 'white')
 
 
 ### 3. Quantidade e porcentagem de pessoas que trabalham no setor público por raça ####
@@ -169,8 +180,8 @@ ggplot(data = t3, mapping = aes(x = '', y = prop, fill = cor)) +
   theme(legend.position = 'right')
 
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad3.png', plot = last_plot(), device = 'png',
-       width = 15, height = 15, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad3.png', plot = last_plot(), device = 'png',
+ #      width = 15, height = 15, units = 'cm', bg = 'white')
 
 
 
@@ -228,8 +239,8 @@ ggplot(data = t4, mapping = aes(x = '', y = prop, fill = cor)) +
   theme(legend.position = 'right')
 
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad4.png', plot = last_plot(), device = 'png',
-       width = 30, height = 12, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad4.png', plot = last_plot(), device = 'png',
+      # width = 30, height = 12, units = 'cm', bg = 'white')
 
 
 ### 5. Quantidade e porcentagem de pessoas que trabalham no setor público por raça e gênero ####
@@ -293,8 +304,8 @@ ggplot(data = t5, mapping = aes(x = cor, y = prop, fill = sexo, group = as.facto
   labs(y = '(%)', x = '', fill = "", title = "Porcentagem de pessoas no setor público por gênero e raça:") +
   theme_bw()
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad5.png', plot = last_plot(), device = 'png',
-       width = 18, height = 15, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad5.png', plot = last_plot(), device = 'png',
+       #width = 18, height = 15, units = 'cm', bg = 'white')
 
 
 
@@ -382,8 +393,8 @@ ggplot(data = t6, mapping = aes(x = cor, y = prop, fill = sexo, group = as.facto
   labs(y = '(%)', x = '', fill = "", title = "Porcentagem de pessoas no setor público por gênero e raça e esfera:") +
   theme_bw()
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad6.png', plot = last_plot(), device = 'png',
-       width = 28, height = 15, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad6.png', plot = last_plot(), device = 'png',
+ #      width = 28, height = 15, units = 'cm', bg = 'white')
 
 
 
@@ -392,16 +403,19 @@ ggsave(filename = 'Z:/Temp/Helena/indicador_pnad6.png', plot = last_plot(), devi
 
 # setor publico por raça e genero e cargo de liderança [prop]
 setorpublico_srvyr %>% 
-  filter(VD4011 == "Diretores e gerentes") %>% 
+  filter(V4010 != "1345") |> 
+  filter(V4010 >= "1111" & V4010 <= "1439") %>%  
   group_by(cor, V2007) %>% 
   summarise(freq = survey_mean())
-
-
 
 # Calculate proportion and standard error
 t7_cv <- setorpublico_srvyr %>%
   drop_na(cor) %>% 
-  filter(VD4011 == "Diretores e gerentes") %>% 
+   filter(
+    V4010 >= "1111",
+    V4010 <= "1439",
+    V4010 != "1345"
+  ) %>%
   group_by(cor, V2007) %>% 
   summarise(
     proportion = survey_mean(),
@@ -418,7 +432,11 @@ t7_cv <- setorpublico_srvyr %>%
 # setor publico por raça e gênero e cargo de liderança [sum]
 t7 = setorpublico_srvyr %>% 
   drop_na(cor) %>% 
-  filter(VD4011 == "Diretores e gerentes") %>% 
+   filter(
+    V4010 >= '1111',
+    V4010 <= '1439',
+    V4010 != '1345'
+  ) %>% 
   group_by(cor, V2007) %>% 
   summarise(sum = survey_total()) %>% 
   rename(sexo = V2007) %>% 
@@ -464,23 +482,8 @@ ggplot(data = t7, mapping = aes(x = cor, y = prop, fill = sexo, group = as.facto
   theme_bw()
 
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad7.png', plot = last_plot(), device = 'png',
-       width = 26, height = 15, units = 'cm', bg = 'white')
-
-# 7v2. Quantidade e porcentagem de pessoas que trabalham no setor público por raça e gênero em posição de liderança ----
-out_07_v2 <- pnadc_setor_publico |>
-  drop_na(cor) |> 
-  # filter(VD4011 == 'Diretores e gerentes') |> 
-  filter(V4010 != '1345') |> 
-  filter(V4010 >= '1111' & V4010 <= '1439') |> 
-  group_by(interact(sexo = V2007, cor)) |> 
-  summarise(
-    freq = survey_total(vartype = c('se', 'cv')),
-    prop = survey_mean(vartype = c('se', 'cv')),
-    .groups = 'drop'
-  )
-
-out_07_v2
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad7.png', plot = last_plot(), device = 'png',
+ #      width = 26, height = 15, units = 'cm', bg = 'white')
 
 ### 8. Quantidade e porcentagem de pessoas que trabalham no setor público por raça, gênero e por faixa de remuneração ####
 
@@ -574,8 +577,8 @@ ggplot(data = t8, mapping = aes(x = cor, y = prop, fill = sexo, group = as.facto
   labs(y = '(%)', x = '', fill = "", title = "Porcentagem de pessoas no setor público por gênero e raça e faixa de remuneração:") +
   theme_bw()
 
-ggsave(filename = 'Z:/Temp/Helena/indicador_pnad8.png', plot = last_plot(), device = 'png',
-       width = 30, height = 26, units = 'cm', bg = 'white')
+#ggsave(filename = 'Z:/Temp/Helena/indicador_pnad8.png', plot = last_plot(), device = 'png',
+ #      width = 30, height = 26, units = 'cm', bg = 'white')
 
 
 
@@ -593,4 +596,4 @@ df_list <- list("Dados1" = t1,
                 "Dados8" = t8)
 
 # Write the list to an Excel file
-write_xlsx(df_list, path = "Z:/Temp/Helena/pnad_tabelas_graficos.xlsx")
+write_xlsx(df_list, path = "g:\\Drives compartilhados\\República.org\\4. Equipes\\Dados e Comunicação\\DADOS E CONHECIMENTO\\415 - Repositório de Dados\\Repositório Local\\PNAD\\2024\\pnad_indicadores_output_v2.xlsx")

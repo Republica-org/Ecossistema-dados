@@ -1,0 +1,53 @@
+{
+  "view": {
+    "type": "data_series",
+    "range": [
+      {
+        "label": "Total de vínculos na administração pública",
+        "value": "quantidade_vinculos_sum"
+      }
+    ],
+    "domain": "ano",
+    "groupBy": [
+      "genero"
+    ],
+    "filterBy": [
+      "ano",
+      "genero"
+    ],
+    "chartType": "bars",
+    "dataSourceType": "aggregation"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+      ],
+      "phrasePrefix": ", em"
+
+    },
+    "genero": {
+      "type": "categorical",
+      "label": "Gênero",
+      "options": ["Feminino",
+       "Masculino"
+      ],
+            "phrasePrefix": "do gênero"
+
+    },
+    "quantidade_vinculos": {
+      "type": "continuous",
+      "label": "Total de vínculos"
+    }
+  }
+}
