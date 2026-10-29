@@ -8,13 +8,24 @@
       }
     ],
     "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2019,
+      "options": [2019, 2024],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
     },
@@ -30,6 +41,11 @@
           "color": "var(--green)",
           "label": "Sim",
           "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Sem dados",
+          "value": "Não informou"
         }
       ],
       "variableId": "existencia_legislacao_LAI"

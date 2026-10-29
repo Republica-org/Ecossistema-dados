@@ -1,0 +1,114 @@
+{
+  "view": {
+    "type": "br_map_categorical",
+    "range": [
+      {
+        "label": "Existência de formas de participação do cidadão: Consulta pública on line",
+        "value": "consulta_publica_cidadaos"
+      },
+      {
+        "label": "Existência de formas de participação do cidadão: Grupos de discussão como fóruns ou comunidades pela internet",
+        "value": "grupos_discussao_foruns"
+      },
+      {
+        "label": "Existência de formas de participação do cidadão: Votação on line para orientar a tomada de decisão",
+        "value": "votacao_orientar_decisoes"
+      },
+      {
+        "label": "Existência de formas de participação do cidadão: Enquete on line sobre assuntos de interesse do governo estadual",
+        "value": "enquete_interesse_governo_estadual"
+      }
+    ],
+    "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
+    "stateIdVariableId": "sigla_uf"
+  },
+  "variables": {
+    "ano": {
+      "type": "continuous",
+      "label": "Ano",
+      "options": [2019, 2024],
+      "variableId": "ano",
+      "phrasePrefix": "no ano de"
+    },
+    "sigla_uf": {
+      "type": "categorical",
+      "options": [],
+      "variableId": "sigla_uf"
+    },
+    "consulta_publica_cidadaos": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "consulta_publica_cidadaos"
+    },
+    "grupos_discussao_foruns": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "grupos_discussao_foruns"
+    },
+    "votacao_orientar_decisoes": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "votacao_orientar_decisoes"
+    },
+    "enquete_interesse_governo_estadual": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "enquete_interesse_governo_estadual"
+    }
+  }
+}

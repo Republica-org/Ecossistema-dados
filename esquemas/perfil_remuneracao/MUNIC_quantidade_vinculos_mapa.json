@@ -11,26 +11,26 @@
         "value": "proporcao_tipo",
         "numberFormat": {
           "style": "percent",
-          "minimumFractionDigits": 2,
-          "maximumFractionDigits": 2
-      }
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
       }
     ],
     "mapType": "municipalities_by_state",
     "filterBy": [
       {
-        "type":"single",
-        "variableId":"ano"
+        "type": "single",
+        "variableId": "ano"
       },
       "tipo_vinculo"
     ],
     "defaultValues": {
       "filterBy": {
-        "tipo_vinculo":[
-          "Estatutários"
+        "ano": [
+          2024
         ],
-        "ano":[
-          2021
+        "tipo_vinculo": [
+          "Estatutários"
         ]
       }
     },
@@ -44,7 +44,8 @@
       "label": "Ano",
       "options": [
         2021,
-        2023
+        2023,
+        2024
       ],
       "phrasePrefix": "no ano de"
     },

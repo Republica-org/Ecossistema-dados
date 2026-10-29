@@ -11,8 +11,16 @@
         "value": "pesquisa_satisfacao_servicos_estado"
       },
       {
-        "label": "Existência de serviços disponíveis na internet sobre Diário Oficial, Legislação Estadual e Finanças Públicas",
-        "value": "diario_legislacao_financas"
+        "label": "Existência de serviços disponíveis na internet sobre Diário Oficial",
+        "value": "diario"
+      },
+      {
+        "label": "Existência de serviços disponíveis na internet sobre Legislação Estadual",
+        "value": "legislacao"
+      },
+      {
+        "label": "Existência de serviços disponíveis na internet sobre Finanças Públicas",
+        "value": "financas"
       },
       {
         "label": "Existência de serviços disponíveis na internet sobre Ouvidoria e serviços de atendimento ao cidadão",
@@ -20,20 +28,82 @@
       }
     ],
     "mapType": "states",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
     "stateIdVariableId": "sigla_uf"
   },
   "variables": {
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2019,
+      "options": [
+        2019,
+        2024
+      ],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
+    },
+    "diario": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "diario"
+    },
+    "financas": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "financas"
     },
     "sigla_uf": {
       "type": "categorical",
       "options": [],
       "variableId": "sigla_uf"
+    },
+    "legislacao": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "legislacao"
     },
     "concursos_publicos": {
       "type": "categorical",
@@ -50,22 +120,6 @@
         }
       ],
       "variableId": "concursos_publicos"
-    },
-    "diario_legislacao_financas": {
-      "type": "categorical",
-      "options": [
-        {
-          "color": "var(--red)",
-          "label": "Não",
-          "value": "Não"
-        },
-        {
-          "color": "var(--green)",
-          "label": "Sim",
-          "value": "Sim"
-        }
-      ],
-      "variableId": "diario_legislacao_financas"
     },
     "ouvidoria_atendimento_cidadao": {
       "type": "categorical",

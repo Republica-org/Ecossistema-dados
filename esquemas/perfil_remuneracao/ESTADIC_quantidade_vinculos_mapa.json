@@ -27,7 +27,7 @@
     "defaultValues": {
       "filterBy": {
         "ano": [
-          2021
+          2024
         ],
         "tipo_vinculo": [
           "Estatutários"
@@ -42,7 +42,8 @@
       "label": "Ano",
       "options": [
         2021,
-        2023
+        2023,
+        2024
       ],
       "phrasePrefix": "no ano de"
     },

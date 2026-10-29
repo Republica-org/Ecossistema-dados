@@ -8,6 +8,17 @@
       }
     ],
     "mapType": "municipalities_by_state",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
@@ -15,7 +26,7 @@
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2019,
+      "options": [2019, 2024],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
     },

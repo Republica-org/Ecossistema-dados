@@ -7,12 +7,20 @@
         "value": "concursos_publicos"
       },
       {
-        "label": "Existência de serviços disponíveis na internet: Pesquisa de satisfação relacionada aos serviços prestados pelo Município",
+        "label": "Existência de serviços disponíveis na internet: Pesquisa de satisfação relacionada aos serviços prestados pela Prefeitura",
         "value": "pesquisa_satisfacao_servicos_estado"
       },
       {
-        "label": "Existência de serviços disponíveis na internet: Diário Oficial, Legislação Municipal e Finanças Públicas",
-        "value": "diario_legislacao_financas"
+        "label": "Existência de serviços disponíveis na internet sobre: Diário Oficial",
+        "value": "diario"
+      },
+      {
+        "label": "Existência de serviços disponíveis na internet sobre: Legislação Municipal",
+        "value": "legislacao"
+      },
+      {
+        "label": "Existência de serviços disponíveis na internet sobre: Finanças Públicas",
+        "value": "financas"
       },
       {
         "label": "Existência de serviços disponíveis na internet: Ouvidoria e serviços de atendimento ao cidadão",
@@ -20,6 +28,17 @@
       }
     ],
     "mapType": "municipalities_by_state",
+    "filterBy": [
+      {
+        "type": "single",
+        "variableId": "ano"
+      }
+    ],
+    "defaultValues": {
+      "filterBy": {
+        "ano": 2024
+      }
+    },
     "stateIdVariableId": "sigla_uf",
     "municipalityIdVariableId": "id_municipio"
   },
@@ -27,7 +46,7 @@
     "ano": {
       "type": "continuous",
       "label": "Ano",
-      "options": 2019,
+      "options": [2019, 2024],
       "variableId": "ano",
       "phrasePrefix": "no ano de"
     },
@@ -88,7 +107,7 @@
       ],
       "variableId": "diario_legislacao_financas"
     },
-    "ouvidoria_atendimento_cidadao": {
+    "diario": {
       "type": "categorical",
       "options": [
         {
@@ -100,14 +119,41 @@
           "color": "var(--green)",
           "label": "Sim",
           "value": "Sim"
-        },
-        {
-          "color": "var(--grey)",
-          "label": "Recusa",
-          "value": "Recusa"
         }
       ],
-      "variableId": "ouvidoria_atendimento_cidadao"
+      "variableId": "diario"
+    },
+    "legislacao": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "legislacao"
+    },
+    "financas": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        }
+      ],
+      "variableId": "financas"
     },
     "pesquisa_satisfacao_servicos_estado": {
       "type": "categorical",
@@ -129,6 +175,27 @@
         }
       ],
       "variableId": "pesquisa_satisfacao_servicos_estado"
+    },
+    "ouvidoria_atendimento_cidadao": {
+      "type": "categorical",
+      "options": [
+        {
+          "color": "var(--red)",
+          "label": "Não",
+          "value": "Não"
+        },
+        {
+          "color": "var(--green)",
+          "label": "Sim",
+          "value": "Sim"
+        },
+        {
+          "color": "var(--grey)",
+          "label": "Recusa",
+          "value": "Recusa"
+        }
+      ],
+      "variableId": "ouvidoria_atendimento_cidadao"
     }
   }
 }

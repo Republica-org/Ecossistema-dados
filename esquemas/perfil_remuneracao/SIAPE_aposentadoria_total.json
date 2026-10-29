@@ -10,7 +10,6 @@
     "domain": "ano",
     "groupBy": [
       "tipo_aposentadoria",
-      "org_lotacao",
       "categoria_ministerios"
     ],
     "filterBy": [
@@ -36,7 +35,8 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
       ],
       "phrasePrefix": "em"
     },
